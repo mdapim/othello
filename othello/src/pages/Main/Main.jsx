@@ -23,7 +23,6 @@ export default function Main() {
 
   return (
     <div className="frame">
-      {/* <Car /> */}
       <div
         class="bg-fixed h-screen w-full flex"
         style={{
