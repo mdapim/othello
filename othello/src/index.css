@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.othello-text-small {
+  font-family: "fontleroybrown.regular";
+  text-transform: uppercase;
+  color: gold;
+}
+
+@font-face {
+  font-family: "FONTLERO"; /*Can be any text*/
+  src: local("FONTLERO"), url("./Fonts/FONTLERO.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "fontleroybrown.regular"; /*Can be any text*/
+  src: local("fontleroybrown.regular"),
+    url("./Fonts/fontleroybrown.regular.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

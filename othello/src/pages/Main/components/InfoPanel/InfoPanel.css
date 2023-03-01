@@ -1,0 +1,22 @@
+.infoPanel-container {
+  width: 700px;
+  /* height: 400px; */
+  /* border: 2px solid goldenrod;
+  margin: auto;
+  padding: 10px; */
+  /* box-shadow: 0px 0px 2px 2px #888888; */
+}
+
+.image-container {
+  height: 500px;
+  /* border: 2px solid black; */
+  box-shadow: 0px 0px 2px 2px #888888;
+}
+
+.infoPanel-text {
+  text-align: center;
+}
+
+#test {
+  opacity: 90 !important;
+}
