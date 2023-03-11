@@ -7,6 +7,7 @@ module.exports = {
         othello: "#f4f0e0",
       },
       height: (theme) => ({ "screen/2": "75vh" }),
+      borderWidth: (theme) => ({ small: "0.5px" }),
     },
   },
   plugins: [],

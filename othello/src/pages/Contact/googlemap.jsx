@@ -1,6 +1,7 @@
 import React from "react";
 import GoogleMap from "google-maps-react-markers";
 import { useState, useRef } from "react";
+import "../../App.css";
 
 export default function GMap() {
   const mapRef = useRef(null);
@@ -11,9 +12,7 @@ export default function GMap() {
     setMapReady(true);
   };
 
-  const AnyReactComponent = ({ text }) => (
-    <div className="bg-white">{text}</div>
-  );
+  const AnyReactComponent = ({ text }) => <div className="marker">{text}</div>;
 
   return (
     <div>
@@ -32,7 +31,7 @@ export default function GMap() {
         <AnyReactComponent
           lat={53.563999531581786}
           lng={-0.08794536619049058}
-          text="Here"
+          text=""
         />
       </GoogleMap>
     </div>

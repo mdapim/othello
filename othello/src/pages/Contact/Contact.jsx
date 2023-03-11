@@ -2,12 +2,15 @@ import GMap from "./googlemap";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Footer from "../Main/components/Footer/Footer";
+import InputCard from "./InputCard";
+import { Input } from "postcss";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    subject: "",
     message: "",
   });
   var data = {
@@ -17,6 +20,8 @@ export default function Contact() {
     template_params: {
       to_name: formData.name,
       from_name: formData.email,
+      subject: formData.subject,
+      phone: formData.phone,
       message: formData.message,
       "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
     },
@@ -53,88 +58,93 @@ export default function Contact() {
 
   return (
     <div className="h-full w-full">
-      {console.log("form is", formData)}
       <div
-        class=" mt-60 bg-fixed h-96 w-full"
+        class="mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex items-center justify-center"
         style={{
-          backgroundImage: `url(${
+          backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${
             process.env.PUBLIC_URL + "/Images/table.jpeg"
           })`,
         }}
-      ></div>
-      <div>
+      >
+        <p className="text-8xl uppercase">Contact Us </p>
+      </div>
+      <div className="flex flex-row">
         <form
-          className="flex flex-col"
+          className="flex basis-2/3 flex-col h-screen/2"
           onSubmit={(e) => {
             sendMessage();
             e.preventDefault();
           }}
         >
-          <div className="flex flex-row flex-wrap p-10 justify-around">
-            <div className="flex flex-col space-y-11">
-              <label className="">
-                Name
-                <br />
-                <input
-                  type="text"
+          <div className="flex flex-col flex-wrap pt-24 items-center space-y-10">
+            <div className="flex flex-col space-y-5">
+              <div className="flex lg:flex-row justify-between lg:space-x-20 sm:flex-col">
+                <InputCard
                   name="name"
-                  size="40"
-                  className="border-gray-700 border-b-2 outline-0"
-                  onChange={handleFormInput}
-                />
-              </label>
-              <label className="">
-                Email
-                <br />
-                <input
-                  type="email"
-                  name="email"
-                  size="40"
-                  className="border-gray-700 border-b-2 outline-0"
-                  onChange={handleFormInput}
-                />{" "}
-              </label>
-              <label className="">
-                Phone
-                <br />
-                <input
+                  size={25}
                   type="text"
-                  size="40"
-                  name="phone"
-                  className="border-gray-700 border-b-2 outline-0"
-                  onChange={handleFormInput}
+                  handleFormInput={handleFormInput}
                 />
-              </label>
+                <InputCard
+                  name="phone"
+                  size={25}
+                  type="phone"
+                  handleFormInput={handleFormInput}
+                />
+              </div>
+              <div className="flex lg:flex-row justify-between sm:flex-col">
+                <InputCard
+                  name="email"
+                  size={25}
+                  type="email"
+                  handleFormInput={handleFormInput}
+                />
+                <InputCard
+                  name="subject"
+                  size={25}
+                  type="text"
+                  handleFormInput={handleFormInput}
+                />
+              </div>
             </div>
-            <label className="">
+            <label className="font-extrabold uppercase">
               Message
               <br />
               <textarea
-                cols="39"
+                cols="60"
                 rows="9"
                 maxLength="200"
                 type="text"
                 name="message"
-                className="border-gray-700 border-b-2 outline-0"
+                className="border-gray-700 border-b-2 outline-0 normal-case font-normal"
                 onChange={handleFormInput}
               />
             </label>
           </div>
-          <p className=" m-auto">
-            <input type="submit" />
-          </p>
-        </form>
-        <br />
-        <div className="flex flex-row justify-around">
-          <div>
-            <p>Contact Us</p>
+          <div className=" m-auto">
+            <button
+              type="submit"
+              className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
+            >
+              Submit
+            </button>
           </div>
-          <GMap />
-          <div>
-            <p>Opening Times</p>
+        </form>
+        <div className="flex basis-1/3 flex-col justify-around">
+          <div className="text-center mx-auto">
+            <p className="text-4xl bold">Contact Us</p>
+            <p>01472 356704</p>
+            <p> othellogrimsby@gmail.com</p>
+          </div>
+          <div className="text-center mx-auto mb-20">
+            <p className="text-4xl bold">Opening Times</p>
+            <p>Monday to Saturday</p>
+            <p> Lunch: 12-2pm</p>
+            <p> Dinner: 6-10pm</p>
           </div>
         </div>
       </div>
+      <GMap />
       <Footer />
     </div>
   );

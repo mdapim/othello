@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
-import Car from "./components/Carousel/Carousel";
+import React, { useEffect, useState } from "react";
 import InfoPanel from "./components/InfoPanel/InfoPanel";
-import NavBarS from "./components/NavBarS/NavBarS";
 import Featured from "./components/Featured/Featured";
-import FeaturedCard from "./components/FeatauredCard/FetauredCard";
 import Footer from "./components/Footer/Footer";
 import Comments from "./components/Comments/Comments";
 

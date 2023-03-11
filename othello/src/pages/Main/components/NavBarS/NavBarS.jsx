@@ -1,18 +1,19 @@
 import "../../../../index.css";
 import { Link } from "react-router-dom";
 import "../../Main.css";
-import { useState, useEffe, useEffect } from "react";
+import AnimatedLink from "./AnimatedLink";
+import { useState, useEffect } from "react";
 
 export default function NavBarS() {
   const [hideBar, setHideBar] = useState(true);
   const [changeSize, setChangeSize] = useState(false);
-
-  const check = () => {
-    console.log("logging", window.scrollY);
-  };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", check, true);
-  // }, []);
+  const [linkNames, setLinkNames] = useState([
+    { name: "Home", link: "/" },
+    { name: "About", link: "/About" },
+    { name: "Our Menu", link: "/OurMenu" },
+    { name: "Contact", link: "Contact" },
+    { name: "Private Bookings", link: "PrivateBookings" },
+  ]);
 
   useEffect(() => {
     const fixedNavbar = () => {
@@ -37,7 +38,7 @@ export default function NavBarS() {
             (changeSize ? " py-0" : " py-6")
           }
         >
-          <a href="https://flowbite.com/" class="flex items-center">
+          <Link to="/" class="flex items-center">
             <img
               src={process.env.PUBLIC_URL + "/Images/otello2.png"}
               class={
@@ -49,15 +50,8 @@ export default function NavBarS() {
             <span class="self-center othello-text-small text-4xl font-semibold whitespace-nowrap dark:text-white">
               Othello
             </span>
-          </a>
+          </Link>
           <div class="flex md:order-2">
-            {/* <button
-              type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Get started
-            </button> */}
-
             <button
               onClick={() => {
                 setHideBar(!hideBar);
@@ -92,47 +86,19 @@ export default function NavBarS() {
             id="navbar-sticky"
           >
             <ul class="flex pacifico flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-              <li>
-                <Link
-                  to="/"
-                  className="block py-2 pl-3 pr-4 text-othello bg-blue-700 rounded md:bg-transparent md:p-0"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/About"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 group text-sky-600 transition duration-300"
-                >
-                  About
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/OurMenu"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Our Menu
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Contact"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/PrivateBookings"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Private Bookings
-                </Link>
-              </li>
+              {linkNames.map(({ name, link }) => {
+                return (
+                  <li>
+                    <AnimatedLink
+                      name={name}
+                      link={link}
+                      textCol={
+                        name === "Home" ? "text-othello" : "text-gray-400"
+                      }
+                    />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

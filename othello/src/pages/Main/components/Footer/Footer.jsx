@@ -16,26 +16,33 @@ export default function Footer() {
             <SocialIcon
               style={{ height: "30px", width: "30px" }}
               url="https://twitter.com/jaketrent"
+              bgColor="transparent"
+              fgColor="white"
             />
             <SocialIcon
               style={{ height: "30px", width: "30px" }}
-              url="https://facebook.com/jaketrent"
+              url="https://www.facebook.com/othellorestaurantgrimsby/"
+              bgColor="transparent"
+              fgColor="white"
             />
             <SocialIcon
               style={{ height: "30px", width: "30px" }}
-              url="https://email.com/jaketrent"
+              url="mailto:othellogrimsby@gmail.com"
+              bgColor="transparent"
+              fgColor="white"
             />
           </div>
           <p className="mt-2">01472 356704</p>
         </div>
         <div className="text-center flex-1">
           <p className="font-bold text-xl"> Hours </p>
-          <p> Monday to Saturday</p>
+          <p> Mon - Sat: </p>
           <p> 12pm - 2pm</p>
           <p> 6pm - 10pm</p>
         </div>
       </div>
-      <p className="text-center text-white mt-10">
+      <hr className="bg-white border-[0.01em] opacity-40" />
+      <p className="text-center text-white mt-5">
         Copyright © 2023 Othello Restaurant GY. All rights reserved.
       </p>
     </div>

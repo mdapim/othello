@@ -1,6 +1,6 @@
-export default function ItemCard({ text }) {
+export default function ItemCard({ text, source }) {
   return (
-    <div class="flex justify-center">
+    <div class="flex justify-center h-64">
       <div class="rounded-lg shadow-lg bg-white max-w-xs relative">
         <a
           href="#!"
@@ -9,8 +9,8 @@ export default function ItemCard({ text }) {
           data-mdb-ripple-unbound="true"
         >
           <img
-            class="rounded-lg"
-            src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+            class="rounded-lg object-fill brightness-75"
+            src={source}
             alt=""
           />
           <h5 class="text-white text-xl font-medium mb-2 bottom-0 absolute p-4">
