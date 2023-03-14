@@ -13,17 +13,15 @@ function App() {
   return (
     // <div className="w-screen h-screen bg-stone-700">
     <BrowserRouter>
-      <div className="w-96">
-        <NavBarS />
-        <Routes>
-          <Route index element={<Main />} />
-          <Route path="/" element={<Main />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/OurMenu" element={<OurMenu />} />
-          <Route path="/PrivateBookings" element={<PrivateBookings />} />
-        </Routes>
-      </div>
+      <NavBarS />
+      <Routes>
+        <Route index element={<Main />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/OurMenu" element={<OurMenu />} />
+        <Route path="/PrivateBookings" element={<PrivateBookings />} />
+      </Routes>
     </BrowserRouter>
     // </div>
   );
