@@ -19,6 +19,7 @@
     "react-social-icons": "^5.15.0",
     "reacticons": "^0.0.1",
     "slick-carousel": "^1.8.1",
+    "tw-elements": "^1.0.0-beta1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

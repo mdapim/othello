@@ -10,5 +10,5 @@ module.exports = {
       borderWidth: (theme) => ({ small: "0.5px" }),
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 };

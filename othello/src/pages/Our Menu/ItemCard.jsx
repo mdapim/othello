@@ -1,6 +1,18 @@
-export default function ItemCard({ text, source }) {
+export default function ItemCard({
+  text,
+  source,
+  setCategoryName,
+  getMenuItems,
+  getDrinkItems,
+}) {
   return (
-    <div class="flex justify-center h-64">
+    <div
+      class="flex justify-center"
+      onClick={() => {
+        setCategoryName(text);
+        text === "wines" ? getDrinkItems(text) : getMenuItems(text);
+      }}
+    >
       <div class="rounded-lg shadow-lg bg-white max-w-xs relative">
         <a
           href="#!"
@@ -9,7 +21,7 @@ export default function ItemCard({ text, source }) {
           data-mdb-ripple-unbound="true"
         >
           <img
-            class="rounded-lg object-fill brightness-75"
+            class="rounded object-contain brightness-75 h-48"
             src={source}
             alt=""
           />
