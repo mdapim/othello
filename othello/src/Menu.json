@@ -184,7 +184,7 @@
       "vegetarian": false
     }
   ],
-  "desserts": [
+  "deserts": [
     {
       "name": "Baklava",
       "description": "A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream.",
@@ -248,167 +248,152 @@
       "vegetarian": false
     }
   ],
-  "wines": [
-    {
-      "name": "Montagne St Emilion",
-      "description": "Soft, ripe wine with a delicious red fruit character",
-      "price": "£26.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Merlot",
-      "description": "Smooth Chilean ruby red fruit",
-      "price": "£22.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Cotes du Rhone",
-      "description": "Fruity with flavours of herbal spice and rich raspberry",
-      "price": "£24.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Crozes Hermitage",
-      "description": "Rich wine with aromas of blackcurrant",
-      "price": "£29.75",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Chateaneuf du Pape",
-      "description": "An intense ruby blend, powerful wine, full body",
-      "price": "34.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Espartero Rioja",
-      "description": "Full bodied, smooth, with aromas of prunes and vanilla",
-      "price": "£29.75",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Shiraz",
-      "description": "Australian Shiraz, full of deep flavours",
-      "price": "£24.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Faustino 1",
-      "description": "Velvet smooth finish with oak hints",
-      "price": "£45.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Trivento Malbec",
-      "description": "Strong blackcurrent velvety finish hosting a plums aroma",
-      "price": "£29.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "Othello",
-      "description": "Cypriot full bodied dry red wine with rich aroma",
-      "price": "£21.95",
-      "vegetarian": false,
-      "type": "red"
-    },
-    {
-      "name": "770 Miles",
-      "description": "Californian zinfandel, laced with berries crisp and sweet",
-      "price": "£23.95",
-      "vegetarian": false,
-      "type": "rose"
-    },
-    {
-      "name": "Anjou Rose",
-      "description": "Classic French rose from near Lois Valley",
-      "price": "£23.95",
-      "vegetarian": false,
-      "type": "rose"
-    },
-    {
-      "name": "Sauvignon Blanc",
-      "description": "Crisp authentic, South African blend of grape and pineapple",
-      "price": "£23.75",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Sancerre",
-      "description": "Crisp, fresh with gooseberry finish",
-      "price": "£26.75",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Chardonnay",
-      "description": "Boasting a rich tropical fruit with a hint of citrus",
-      "price": "£24.95",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Pinot Grigio",
-      "description": "Light, crisp and zesty with a citrus aroma",
-      "price": "£24.95",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Saint Panteleimon",
-      "description": "Cypriot medium sweet white with a fruity finish",
-      "price": "£21.95",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Apelia",
-      "description": "Greek dry white wine soft palate",
-      "price": "£21.95",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Troodos",
-      "description": "Cypriot medium dry white with a fruity finish",
-      "price": "£21.95",
-      "vegetarian": false,
-      "type": "white"
-    },
-    {
-      "name": "Canti",
-      "description": "Crisp prosecco with delightful flavours of peas and peach",
-      "price": "£23.95",
-      "vegetarian": false,
-      "type": "sparkling"
-    },
-    {
-      "name": "Asti Spumante",
-      "description": "Refreshing, slightly sweet, sparkling white wine made from Moscato grape",
-      "price": "£23.95",
-      "vegetarian": false,
-      "type": "sparkling"
-    },
-    {
-      "name": "Moet & Chandon",
-      "description": "Distinguishes itself with a fruity brightness, a seductive palate and an elegant maturity",
-      "price": "£57.00",
-      "vegetarian": false,
-      "type": "sparkling"
-    },
-    {
-      "name": "Verve Clicquot",
-      "description": "well known for both its full bodied biscuit style and consistency quality and fine champagne",
-      "price": "£60.00",
-      "vegetarian": false,
-      "type": "sparkling"
-    }
-  ]
+  "wine": {
+    "red-wine": [
+      {
+        "name": "Montagne St Emilion",
+        "description": "Soft, ripe wine with a delicious red fruit character",
+        "price": "£26.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Merlot",
+        "description": "Smooth Chilean ruby red fruit",
+        "price": "£22.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Cotes du Rhone",
+        "description": "Fruity with flavours of herbal spice and rich raspberry",
+        "price": "£24.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Crozes Hermitage",
+        "description": "Rich wine with aromas of blackcurrant",
+        "price": "£29.75",
+        "vegetarian": false
+      },
+      {
+        "name": "Chateaneuf du Pape",
+        "description": "An intense ruby blend, powerful wine, full body",
+        "price": "34.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Espartero Rioja",
+        "description": "Full bodied, smooth, with aromas of prunes and vanilla",
+        "price": "£29.75",
+        "vegetarian": false
+      },
+      {
+        "name": "Shiraz",
+        "description": "Australian Shiraz, full of deep flavours",
+        "price": "£24.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Faustino 1",
+        "description": "Velvet smooth finish with oak hints",
+        "price": "£45.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Trivento Malbec",
+        "description": "Strong blackcurrent velvety finish hosting a plums aroma",
+        "price": "£29.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Othello",
+        "description": "Cypriot full bodied dry red wine with rich aroma",
+        "price": "£21.95",
+        "vegetarian": false
+      }
+    ],
+    "rose-wine": [
+      {
+        "name": "770 Miles",
+        "description": "Californian zinfandel, laced with berries crisp and sweet",
+        "price": "£23.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Anjou Rose",
+        "description": "Classic French rose from near Lois Valley",
+        "price": "£23.95",
+        "vegetarian": false
+      }
+    ],
+    "white-wine": [
+      {
+        "name": "Sauvignon Blanc",
+        "description": "Crisp authentic, South African blend of grape and pineapple",
+        "price": "£23.75",
+        "vegetarian": false
+      },
+      {
+        "name": "Sancerre",
+        "description": "Crisp, fresh with gooseberry finish",
+        "price": "£26.75",
+        "vegetarian": false
+      },
+      {
+        "name": "Chardonnay",
+        "description": "Boasting a rich tropical fruit with a hint of citrus",
+        "price": "£24.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Pinot Grigio",
+        "description": "Light, crisp and zesty with a citrus aroma",
+        "price": "£24.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Saint Panteleimon",
+        "description": "Cypriot medium sweet white with a fruity finish",
+        "price": "£21.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Apelia",
+        "description": "Greek dry white wine soft palate",
+        "price": "£21.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Troodos",
+        "description": "Cypriot medium dry white with a fruity finish",
+        "price": "£21.95",
+        "vegetarian": false
+      }
+    ],
+    "sparkling wine & champagne": [
+      {
+        "name": "Canti",
+        "description": "Crisp prosecco with delightful flavours of peas and peach",
+        "price": "£23.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Asti Spumante",
+        "description": "Refreshing, slightly sweet, sparkling white wine made from Moscato grape",
+        "price": "£23.95",
+        "vegetarian": false
+      },
+      {
+        "name": "Moet & Chandon",
+        "description": "Distinguishes itself with a fruity brightness, a seductive palate and an elegant maturity",
+        "price": "£57.00",
+        "vegetarian": false
+      },
+      {
+        "name": "Verve Clicquot",
+        "description": "well known for both its full bodied biscuit style and consistency quality and fine champagne",
+        "price": "£60.00",
+        "vegetarian": false
+      }
+    ]
+  }
 }

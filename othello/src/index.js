@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import "./Fonts/FONTLERO.TTF";
 import "./Fonts/fontleroybrown.regular.ttf";
-import * as te from "tw-elements";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
