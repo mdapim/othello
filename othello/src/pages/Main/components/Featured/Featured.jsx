@@ -46,6 +46,7 @@ export default function Featured() {
             <FeaturedCard item="sea" />
             <FeaturedCard item="garlic" />
             <FeaturedCard item="pan" />
+            
           </Slider>
         </div>
         <br />
