@@ -5,6 +5,7 @@
 html,
 body {
   width: 100%;
+  margin: auto;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -42,7 +43,7 @@ body {
 }
 /* inner circle (optional if you don't need the central dot) */
 .marker::before {
-  content: "";
+  content: '';
   background: white;
   width: 50%;
   height: 50%;
@@ -57,7 +58,7 @@ body {
 }
 /* shadow (optional if you don't need a shadow) */
 .marker::after {
-  content: "";
+  content: '';
   background: rgba(128, 128, 128, 0.2);
   width: 75%;
   height: 75%;

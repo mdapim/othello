@@ -1,7 +1,0 @@
-{
-  "extends": ["", ""],
-  "plugins": [""],
-  "rules": {
-    "prettier/prettier": ["error"]
-  }
-}

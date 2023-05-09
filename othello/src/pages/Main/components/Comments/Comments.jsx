@@ -1,11 +1,11 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../Main.css";
-import ReviewsData from "./TripAdvisorData.json";
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '../../Main.css';
+import ReviewsData from './TripAdvisorData.json';
 
-import CommentCard from "./CommentCard";
+import CommentCard from './CommentCard';
 export default function Comments() {
   const settings = {
     infinite: true,
@@ -15,7 +15,7 @@ export default function Comments() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 8000,
-    cssEase: "linear",
+    cssEase: 'linear',
     pauseOnHover: false,
     arrows: false,
   };
@@ -23,22 +23,22 @@ export default function Comments() {
   return (
     <>
       <div
-        className="h-screen/2 w-100% p-10"
+        className='h-screen/2 w-100% p-10'
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${
-            process.env.PUBLIC_URL + "/Images/table.jpeg"
+            process.env.PUBLIC_URL + '/Images/table.jpeg'
           })`,
         }}
       >
-        <div className=" max-w-40 max-h-40">
+        <div className=' max-w-40 max-h-40 w-screenfull m-auto'>
           <Slider {...settings}>
             {ReviewsData.map((item) => {
               return (
                 <CommentCard
                   title={item.Title}
-                  description={item["Review text"]}
+                  description={item['Review text']}
                   user={item.Author}
-                  image={item["Profile picture"]}
+                  image={item['Profile picture']}
                 />
               );
             })}
