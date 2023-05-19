@@ -5,6 +5,7 @@ import Menu from '../../Menu.json';
 import Footer from '../Main/components/Footer/Footer';
 import ListMeal from './components/ListMeal';
 import ListItem from './listItems';
+import ButtonGrid from './components/buttonGrid';
 
 export default function OurMenu() {
   const [chosenItem, setChosenItem] = useState('Lunch');
@@ -55,24 +56,15 @@ export default function OurMenu() {
           Wine
         </p>
       </div>
-      <div className='pt-40 flex flex-row justify-around px-40'>
-        <ItemCard
-          text='Lunch'
-          // source={process.env.PUBLIC_URL + "./Images/chicken.jpeg"}
-          source={process.env.PUBLIC_URL + './Images/crab.jpeg'}
-        />
-        <ItemCard
-          text='Dinner'
-          // source={"https://mdbootstrap.com/img/new/standard/nature/182.jpg"}
-          source={process.env.PUBLIC_URL + './Images/crab.jpeg'}
-        />
-        <ItemCard
-          text='WineLst'
-          source={process.env.PUBLIC_URL + './Images/crab.jpeg'}
-        />
-      </div>
+      <ButtonGrid />
+
       <br />
       <hr className=' h-px dark:bg-black' />
+      <img
+        className='object-none w-full rounded-t-lg h-72 md:rounded-none md:rounded-l'
+        src={process.env.PUBLIC_URL + `/Images/main.jpeg`}
+        alt=''
+      />
       <div className='m-20'>
         <div className=' h-full shadow-lg p-40 mx-auto w-screenfull'>
           <ul className='flex flex-col space-y-10 '>

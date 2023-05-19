@@ -30,7 +30,7 @@ export default function Comments() {
           })`,
         }}
       >
-        <div className=' max-w-40 max-h-40 w-screenfull m-auto'>
+        <div className=' w-[70%] w-screenfull m-auto'>
           <Slider {...settings}>
             {ReviewsData.map((item) => {
               return (
