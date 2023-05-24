@@ -1,5 +1,5 @@
 import ButtonCard from './buttonCard';
-export default function ButtonGrid() {
+export default function ButtonGrid({ setItem }) {
   const testArr = [
     {
       title: 'Lunch',
@@ -14,7 +14,7 @@ export default function ButtonGrid() {
       image: 'steak.jpeg',
     },
     {
-      title: 'Dessert',
+      title: 'Desserts',
       description:
         'Satisfy your sweet cravings with divine Greek desserts. Indulge in heavenly baklava, creamy loukoumades, and more. Explore our irresistible dessert menu and treat yourself to a taste of Greeces sweetest delights!',
       image: 'bac.jpeg',
@@ -28,12 +28,13 @@ export default function ButtonGrid() {
   ];
   return (
     //justify-items-stretch
-    <div className='grid grid-cols-2 gap-0'>
+    <div className='grid grid-cols-2 gap-2'>
       {testArr.map((item) => (
         <ButtonCard
           title={item.title}
           description={item.description}
           image={item.image}
+          setItem={setItem}
         />
       ))}
     </div>

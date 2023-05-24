@@ -22,53 +22,15 @@ export default function OurMenu() {
       >
         <p className='text-8xl uppercase'> Our Menu </p>
       </div>
-      <div className='flex flex-row justify-center'>
-        <p
-          className='bg-yellow-400 p-4 flex-1 text-center text-white'
-          onClick={() => {
-            setChosenItem('Lunch');
-          }}
-        >
-          Lunch
-        </p>
-        <p
-          className='bg-blue-400 p-4 flex-1 text-center text-white'
-          onClick={() => {
-            setChosenItem('Dinner');
-          }}
-        >
-          Dinner
-        </p>
-        <p
-          className='bg-yellow-400 p-4 flex-1 text-center text-white '
-          onClick={() => {
-            setChosenItem('Desserts');
-          }}
-        >
-          Dessert
-        </p>
-        <p
-          className='bg-blue-400 p-4 flex-1 text-center text-white'
-          onClick={() => {
-            setChosenItem('Wine');
-          }}
-        >
-          Wine
-        </p>
+      <div className='m-24'>
+        <ButtonGrid setItem={setChosenItem} />
       </div>
-      <ButtonGrid />
 
       <br />
       <hr className=' h-px dark:bg-black' />
-      <img
-        className='object-none w-full rounded-t-lg h-72 md:rounded-none md:rounded-l'
-        src={process.env.PUBLIC_URL + `/Images/main.jpeg`}
-        alt=''
-      />
-      <div className='m-20'>
-        <div className=' h-full shadow-lg p-40 mx-auto w-screenfull'>
-          <ul className='flex flex-col space-y-10 '>
-            {/* {Menu[chosenItem].starters.map((item) => {
+
+      <ul className='flex flex-col space-y-10 '>
+        {/* {Menu[chosenItem].starters.map((item) => {
               return (
                 <ListItem
                   name={item.name}
@@ -77,16 +39,12 @@ export default function OurMenu() {
                 />
               );
             })} */}
-            {chosenItem &&
-              Object.keys(Menu[chosenItem]).map((item) => (
-                <SectionItem
-                  menuItem={item}
-                  menuList={Menu[chosenItem][item]}
-                />
-              ))}
-          </ul>
-        </div>
-      </div>
+        {chosenItem &&
+          Object.keys(Menu[chosenItem]).map((item) => (
+            <SectionItem menuItem={item} menuList={Menu[chosenItem][item]} />
+          ))}
+      </ul>
+
       <Footer />
     </div>
   );
