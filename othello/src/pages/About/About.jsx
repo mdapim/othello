@@ -1,16 +1,22 @@
 import Footer from '../Main/components/Footer/Footer';
+import ImageGallery from './ImageGallery';
 export default function About() {
   return (
     <div>
       <div
-        class='mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex items-center justify-center'
+        class='mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex flex-col items-center space-y-10 justify-center'
         style={{
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${
             process.env.PUBLIC_URL + '/Images/table.jpeg'
           })`,
         }}
       >
-        <p className='text-8xl uppercase'>About Us </p>
+        <p className='text-8xl font-bold uppercase'>About Us </p>
+        <p className='text-2xl px-96'>
+          Exquisite cuisine, impeccable service, and elegant ambiance. Join us
+          at Othello Restaurant in Grimsby for an unforgettable dining
+          experience that delights all the senses.{' '}
+        </p>
       </div>
       <div className='flex-col justify-between justify-center items-center'>
         <div className='flex-1'>
@@ -65,101 +71,8 @@ export default function About() {
         </div>
       </div>
       <hr className=' border-gray-400 m-auto mt-8' />
-      <div className='m-20'>
-        <div class='grid grid-cols-2 md:grid-cols-4 gap-4'>
-          <div class='grid gap-4'>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg'
-                alt=''
-              />
-            </div>
-          </div>
-          <div class='grid gap-4'>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg'
-                alt=''
-              />
-            </div>
-          </div>
-          <div class='grid gap-4'>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg'
-                alt=''
-              />
-            </div>
-          </div>
-          <div class='grid gap-4'>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg'
-                alt=''
-              />
-            </div>
-            <div>
-              <img
-                class='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg'
-                alt=''
-              />
-            </div>
-          </div>
-        </div>
+      <div className='w-screenfull py-10 m-auto'>
+        <ImageGallery />
       </div>
 
       <Footer />

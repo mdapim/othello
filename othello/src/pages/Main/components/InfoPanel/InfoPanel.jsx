@@ -55,9 +55,9 @@ export default function InfoPanel() {
         id='test'
       >
         {' '}
-        <h1 className='uppercase text-3xl'>What we offer</h1>
+        <h1 className='uppercase text-4xl'>What we offer</h1>
         <br />
-        <span className='flex flex-row text-justify space-x-14'>
+        <span className='flex flex-row text-lg text-justify space-x-14'>
           <p className='flex-1'>
             Welcome to our Greek restaurant, where you can experience the
             authentic flavors and hospitality of Greece. From the sun-kissed
