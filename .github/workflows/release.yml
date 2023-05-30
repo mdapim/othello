@@ -14,7 +14,7 @@ on:
       release:
         type: boolean
         default: false
-  # issues:
+  push:
 
 jobs:
   run-file:
