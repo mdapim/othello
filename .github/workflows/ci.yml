@@ -11,3 +11,14 @@ jobs:
       - name: Write echo
         run: |
           echo "this is echo working yah boi" ${{ inputs.release }}
+  release:
+  permissions:
+    contents: write
+    issues: write
+    pull-requests: write
+  runs-on: ubuntu-latest
+  steps:
+    - uses: nearform-actions/optic-release-automation-action@v4
+      with:
+        # github-token: ${{ secrets.github_token }}
+        semver: auto
