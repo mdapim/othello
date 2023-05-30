@@ -20,5 +20,4 @@ jobs:
   steps:
     - uses: nearform-actions/optic-release-automation-action@v4
       with:
-        # github-token: ${{ secrets.github_token }}
         semver: auto
