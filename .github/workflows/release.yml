@@ -18,5 +18,3 @@ on:
 jobs:
   run-file:
     uses: ./.github/workflows/ci.yml
-    with:
-      environment: hey there
