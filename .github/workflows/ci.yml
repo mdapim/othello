@@ -17,10 +17,12 @@ jobs:
           cache: 'npm'
 
   netsuite:
+    steps:
     run: |
       echo "Running netsuite"
 
   deploy app:
+    steps:
     run: |
       echo "deploying app"
 
