@@ -14,8 +14,18 @@ on:
       release:
         type: boolean
         default: false
+  pull_request:
+    types: [closed]
   push:
 
 jobs:
   run-file:
-    uses: ./.github/workflows/ci.yml
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: nearform-actions/optic-release-automation-action@v4
+        with:
+          semver: auto
