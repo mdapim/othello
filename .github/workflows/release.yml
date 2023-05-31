@@ -14,9 +14,19 @@ on:
       release:
         type: boolean
         default: false
+      baseTag:
+        description: 'base release tag'
+      tag:
+        description: 'The npm tag'
+        required: false
+        default: 'latest'
+      commit-message:
+        description: 'The commit message template'
+        required: false
+        default: 'Release v1.0.0'
   pull_request:
     types: [closed]
-  push:
+  # push:
 
 jobs:
   run-file:
@@ -28,4 +38,5 @@ jobs:
     steps:
       - uses: nearform-actions/optic-release-automation-action@v4
         with:
+          commit-message: 'new commit is being processed'
           semver: auto
