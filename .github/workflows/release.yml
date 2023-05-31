@@ -26,7 +26,7 @@ on:
         default: 'Release v1.0.0'
   pull_request:
     types: [closed]
-  # push:
+  push:
 
 jobs:
   run-file:
