@@ -8,9 +8,10 @@ on:
         default: patch
         type: choice
         options:
-          - patch
-          - minor
-          - major
+          - prerelease
+          - prepatch
+          - premajor
+          - preminor
       release:
         type: boolean
         default: false
