@@ -38,5 +38,5 @@ jobs:
     steps:
       - uses: nearform-actions/optic-release-automation-action@v4
         with:
-          commit-message: 'new commit is being processed'
+          commit-message: 'feat(lang): checking this works'
           semver: auto
