@@ -1,6 +1,6 @@
 export default function FeaturedCard({ item }) {
   return (
-    <div class='w-80 h-auto shadow-2xl border text-black'>
+    <div class='w-80 h-auto shadow-lg border text-black'>
       <img
         class=' object-cover w-full '
         src={process.env.PUBLIC_URL + `/Images/${item}.jpeg`}

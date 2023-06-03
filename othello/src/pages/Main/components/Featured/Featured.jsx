@@ -11,8 +11,8 @@ export default function Featured() {
     slidesToScroll: 1,
     fade: false,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 2000,
+    speed: 2000,
+    autoplaySpeed: 4000,
     cssEase: 'linear',
     pauseOnHover: false,
     arrows: false,
@@ -46,6 +46,7 @@ export default function Featured() {
             <FeaturedCard item='sea' />
             <FeaturedCard item='garlic' />
             <FeaturedCard item='pan' />
+            <FeaturedCard item='cheese' />
           </Slider>
         </div>
         <h3 className=' mt-40 text-black text-xl text-center'>

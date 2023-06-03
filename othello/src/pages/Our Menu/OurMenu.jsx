@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ItemCard from './ItemCard';
 import SectionItem from './components/sectionItem';
 import Menu from '../../Menu.json';
-import Footer from '../Main/components/Footer/Footer';
+import Footer from '../../components/Footer/Footer.jsx';
 import ListMeal from './components/ListMeal';
 import ListItem from './listItems';
 import ButtonGrid from './components/buttonGrid';

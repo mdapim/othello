@@ -1,4 +1,4 @@
-import Footer from '../Main/components/Footer/Footer';
+import Footer from '../../components/Footer/Footer.jsx';
 import ImageGallery from './ImageGallery';
 export default function About() {
   return (

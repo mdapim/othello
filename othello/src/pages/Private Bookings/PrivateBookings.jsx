@@ -1,7 +1,9 @@
-import Footer from '../Main/components/Footer/Footer';
+import Footer from '../../components/Footer/Footer.jsx';
 import InputCard from '../Contact/InputCard';
 import Form from '../Contact/Form';
+import { useNavigate } from 'react-router-dom';
 export default function PrivateBookings() {
+  const navigate = useNavigate();
   const handleFormInput = () => {};
   return (
     <div>
@@ -45,7 +47,12 @@ export default function PrivateBookings() {
             unforgettable experience for you and your guests. Book the Aphrodite
             Suite today and make your event a resounding success.
           </p>
-          <button className='relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer'>
+          <button
+            onClick={() => {
+              navigate('Contact');
+            }}
+            className='relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer'
+          >
             Enquire
           </button>
         </div>
@@ -71,7 +78,12 @@ export default function PrivateBookings() {
             Experience warmth, togetherness, and exceptional dining in our
             family-themed private room. Book now and let the festivities begin!
           </p>
-          <button className='relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer'>
+          <button
+            onClick={() => {
+              navigate('Contact');
+            }}
+            className='relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer'
+          >
             Enquire
           </button>
         </div>

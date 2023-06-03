@@ -7,7 +7,7 @@ export default function InputCard({ name, handleFormInput, size, type }) {
         type={type}
         name={name}
         size={size}
-        className='border-gray-700 w-full border-b-2 outline-0 normal-case font-normal h-8'
+        className='border-gray-400 bg-gray-50 indent-2.5 w-full h-10 border outline-0 normal-case font-normal h-8 focus:border-gray-700 focus:border-2'
         onChange={handleFormInput}
       />
     </label>

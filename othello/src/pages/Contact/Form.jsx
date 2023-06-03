@@ -29,28 +29,28 @@ export default function Form({ sendMessage, handleFormInput }) {
         e.preventDefault();
       }}
     >
-      <div className='grid grid pt-16'>
-        <div className='grid gap-28 grid-cols-2'>
+      <div className='grid'>
+        <div className='grid gap-4 grid-cols-2'>
           <InputCard
-            name='name'
+            name='Full name'
             size={25}
             type='text'
             handleFormInput={handleFormInput}
           />
           <InputCard
-            name='phone '
+            name='phone number'
             size={25}
             type='phone'
             handleFormInput={handleFormInput}
           />
         </div>
         <InputCard
-          name='email'
+          name='email address'
           size={55}
           type='email'
           handleFormInput={handleFormInput}
         />
-        <div className='grid gap-28 grid-cols-2'>
+        <div className='grid gap-4 grid-cols-2'>
           <div>
             <label for='underline_select' class='sr-only'>
               Underline select
@@ -60,7 +60,7 @@ export default function Form({ sendMessage, handleFormInput }) {
               id='underline_select'
               name='event'
               defaultValue={'--:--'}
-              class='block py-[3px] px-0 w-full text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 peer'
+              class=' indent-2.5 h-10 w-full bg-gray-50 text-black bg-transparent border-0 border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer'
             >
               {timeOptions.map((item) => (
                 <option disabled={item === '--:--' ? true : false} value={item}>
@@ -77,7 +77,7 @@ export default function Form({ sendMessage, handleFormInput }) {
               type='date'
               name='date'
               size={25}
-              className='border-gray-700 w-full border-b-2 outline-0 normal-case font-normal h-8'
+              className='indent-1 border-gray-400 bg-gray-50 w-full border outline-0 normal-case font-normal h-10 focus:border-gray-700 focus:border-2'
               onChange={handleFormInput}
               min={dateFormat(selectedDate, 'yyyy-mm-dd')}
               max='2030-01-01'
@@ -95,12 +95,12 @@ export default function Form({ sendMessage, handleFormInput }) {
             maxLength='200'
             type='text'
             name='message'
-            className='border-gray-700 border-b-2 w-full outline-0 normal-case font-normal'
+            className='indent-2.5 border-gray-400 border bg-gray-50 w-full outline-0 normal-case font-normal focus:border-2 focus:border-gray-700 '
             onChange={handleFormInput}
           />
         </label>
       </div>
-      <div className=' m-auto'>
+      <div className='mx-auto mt-8'>
         <button
           type='submit'
           className='relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer'

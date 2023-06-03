@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import InfoPanel from './components/InfoPanel/InfoPanel';
 import Featured from './components/Featured/Featured';
-import Footer from './components/Footer/Footer';
+import Footer from '../../components/Footer/Footer.jsx';
 import Comments from './components/Comments/Comments';
+import { useNavigate } from 'react-router-dom';
 
 export default function Main() {
+  const navigate = useNavigate();
   const [data, setData] = useState(undefined);
 
   //   const fetchReviews = async () => {
@@ -45,7 +47,12 @@ export default function Main() {
           </p>
           <br />
           <br />
-          <button className='relative h-12 w-44 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-black'>
+          <button
+            onClick={() => {
+              navigate('/OurMenu');
+            }}
+            className='relative h-12 w-44 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-black'
+          >
             {' '}
             Try Now{' '}
           </button>

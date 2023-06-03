@@ -1,7 +1,7 @@
 import GMap from './googlemap';
 import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Footer from '../Main/components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import Form from './Form';
 
 export default function Contact() {
@@ -54,7 +54,26 @@ export default function Contact() {
       );
   };
 
-  useEffect(() => {}, []);
+  const ContactInfo = () => {
+    return (
+      <div className='text-center mx-auto'>
+        <h2 className='text-4xl font-bold uppercase'>Contact Us</h2>
+        <p className='text-2xl'>01472 356704</p>
+        <p className='text-2xl'> othellogrimsby@gmail.com</p>
+      </div>
+    );
+  };
+
+  const OpeningTimes = () => {
+    return (
+      <div className='text-center mx-auto mb-20'>
+        <p className='text-4xl font-bold uppercase'>Opening Times</p>
+        <p className='text-2xl'>Monday to Saturday</p>
+        <p className='text-xl'> Lunch: 12-2pm</p>
+        <p className='text-xl'> Dinner: 6-10pm</p>
+      </div>
+    );
+  };
 
   return (
     <div className='h-full w-full'>
@@ -73,25 +92,33 @@ export default function Contact() {
           hearing from you.
         </p>
       </div>
-      <div className='grid grid-cols-2 m-auto w-screenfull'>
-        <div className='mx-14'>
-          <Form handleFormInput={handleFormInput} sendMessage={sendMessage} />
+      <div className='w-screenfull m-auto'>
+        <div className='m-auto my-20 text-center'>
+          <p className='text-4xl font-bold'>
+            Open Mondays through Saturdays Lunch - Dinner
+          </p>
+          <p className='my-5 text-3xl font-bold'>
+            Call 01472 356704 during our opening times, or online using the form
+            below
+          </p>
         </div>
-
-        <div className='flex basis-1/3 flex-col justify-around'>
-          <div className='text-center mx-auto'>
-            <p className='text-4xl bold'>Contact Us</p>
-            <p>01472 356704</p>
-            <p> othellogrimsby@gmail.com</p>
+        <div className='grid grid-cols-2 m-auto mt-32'>
+          <div>
+            <p className=' mx-28 font-bold text-5xl'> Enquires </p>
+            <p className=' text-lg mx-28 mt-14'>
+              We recommend booking at least 2 weeks in advance for large parties
+              of 6 or more, Please be advised this form does not confirm your
+              reservation and you will be contacted by a member of our team as
+              quickly as possible to confirm it. We value your interest in our
+              establishment and look forward to serving you.
+            </p>
           </div>
-          <div className='text-center mx-auto mb-20'>
-            <p className='text-4xl bold'>Opening Times</p>
-            <p>Monday to Saturday</p>
-            <p> Lunch: 12-2pm</p>
-            <p> Dinner: 6-10pm</p>
+          <div className='mx-20'>
+            <Form handleFormInput={handleFormInput} sendMessage={sendMessage} />
           </div>
         </div>
       </div>
+
       <GMap />
       <Footer />
     </div>
