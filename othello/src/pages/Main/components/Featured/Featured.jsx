@@ -20,6 +20,44 @@ export default function Featured() {
 
   const food = ['crab', 'sea', 'garlic', 'pan'];
 
+  const featuredItems = [
+    {
+      image: 'bac',
+      title: 'Baklava',
+      description:
+        'A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream.',
+      price: '£6.95',
+    },
+    {
+      image: 'sea',
+      title: 'Sea Bass',
+      description: 'Pan fried in spinach topped with a lemon and lime butter',
+      price: '£17.95',
+    },
+    {
+      image: 'garlic',
+      title: 'Garlic King Prawns',
+      description:
+        'Large crevettes coated in garlic butter, served with a sweet chilli sauce',
+      price: '£10.75',
+    },
+
+    {
+      image: 'steak',
+      title: 'Sirloin Steak',
+      description:
+        'Juicy, tender sirloin steak, perfectly seared to lock in the rich flavors and mouthwatering juiciness.',
+      price: '£27.95',
+    },
+    {
+      image: 'cheese',
+      title: 'CheeseCake',
+      description:
+        'A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream',
+      price: '£6.95',
+    },
+  ];
+
   return (
     <div className='h-screen/2 w-100% p-10 overflow-hidden relative'>
       <img
@@ -42,14 +80,22 @@ export default function Featured() {
 '
         >
           <Slider {...settings}>
-            <FeaturedCard item='crab' />
+            {featuredItems.map((item) => (
+              <FeaturedCard
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                price={item.price}
+              />
+            ))}
+            {/* <FeaturedCard item='crab' />
             <FeaturedCard item='sea' />
             <FeaturedCard item='garlic' />
             <FeaturedCard item='pan' />
-            <FeaturedCard item='cheese' />
+            <FeaturedCard item='cheese' /> */}
           </Slider>
         </div>
-        <h3 className=' mt-40 text-black text-xl text-center'>
+        <h3 className=' mt-60 text-black text-xl text-center'>
           {' '}
           ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------{' '}
         </h3>

@@ -9,37 +9,37 @@
       },
       {
         "name": "Poached Asparagus Spears (GF)",
-        "description": "",
+        "description": "Delicate asparagus spears, gently poached to maintain their vibrant color and crisp, tender texture.",
         "price": "£5.25",
         "vegetarian": true
       },
       {
         "name": "Halloumi & Tomato Salad (GF)",
-        "description": "",
+        "description": "Grilled halloumi cheese paired with ripe, juicy tomatoes, creating a harmonious blend of flavors",
         "price": "£6.25",
         "vegetarian": true
       },
       {
         "name": "Brie & Camembert Fritters",
-        "description": "",
+        "description": "Indulgent brie and camembert fritters, golden and crispy on the outside, oozing with creamy, melty cheese inside.",
         "price": "£5.25",
         "vegetarian": true
       },
       {
         "name": "Pate Othello & Homemade Pickle (GF)",
-        "description": "",
+        "description": "Pate Othello, a velvety delight of rich flavors, accompanied by tangy, homemade pickles for the perfect balance",
         "price": "£5.45",
         "vegetarian": true
       },
       {
         "name": "Spinach & Feta Parcels",
-        "description": "",
+        "description": "Savory spinach and feta parcels, wrapped in flaky pastry, delivering a delightful combination of greens and cheese.",
         "price": "£4.95",
         "vegetarian": true
       },
       {
         "name": "Goujons of Sole",
-        "description": "",
+        "description": "Tender goujons of sole, delicately breaded and fried to golden perfection, showcasing the delicate flavors of the sea.",
         "price": "£5.95",
         "vegetarian": true
       }
@@ -233,19 +233,19 @@
     "grill": [
       {
         "name": "Fillet Steak",
-        "description": "",
+        "description": "Tender fillet steak, accompanied by crispy chips, flavorful onion rings, and a juicy tomato garnish. A sublime combination.",
         "price": "£29.95",
         "vegetarian": false
       },
       {
         "name": "Sirloin Steak",
-        "description": "",
+        "description": "Juicy sirloin steak, paired with crispy chips, golden onion rings, and a refreshing tomato garnish. A classic delight.",
         "price": "£27.95",
         "vegetarian": false
       },
       {
         "name": "Porterhouse Steak",
-        "description": "",
+        "description": "Hearty porterhouse steak, served with crispy chips, delectable onion rings, and a succulent tomato garnish. A carnivore's delight.",
         "price": "£31.95",
         "vegetarian": false
       }
