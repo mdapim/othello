@@ -31,7 +31,7 @@ export default function NavBarS() {
 
   return (
     <>
-      <nav class='bg-white px-2 sm:px-4 py-2.5 dark:bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-95'>
+      <nav class='bg-white px-2 sm:px-4 py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-95'>
         <div
           class={
             'container flex flex-wrap items-center justify-between mx-auto transition-all duration-200' +
