@@ -59,7 +59,7 @@ export default function Featured() {
   ];
 
   return (
-    <div className='h-screen/2 w-100% p-10 overflow-hidden relative'>
+    <div className='h-screen/2 w-100% p-10 relative'>
       <img
         src={process.env.PUBLIC_URL + '/Images/olive.jpeg'}
         alt='op'
