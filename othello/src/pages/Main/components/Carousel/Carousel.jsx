@@ -1,8 +1,8 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../Main.css";
+import React from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '../../Main.css'
 
 export default function Car() {
   const settings = {
@@ -13,41 +13,41 @@ export default function Car() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 4000,
-    cssEase: "linear",
-    pauseOnHover: false,
-  };
+    cssEase: 'linear',
+    pauseOnHover: false
+  }
   return (
-    <div style={{ height: "500px" }}>
+    <div style={{ height: '500px' }}>
       <Slider {...settings}>
         <div>
           <img
             className="img-wrap"
-            src={process.env.PUBLIC_URL + "/Images/drinks.jpeg"}
+            src={`${process.env.PUBLIC_URL}/Images/drinks.jpeg`}
             alt="img"
           />
         </div>
         <div>
           <img
             className="img-wrap"
-            src={process.env.PUBLIC_URL + "/Images/main.jpeg"}
+            src={`${process.env.PUBLIC_URL}/Images/main.jpeg`}
             alt="img"
           />
         </div>
         <div>
           <img
             className="img-wrap"
-            src={process.env.PUBLIC_URL + "/Images/steak.jpeg"}
+            src={`${process.env.PUBLIC_URL}/Images/steak.jpeg`}
             alt="img"
           />
         </div>
         <div>
           <img
             className="img-wrap"
-            src={process.env.PUBLIC_URL + "/Images/feed.jpeg"}
+            src={`${process.env.PUBLIC_URL}/Images/feed.jpeg`}
             alt="img"
           />
         </div>
       </Slider>
     </div>
-  );
+  )
 }

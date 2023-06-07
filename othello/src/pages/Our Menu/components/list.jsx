@@ -1,12 +1,18 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function List({ title, description, price }) {
-  <span>
-    {console.log(title)}
-    <>
+  return (
+    <span>
       <h1> {title}</h1>
       <p> {description}</p>
-    </>
-    <p>{price}</p>
-  </span>;
+      <p>{price}</p>
+    </span>
+  )
+}
+
+List.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired
 }

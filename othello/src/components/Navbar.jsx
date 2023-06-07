@@ -1,22 +1,25 @@
-import { useEffect, useState } from "react";
-import "../index.css";
-import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
-import { useProSidebar } from "react-pro-sidebar";
-import { sidebarClasses, menuClasses } from "react-pro-sidebar";
-import { BiArch } from "react-icons/bi";
-import "./Navbar.css";
+import React from 'react'
+import '../index.css'
+import {
+  Sidebar,
+  Menu,
+  MenuItem,
+  useProSidebar,
+  sidebarClasses
+} from 'react-pro-sidebar'
+import { BiArch } from 'react-icons/bi'
+import './Navbar.css'
 
 export default function NavBar() {
-  const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
-    useProSidebar();
+  const { collapseSidebar, collapsed } = useProSidebar()
 
   return (
-    <div style={{ display: "flex", height: "100%" }}>
+    <div style={{ display: 'flex', height: '100%' }}>
       <Sidebar
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            backgroundColor: "black",
-          },
+            backgroundColor: 'black'
+          }
         }}
         className="MenuMain"
       >
@@ -24,7 +27,7 @@ export default function NavBar() {
         {!collapsed && (
           <img
             className="center"
-            src={process.env.PUBLIC_URL + "/Othello.jpeg"}
+            src={`${process.env.PUBLIC_URL}/Othello.jpeg`}
             alt="img"
           />
         )}
@@ -33,7 +36,6 @@ export default function NavBar() {
             className="sidebar-text"
             icon={<BiArch size={70} color="gold" />}
           >
-            {" "}
             Home
           </MenuItem>
           <MenuItem className="sidebar-text"> Our Menu</MenuItem>
@@ -43,8 +45,10 @@ export default function NavBar() {
         </Menu>
       </Sidebar>
       <main>
-        <button onClick={() => collapseSidebar()}>Collapse</button>
+        <button type="button" onClick={() => collapseSidebar()}>
+          Collapse
+        </button>
       </main>
     </div>
-  );
+  )
 }

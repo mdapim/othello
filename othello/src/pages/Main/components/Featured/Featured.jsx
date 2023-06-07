@@ -1,8 +1,8 @@
-import React from 'react';
-import FeaturedCard from '../FeatauredCard/FetauredCard';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from 'react'
+import Slider from 'react-slick'
+import FeaturedCard from '../FeatauredCard/FetauredCard'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export default function Featured() {
   const settings = {
@@ -15,10 +15,8 @@ export default function Featured() {
     autoplaySpeed: 4000,
     cssEase: 'linear',
     pauseOnHover: false,
-    arrows: false,
-  };
-
-  const food = ['crab', 'sea', 'garlic', 'pan'];
+    arrows: false
+  }
 
   const featuredItems = [
     {
@@ -26,20 +24,20 @@ export default function Featured() {
       title: 'Baklava',
       description:
         'A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream.',
-      price: '£6.95',
+      price: '£6.95'
     },
     {
       image: 'sea',
       title: 'Sea Bass',
       description: 'Pan fried in spinach topped with a lemon and lime butter',
-      price: '£17.95',
+      price: '£17.95'
     },
     {
       image: 'garlic',
       title: 'Garlic King Prawns',
       description:
         'Large crevettes coated in garlic butter, served with a sweet chilli sauce',
-      price: '£10.75',
+      price: '£10.75'
     },
 
     {
@@ -47,59 +45,48 @@ export default function Featured() {
       title: 'Sirloin Steak',
       description:
         'Juicy, tender sirloin steak, perfectly seared to lock in the rich flavors and mouthwatering juiciness.',
-      price: '£27.95',
+      price: '£27.95'
     },
     {
       image: 'cheese',
       title: 'CheeseCake',
       description:
         'A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream',
-      price: '£6.95',
-    },
-  ];
+      price: '£6.95'
+    }
+  ]
 
   return (
-    <div className='h-screen/2 w-100% p-10 relative'>
+    <div className="h-screen/2 w-100% p-10 relative overflow-hidden">
       <img
-        src={process.env.PUBLIC_URL + '/Images/olive.jpeg'}
-        alt='op'
-        className='opacity-10 p-10 absolute top-0 left-0 w-screen h-auto z-0' //inset-x-80 inset-y-24
+        src={`${process.env.PUBLIC_URL}/Images/olive.jpeg`}
+        alt="op"
+        className="opacity-10 p-10 absolute h-auto top-0 left-0 w-screen z-0" // inset-x-80 inset-y-24
       />
-      <div className='m-auto z-10'>
-        <h1 className='text-center t-40 text-5xl text-black'>
-          {' '}
-          Popular Dishes
-        </h1>
-        <h3 className='text-white text-xl text-center'>
-          {' '}
-          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------{' '}
+      <div className="m-auto z-10">
+        <h1 className="text-center t-40 text-5xl text-black">Popular Dishes</h1>
+        <h3 className="text-white text-xl text-center">
+          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
         </h3>
         <br />
         <div
-          className='w-screen h-72 w-screenfull m-auto
-'
+          className="w-screen h-72 w-screenfull m-auto
+"
         >
           <Slider {...settings}>
-            {featuredItems.map((item) => (
+            {featuredItems.map(item => (
               <FeaturedCard
                 image={item.image}
                 title={item.title}
                 description={item.description}
-                price={item.price}
               />
             ))}
-            {/* <FeaturedCard item='crab' />
-            <FeaturedCard item='sea' />
-            <FeaturedCard item='garlic' />
-            <FeaturedCard item='pan' />
-            <FeaturedCard item='cheese' /> */}
           </Slider>
         </div>
-        <h3 className=' mt-60 text-black text-xl text-center'>
-          {' '}
-          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------{' '}
+        <h3 className=" mt-60 text-black text-xl text-center">
+          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
         </h3>
       </div>
     </div>
-  );
+  )
 }

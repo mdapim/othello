@@ -1,37 +1,36 @@
-import Footer from '../../components/Footer/Footer.jsx';
-import ImageGallery from './ImageGallery';
+import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import ImageGallery from './ImageGallery'
+
 export default function About() {
   return (
     <div>
       <div
-        class='mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex flex-col items-center space-y-10 justify-center'
+        className="mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex flex-col items-center space-y-10 justify-center"
         style={{
-          backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${
-            process.env.PUBLIC_URL + '/Images/table.jpeg'
-          })`,
+          backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
         }}
       >
-        <p className='text-8xl font-bold uppercase'>About Us </p>
-        <p className='text-2xl px-96'>
+        <p className="text-8xl font-bold uppercase">About Us </p>
+        <p className="text-2xl px-96">
           Exquisite cuisine, impeccable service, and elegant ambiance. Join us
           at Othello Restaurant in Grimsby for an unforgettable dining
-          experience that delights all the senses.{' '}
+          experience that delights all the senses.
         </p>
       </div>
-      <div className='flex-col justify-between justify-center items-center'>
-        <div className='flex-1'>
+      <div className="flex-col justify-between justify-center items-center">
+        <div className="flex-1">
           <div>
             <img
-              className='m-auto mt-20'
-              src={process.env.PUBLIC_URL + '/Images/Place/FrontBlack.jpg'}
-              alt='Othello front'
+              className="m-auto mt-20"
+              src={`${process.env.PUBLIC_URL}/Images/Place/FrontBlack.jpg`}
+              alt="Othello front"
             />
           </div>
         </div>
-        <hr className='w-[600px] border-[0.5px] border-gray-400 m-auto mt-8' />
-        <div className='flex-1 m-auto space-y-10'>
-          <div className='p-8 px-96 space-y-6 text-center'>
-            {' '}
+        <hr className="w-[600px] border-[0.5px] border-gray-400 m-auto mt-8" />
+        <div className="flex-1 m-auto space-y-10">
+          <div className="p-8 px-96 space-y-6 text-center">
             <p>
               Welcome to Othello Restaurant, a family-owned and operated
               restaurant located in the heart of Grimsby. We pride ourselves on
@@ -70,12 +69,12 @@ export default function About() {
           </div>
         </div>
       </div>
-      <hr className=' border-gray-400 m-auto mt-8' />
-      <div className='w-screenfull py-10 m-auto'>
+      <hr className=" border-gray-400 m-auto mt-8" />
+      <div className="w-screenfull py-10 m-auto">
         <ImageGallery />
       </div>
 
       <Footer />
     </div>
-  );
+  )
 }

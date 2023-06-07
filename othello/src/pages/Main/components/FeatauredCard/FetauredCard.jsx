@@ -1,26 +1,39 @@
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-export default function FeaturedCard({ image, title, description, price }) {
-  const navigate = useNavigate();
+export default function FeaturedCard({ image, title, description }) {
+  const navigate = useNavigate()
+  const handleEventAction = () => {
+    navigate('/OurMenu')
+  }
+
   return (
     <div
-      class='w-80 h-[480px] shadow-md border text-black hover:cursor-pointer'
-      onClick={() => {
-        navigate('/OurMenu');
-      }}
+      className="w-80 h-[480px] shadow-md border text-black hover:cursor-pointer"
+      role="link"
+      tabIndex={0}
+      onClick={handleEventAction}
+      onKeyDown={handleEventAction}
     >
       <img
-        class=' object-cover w-full '
-        src={process.env.PUBLIC_URL + `/Images/${image}.jpeg`}
-        alt=''
+        className=" object-cover w-full "
+        src={`${process.env.PUBLIC_URL}/Images/${image}.jpeg`}
+        alt=""
       />
-      <hr className='w-16 shadow shadow-black border-transparent mx-auto mt-8' />
-      <div class='p-4 '>
-        <h5 class='mb-2 text-2xl text-center font-bold tracking-tight'>
+      <hr className="w-16 shadow shadow-black border-transparent mx-auto mt-8" />
+      <div className="p-4 ">
+        <h5 className="mb-2 text-2xl text-center font-bold tracking-tight">
           {title}
         </h5>
-        <p class='font-normal text-lg text-center'>{description}</p>
+        <p className="font-normal text-lg text-center">{description}</p>
       </div>
     </div>
-  );
+  )
+}
+
+FeaturedCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 }
