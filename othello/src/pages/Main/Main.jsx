@@ -7,18 +7,6 @@ import Comments from './components/Comments/Comments'
 
 export default function Main() {
   const navigate = useNavigate()
-  // const [data, setData] = useState(undefined)
-
-  //   const fetchReviews = async () => {
-  //     const apiResponse = await fetch(`
-  // https://api.content.tripadvisor.com/api/v1/location/1943770/details`);
-  //     const apiResponseJson = await apiResponse.json();
-  //     console.log("response -> ", apiResponseJson);
-  //   };
-
-  //   useEffect(() => {
-  //     fetchReviews();
-  //   }, []);
 
   return (
     <div className="frame">
