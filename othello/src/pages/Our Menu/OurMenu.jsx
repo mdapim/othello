@@ -8,7 +8,6 @@ export default function OurMenu() {
   const [chosenItem, setChosenItem] = useState('Lunch')
   return (
     <div>
-      {console.log(chosenItem)}
       <div
         className="mt-[149px] bg-fixed h-[50vh] w-full text-center text-white flex flex-col space-y-10 items-center justify-center"
         style={{

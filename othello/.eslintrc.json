@@ -14,6 +14,8 @@
     "arrow-parens": 0,
     "comma-dangle": "off",
     "react/no-unescaped-entities": 0,
-    "react/jsx-props-no-spreading": 1
+    "react/jsx-props-no-spreading": 1,
+    "import/no-extraneous-dependencies": 1,
+    "jsx-a11y/label-has-associated-control": 1
   }
 }

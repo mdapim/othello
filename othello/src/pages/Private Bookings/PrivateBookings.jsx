@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 
 export default function PrivateBookings() {
+  const { t } = useTranslation('Private')
   const navigate = useNavigate()
   return (
     <div>
@@ -12,12 +14,8 @@ export default function PrivateBookings() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpg`})`
         }}
       >
-        <p className="text-8xl uppercase font-bold"> Private Bookings </p>
-        <p className="text-2xl px-96">
-          Experience exclusivity at its finest with our private bookings at
-          Othello Restaurant in Grimsby. Enjoy an intimate and luxurious dining
-          experience tailored to your special occasion.
-        </p>
+        <p className="text-8xl uppercase font-bold"> {t('Title.heading')} </p>
+        <p className="text-2xl px-96">{t('Title.description')}</p>
       </div>
       <div className="p-10 m-auto grid grid-cols-2">
         <img
@@ -26,24 +24,12 @@ export default function PrivateBookings() {
           alt=""
         />
         <div className="py-20 m-auto px-32 space-y-6 flex flex-col items-center">
-          <h2 className="font-bold text-4xl uppercase ">The Aphrodite Suite</h2>
-          <p>
-            Elevate your event to new heights with our Aphrodite Suite at
-            Othello Restaurant in Grimsby. Designed to accommodate large
-            gatherings of 30+ people, this exclusive space offers an intimate
-            and luxurious setting for your special occasion.
-          </p>
-          <p>
-            From milestone celebrations to corporate events, the Aphrodite Suite
-            provides a haven of refined elegance, where impeccable service and
-            attention to detail are paramount.
-          </p>
-          <p>
-            Our dedicated team will work closely with you to customize every
-            aspect, from the menu to the ambiance, ensuring a truly
-            unforgettable experience for you and your guests. Book the Aphrodite
-            Suite today and make your event a resounding success.
-          </p>
+          <h2 className="font-bold text-4xl uppercase ">
+            {t('Aphrodite.title')}
+          </h2>
+          <p>{t('Aphrodite.p1')}</p>
+          <p>{t('Aphrodite.p2')}</p>
+          <p>{t('Aphrodite.p3')}</p>
           <button
             type="button"
             onClick={() => {
@@ -51,31 +37,16 @@ export default function PrivateBookings() {
             }}
             className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
           >
-            Enquire
+            {t('button')}
           </button>
         </div>
       </div>
       <div className="p-10  m-auto grid grid-cols-2">
         <div className="py-20 px-32 space-y-6 m-auto flex flex-col items-center">
-          <h2 className="font-bold text-4xl uppercase ">The Oasis Suite</h2>
-          <p>
-            Welcome to our family-friendly private room at Othello Restaurant in
-            Grimsby, where you can enjoy an intimate gathering with your loved
-            ones. With a curtain that comfortably accommodates a maximum of 8
-            people, this cozy space offers the perfect setting for creating
-            cherished memories.
-          </p>
-          <p>
-            Whether it's a birthday celebration, a special family dinner, or a
-            gathering with close friends, our attentive team is dedicated to
-            ensuring a delightful experience for everyone. Indulge in our
-            delectable menu options, specially crafted to please both young and
-            adult palates.
-          </p>
-          <p>
-            Experience warmth, togetherness, and exceptional dining in our
-            family-themed private room. Book now and let the festivities begin!
-          </p>
+          <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
+          <p>{t('Alcove.p1')}</p>
+          <p>{t('Alcove.p2')}</p>
+          <p>{t('Alcove.p3')}</p>
           <button
             type="button"
             onClick={() => {
@@ -83,7 +54,7 @@ export default function PrivateBookings() {
             }}
             className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
           >
-            Enquire
+            {t('button')}
           </button>
         </div>
         <img

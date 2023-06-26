@@ -1,11 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
 
 export default function CommentCard({ title, description, user, image }) {
+  const { t } = useTranslation('Main')
   return (
     <div className="flex justify-center align-end flex-col p-10">
       <h1 className="text-center t-40 text-5xl text-white">
-        What our happy clients thought
+        {t('Comments.title')}
       </h1>
       <br />
       <hr />

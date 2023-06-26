@@ -20,7 +20,7 @@ export default function GMap() {
     <div>
       {mapReady && <div>Map is ready. See for logs in developer console.</div>}
       <GoogleMap
-        apiKey=""
+        // apiKey="AIzaSyDU5Xiy_BPZ0hYlx6U663gOGbAtcl4S_" // 2Q
         defaultCenter={{ lat: 53.563999531581786, lng: -0.08794536619049058 }}
         defaultZoom={18}
         mapMinHeight="200px"

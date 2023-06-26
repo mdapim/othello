@@ -2,7 +2,32 @@ import React, { useState, useEffect } from 'react'
 import '../../../../index.css'
 import { Link } from 'react-router-dom'
 import '../../Main.css'
+import { useTranslation } from 'react-i18next'
 import AnimatedLink from './AnimatedLink'
+
+export function SelectDropDown() {
+  const { i18n } = useTranslation()
+  return (
+    <div>
+      <label htmlFor="underlineSelect" className="sr-only">
+        Underline select
+      </label>
+      <select
+        id="underlineSelect"
+        onChange={e => {
+          i18n.changeLanguage(e.target.value)
+        }}
+        className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-300 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+      >
+        <option selected>Select Language</option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">Germany</option>
+      </select>
+    </div>
+  )
+}
 
 export default function NavBarS() {
   const [hideBar, setHideBar] = useState(true)
@@ -30,10 +55,10 @@ export default function NavBarS() {
   }, [])
 
   return (
-    <nav className="px-2 sm:px-4 py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-95">
+    <nav className="px-2 sm:px-4 py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-100">
       <div
         className={`container flex flex-wrap items-center justify-between mx-auto transition-all duration-200${
-          changeSize ? ' py-0' : ' py-6'
+          changeSize ? ' py-0' : ' py-8'
         }`}
       >
         <Link to="/" class="flex items-center">
@@ -92,6 +117,7 @@ export default function NavBarS() {
               </li>
             ))}
           </ul>
+          <SelectDropDown />
         </div>
       </div>
     </nav>

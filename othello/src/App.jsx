@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import './App.css'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -13,15 +13,17 @@ function App() {
   return (
     // <div className="w-screen h-screen bg-stone-700">
     <BrowserRouter>
-      <NavBarS />
-      <Routes>
-        <Route index element={<Main />} />
-        <Route path="/" element={<Main />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/OurMenu" element={<OurMenu />} />
-        <Route path="/PrivateBookings" element={<PrivateBookings />} />
-      </Routes>
+      <Suspense fallback={<div>"Loading...."</div>}>
+        <NavBarS />
+        <Routes>
+          <Route index element={<Main />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/OurMenu" element={<OurMenu />} />
+          <Route path="/PrivateBookings" element={<PrivateBookings />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
     // </div>
   )

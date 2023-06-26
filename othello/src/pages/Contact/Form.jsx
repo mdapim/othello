@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import dateFormat from 'dateformat'
 import PropTypes from 'prop-types'
 import InputCard from './InputCard'
@@ -21,6 +22,7 @@ const timeOptions = [
 ]
 
 export default function Form({ sendMessage, handleFormInput }) {
+  const { t } = useTranslation('Contact')
   const [selectedDate, setSelectedDate] = useState(new Date())
   return (
     <form
@@ -34,12 +36,14 @@ export default function Form({ sendMessage, handleFormInput }) {
         <div className="grid gap-4 grid-cols-2">
           <InputCard
             name="Full name"
+            label="Form.name"
             size={25}
             type="text"
             handleFormInput={handleFormInput}
           />
           <InputCard
             name="phone number"
+            label="Form.phone"
             size={25}
             type="phone"
             handleFormInput={handleFormInput}
@@ -47,6 +51,7 @@ export default function Form({ sendMessage, handleFormInput }) {
         </div>
         <InputCard
           name="email address"
+          label="Form.email"
           size={55}
           type="email"
           handleFormInput={handleFormInput}
@@ -57,7 +62,7 @@ export default function Form({ sendMessage, handleFormInput }) {
             <label htmlFor="underline_select" className="sr-only">
               Underline select
             </label>
-            <p className="font-extrabold uppercase"> Event Time</p>
+            <p className="font-extrabold uppercase"> {t('Form.time')}</p>
             <select
               id="underline_select"
               name="event"
@@ -74,7 +79,7 @@ export default function Form({ sendMessage, handleFormInput }) {
           </div>
 
           <label htmlFor="input_date" className="font-extrabold uppercase">
-            Booking Date
+            {t('Form.date')}
             <br />
             <input
               id="input_date"
@@ -91,7 +96,7 @@ export default function Form({ sendMessage, handleFormInput }) {
           {console.log(dateFormat(selectedDate, 'yyyy-mm-dd').toString())}
         </div>
         <label htmlFor="text_box" className="font-extrabold uppercase">
-          Additional Info
+          {t('Form.info')}
           <br />
           <textarea
             id="text_box"
@@ -110,7 +115,7 @@ export default function Form({ sendMessage, handleFormInput }) {
           type="submit"
           className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
         >
-          Enquire
+          {t('button')}
         </button>
       </div>
     </form>

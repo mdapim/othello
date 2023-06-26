@@ -6,6 +6,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './Fonts/FONTLERO.TTF'
 import './Fonts/fontleroybrown.regular.ttf'
+import './i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

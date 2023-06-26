@@ -1,10 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useTranslation } from 'react-i18next'
 
-export default function InputCard({ name, handleFormInput, size, type }) {
+export default function InputCard({
+  label,
+  name,
+  handleFormInput,
+  size,
+  type
+}) {
+  const { t } = useTranslation('Contact')
   return (
     <label htmlFor="name" className="font-extrabold uppercase">
-      {name}
+      {t(label)}
       <br />
       <input
         id="name"
@@ -19,6 +27,7 @@ export default function InputCard({ name, handleFormInput, size, type }) {
 }
 
 InputCard.propTypes = {
+  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   handleFormInput: PropTypes.func.isRequired,
   size: PropTypes.number.isRequired,
