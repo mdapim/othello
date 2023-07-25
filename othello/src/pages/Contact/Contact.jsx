@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useTranslation } from 'react-i18next'
 import GMap from './googlemap'
 import Footer from '../../components/Footer/Footer'
 import Form from './Form'
 
 export default function Contact() {
+  const { t } = useTranslation('Contact')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,33 +63,18 @@ export default function Contact() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/chris.jpg`})`
         }}
       >
-        <p className="text-8xl font-bold uppercase">Contact Us </p>
-        <p className="text-2xl px-96">
-          We're here to assist you! Contact us at Othello Restaurant in Grimsby
-          to reserve a table or discuss your event needs. We look forward to
-          hearing from you.
-        </p>
+        <p className="text-8xl font-bold uppercase"> {t('Title.heading')} </p>
+        <p className="text-2xl px-96">{t('Title.description')}</p>
       </div>
       <div className="w-screenfull m-auto">
         <div className="m-auto my-20 text-center">
-          <p className="text-4xl font-bold">
-            Open Mondays through Saturdays Lunch - Dinner
-          </p>
-          <p className="my-5 text-3xl font-bold">
-            Call 01472 356704 during our opening times, or online using the form
-            below
-          </p>
+          <p className="text-4xl font-bold">{t('open_days')}</p>
+          <p className="my-5 text-3xl font-bold">{t('contact_info')}</p>
         </div>
         <div className="grid grid-cols-2 m-auto mt-32">
           <div>
-            <p className=" mx-28 font-bold text-5xl"> Enquires </p>
-            <p className=" text-lg mx-28 mt-14">
-              We recommend booking at least 2 weeks in advance for large parties
-              of 6 or more, Please be advised this form does not confirm your
-              reservation and you will be contacted by a member of our team as
-              quickly as possible to confirm it. We value your interest in our
-              establishment and look forward to serving you.
-            </p>
+            <p className=" mx-28 font-bold text-5xl"> {t('Form.enquire')} </p>
+            <p className=" text-lg mx-28 mt-14">{t('Form.description')}</p>
           </div>
           <div className="mx-20">
             <Form handleFormInput={handleFormInput} sendMessage={sendMessage} />

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import AnimatedLink from './AnimatedLink'
 
 export function SelectDropDown() {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   return (
     <div>
       <label htmlFor="underlineSelect" className="sr-only">
@@ -19,7 +19,7 @@ export function SelectDropDown() {
         }}
         className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-300 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
       >
-        <option selected>Select Language</option>
+        <option selected>{t('Navigation:Header.language')}</option>
         <option value="en">English</option>
         <option value="fr">French</option>
         <option value="es">Spanish</option>
@@ -30,14 +30,15 @@ export function SelectDropDown() {
 }
 
 export default function NavBarS() {
+  const { t } = useTranslation('Navigation')
   const [hideBar, setHideBar] = useState(true)
   const [changeSize, setChangeSize] = useState(false)
   const linkNames = [
-    { name: 'Home', link: '/' },
-    { name: 'About', link: '/About' },
-    { name: 'Our Menu', link: '/OurMenu' },
-    { name: 'Contact', link: 'Contact' },
-    { name: 'Private Bookings', link: 'PrivateBookings' }
+    { name: t('Header.home'), link: '/' },
+    { name: t('Header.about'), link: '/About' },
+    { name: t('Header.our_menu'), link: '/OurMenu' },
+    { name: t('Header.contact'), link: 'Contact' },
+    { name: t('Header.private'), link: 'PrivateBookings' }
   ]
 
   useEffect(() => {

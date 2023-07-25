@@ -5,6 +5,6 @@ module.exports = {
     default: ['JavascriptLexer']
   },
   locales: ['en', 'fr'], // array of locales
-  output: 'public/locales/$LOCALE/$NAMESPACE.json', // where to output into
+  output: 'src/utils/$LOCALE/$NAMESPACE.json', // where to output into
   input: ['src/pages/main/*.jsx'] // array of globs that tell you where to look for source files
 }

@@ -1,0 +1,22 @@
+{
+  "MainPage.welcome_message.p1": "Bienvenue à",
+  "MainPage.welcome_message.p2": "le",
+  "MainPage.welcome_message.p3": "Othello",
+  "MainPage.welcome_message.p4": "Berceau de la cuisine grecque authentique où vous pourrez découvrir le goût et les traditions de la Grèce à chaque bouchée. Nous sommes fiers de servir une cuisine grecque authentique préparée avec des ingrédients frais, des recettes classiques et une touche de nos propres secrets de famille.",
+  "MainPage.Try": "Essayez maintenant",
+  "InfoPage.about_message.p1": "Bienvenue dans notre restaurant grec, où vous pourrez découvrir les saveurs authentiques et l'hospitalité de la Grèce. Des îles ensoleillées aux régions montagneuses du continent, la cuisine grecque est une célébration d'ingrédients frais et sains, d'herbes et d'épices qui créent une symphonie de saveurs et d'arômes. Notre restaurant apporte cette expérience culinaire à votre porte, offrant une large gamme de plats qui mettent en valeur la diversité de la cuisine grecque.",
+  "InfoPage.about_message.p2": "Que vous soyez amateur de baklava, de moussaka ou de tzatziki, notre menu est conçu pour ravir vos papilles et vous transporter dans la campagne grecque. Alors rejoignez-nous pour un voyage culinaire à travers la Grèce et laissez-nous partager avec vous notre amour de la cuisine, de la culture et de l'hospitalité.",
+  "InfoPage.title": "Ce que nous offrons",
+  "Comments.title": "Ce qu'en ont pensé nos clients satisfaits",
+  "Featured.title": "Plats populaires",
+  "Promotion[0].title": "Ambiance de qualité",
+  "Promotion[0].description": "Une atmosphère agréable et confortable sans nuisances indésirables",
+  "Promotion[1].title": "Nourriture fraîche",
+  "Promotion[1].description": "Nourriture de haute qualité qui correspond aux normes du restaurant",
+  "Promotion[2].title": "Service excellent",
+  "Promotion[2].description": "Service rapide sur tous les fronts : de la prise en charge à la réception du chèque et tout le reste",
+  "Promotion[3].title": "Accueil chaleureux",
+  "Promotion[3].description": "Traitement aimable et cordial par le personnel du restaurant tout au long de votre expérience culinaire",
+  "Promotion[4].title": "Menus de saison",
+  "Promotion[4].description": "Ne manquez pas cette opportunité à durée limitée de savourer le meilleur de la saison"
+}
