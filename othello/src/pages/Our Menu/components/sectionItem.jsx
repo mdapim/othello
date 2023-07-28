@@ -5,6 +5,7 @@ import ListMeal from './ListMeal'
 export default function SectionItem({ menuItem, menuList }) {
   return (
     <>
+      {console.log('menu item is', menuItem)}
       <div
         className="bg-fixed h-72 w-full flex"
         style={{

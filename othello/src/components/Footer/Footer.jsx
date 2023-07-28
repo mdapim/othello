@@ -7,9 +7,9 @@ function OpeningHours() {
   return (
     <div className="text-justify m-auto">
       <p className="text-4xl my-8">{t('Footer.hours')}</p>
-      <p> Monday - Saturday</p>
-      <p> 12pm - 2pm</p>
-      <p> 6pm - 10pm</p>
+      <p> {t('Footer.days')}</p>
+      <p> {t('Footer.open_afternoon')}</p>
+      <p> {t('Footer.open_evening')}</p>
 
       <p className="underline mt-4"> {t('Footer.Enquire')} </p>
     </div>

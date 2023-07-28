@@ -8,10 +8,6 @@ import 'slick-carousel/slick/slick-theme.css'
 
 export default function Featured() {
   const { t } = useTranslation(['Menu', 'Main'])
-  // const Menu = lazy(() =>
-  //   import(`../../../../../public/locales/${i18n.language}/Menu.json`)
-  // )
-  // console.log(t('Lunch.starters.0.name'))
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -28,33 +24,33 @@ export default function Featured() {
   const featuredItems = [
     {
       image: 'bac',
-      title: t('Menu:Desserts.deserts.0.name'),
-      description: t('Desserts.deserts.0.description'),
-      price: t('Desserts.deserts.0.price')
+      title: t('Menu:OfficialMenu.Desserts.deserts.0.name'),
+      description: t('Menu:OfficialMenu.Desserts.deserts.0.description'),
+      price: t('Menu:OfficialMenu.Desserts.deserts.0.price')
     },
     {
       image: 'sea',
-      title: t('Menu:Dinner.fish.0.name'),
-      description: t('Menu:Dinner.fish.0.description'),
-      price: t('Menu:Dinner.fish.0.price')
+      title: t('Menu:OfficialMenu.Dinner.fish.0.name'),
+      description: t('Menu:OfficialMenu.Dinner.fish.0.description'),
+      price: t('Menu:OfficialMenu.Dinner.fish.0.price')
     },
     {
       image: 'garlic',
-      title: t('Menu:Dinner.fish.0.name'),
-      description: t('Menu:Dinner.fish.0.description'),
-      price: t('Menu:Dinner.fish.0.price')
+      title: t('Menu:OfficialMenu.Dinner.fish.0.name'),
+      description: t('Menu:OfficialMenu.Dinner.fish.0.description'),
+      price: t('Menu:OfficialMenu.Dinner.fish.0.price')
     },
     {
       image: 'steak',
-      title: t('Menu:Dinner.grill.1.name'),
-      description: t('Menu:Dinner.grill.1.description'),
-      price: t('Menu:Dinner.grill.1.price')
+      title: t('Menu:OfficialMenu.Dinner.grill.1.name'),
+      description: t('Menu:OfficialMenu.Dinner.grill.1.description'),
+      price: t('Menu:OfficialMenu.Dinner.grill.1.price')
     },
     {
       image: 'cheese',
-      title: t('Menu:Desserts.deserts.3.name'),
-      description: t('Menu:Desserts.deserts.3.description'),
-      price: t('Menu:Desserts.deserts.3.price')
+      title: t('Menu:OfficialMenu.Desserts.deserts.3.name'),
+      description: t('Menu:OfficialMenu.Desserts.deserts.3.description'),
+      price: t('Menu:OfficialMenu.Desserts.deserts.3.price')
     }
   ]
 

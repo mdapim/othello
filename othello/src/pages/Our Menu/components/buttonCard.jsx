@@ -1,15 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function ButtonCard({ title, description, image, setItem }) {
+export default function ButtonCard({
+  title,
+  description,
+  image,
+  setItem,
+  chosenKey
+}) {
   return (
     <div
       className="grid grid-cols-2 bg-black h-64 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
       onClick={() => {
-        setItem(title)
+        setItem(chosenKey)
       }}
       onKeyDown={() => {
-        setItem(title)
+        setItem(chosenKey)
       }}
       role="button"
       tabIndex={0}
@@ -35,5 +41,6 @@ ButtonCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  setItem: PropTypes.func.isRequired
+  setItem: PropTypes.func.isRequired,
+  chosenKey: PropTypes.string.isRequired
 }

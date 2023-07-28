@@ -6,6 +6,7 @@ import ButtonCard from './buttonCard'
 export default function ButtonGrid({ setItem }) {
   const { t } = useTranslation('OurMenu')
   const testArr = ['asp.jpeg', 'steak.jpeg', 'bac.jpeg', 'drinks.jpeg']
+
   return (
     // justify-items-stretch
     <div className="grid grid-cols-2 gap-2">
@@ -13,6 +14,7 @@ export default function ButtonGrid({ setItem }) {
         <ButtonCard
           title={t(`Buttons.${index}.title`)}
           description={t(`Buttons.${index}.description`)}
+          chosenKey={t(`Buttons.${index}.title`, { lng: 'en' })}
           image={item}
           setItem={setItem}
         />

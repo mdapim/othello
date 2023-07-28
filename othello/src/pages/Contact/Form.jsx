@@ -23,7 +23,7 @@ const timeOptions = [
 
 export default function Form({ sendMessage, handleFormInput }) {
   const { t } = useTranslation('Contact')
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [selectedDate] = useState(new Date())
   return (
     <form
       className="grid h-screen/2"
@@ -67,7 +67,7 @@ export default function Form({ sendMessage, handleFormInput }) {
               id="underline_select"
               name="event"
               defaultValue="--:--"
-              onChange={e => setSelectedDate(e.target.value)}
+              // onChange={e => setSelectedDate(e.target.value)}
               className="indent-2.5 h-10 w-full bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer"
             >
               {timeOptions.map(item => (
@@ -93,7 +93,6 @@ export default function Form({ sendMessage, handleFormInput }) {
               defaultValue={dateFormat(selectedDate, 'yyyy-mm-dd')}
             />
           </label>
-          {console.log(dateFormat(selectedDate, 'yyyy-mm-dd').toString())}
         </div>
         <label htmlFor="text_box" className="font-extrabold uppercase">
           {t('Form.info')}
