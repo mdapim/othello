@@ -2,7 +2,7 @@
   "Header": {
     "home": "maison",
     "about": "à propos",
-    "our_menu": "Notre Carte",
+    "our_menu": "Notre carte",
     "contact": "Contact",
     "private": "réservations_privées",
     "language": "Choisir la langue"
@@ -15,6 +15,9 @@
     "email": "othellogrimsby@gmail.com",
     "copyright": "Copyright © 2023 Restaurant Othello GY. Tous les droits sont réservés.",
     "hours": "Heures",
-    "Enquire": "Renseignez-vous maintenant"
+    "Enquire": "Renseignez-vous maintenant",
+    "days": "Lundi samedi",
+    "open_afternoon": "12h - 14h",
+    "open_evening": "18h - 22h"
   }
 }
