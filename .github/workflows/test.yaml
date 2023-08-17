@@ -26,10 +26,13 @@ jobs:
           echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
           source ~/.zshrc
 
-      - name: printing envs in zsh
+      - name: printing zsh file
         run: |
           cat ~/.zshrc
           echo "echoing files out now"
+
+      - name: echoing the files out
+        run: |
           echo "$FILE"
           echo "$FILE2"
           echo printenv
