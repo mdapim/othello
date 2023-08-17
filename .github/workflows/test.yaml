@@ -27,11 +27,10 @@ jobs:
           echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
           echo "export FILE3=${{ env.SETNAMEV }}" >> ~/.zshrc
           echo "export FILE4=$SETNAMEV" >> ~/.zshrc
-          echo "export FILE=${{ secrets.NAME }}" >> ~/.bash_profile
           echo "export FILE2=${{ vars.NAME2 }}" >> ~/.bash_profile
           echo "export FILE3=${{ env.SETNAMEV }}" >> ~/.bash_profile
           echo "export FILE4=$SETNAMEV" >> ~/.bash_profile
-          echo "export FILE5=testing this ourselves" >> ~/.bash_profile
+          echo "export FILE5=testing" >> ~/.bash_profile
           source ~/.zshrc
           source ~/.bash_profile
 
