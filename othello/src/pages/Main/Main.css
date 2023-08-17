@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
 
 .pacifico {
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
 }
 .frame {
   width: 100%;

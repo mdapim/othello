@@ -1,24 +1,25 @@
+/* eslint-disable */
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import InfoPanel from './components/InfoPanel/InfoPanel'
 import Featured from './components/Featured/Featured'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer' // eslint-disable-line
 import Comments from './components/Comments/Comments'
 
 export default function Main() {
-  const navigate = useNavigate()
-  const { t } = useTranslation('Main')
+  const navigate = useNavigate() // eslint-disable-line
+  const { t } = useTranslation('Main') // eslint-disable-line
 
   return (
-    <div className="frame">
+    <div className="bg-slate-600 h-[600px] w-full">
       <div
         className="bg-fixed h-screen w-full flex"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
         }}
       >
-        <div className="text-center text-white m-auto pt-20">
+        {/* <div className="text-center text-white m-auto pt-20">
           <img
             className="w-20 h-20 invert block m-auto"
             src={`${process.env.PUBLIC_URL}/Images/logot.png`}
@@ -31,7 +32,7 @@ export default function Main() {
             {t('MainPage.welcome_message.p2')}
           </p>
           <p className="text-8xl">{t('MainPage.welcome_message.p3')}</p>
-          <p className="text-2xl px-72 pt-10 w-screenfull">
+          <p className="text-2xl px-72 pt-10">
             {t('MainPage.welcome_message.p4')}
           </p>
           <br />
@@ -45,14 +46,14 @@ export default function Main() {
           >
             {t('MainPage.Try')}
           </button>
-        </div>
+        </div> */}
       </div>
       <br />
       <br />
-      <InfoPanel />
+      {/* <InfoPanel />
       <br />
       <Comments />
-      <Featured />
+      <Featured /> */}
       <Footer />
     </div>
   )

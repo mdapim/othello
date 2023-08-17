@@ -14,7 +14,7 @@ export default function SectionItem({ menuItem, menuList }) {
       >
         <p className="text-8xl text-white m-auto uppercase"> {menuItem} </p>
       </div>
-      <div className="grid grid-cols-2 gap-6 justify-between w-screenfull m-auto px-28 py-14">
+      <div className="grid grid-cols-2 gap-6 justify-between m-auto px-28 py-14">
         {menuList.map(item => (
           <ListMeal
             title={item.name}

@@ -1,0 +1,16 @@
+name: My Test
+on: [push]
+jobs:
+  testenv:
+    name: zsh
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup zshrc
+        env:
+          SETNAME: ${{ secrets.NAME}}
+          SETNAMEV: ${{ vars.NAME2 }}
+        run: |
+          echo "$SETNAME"
+          echo "$SETNAMEV"

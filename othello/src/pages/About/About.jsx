@@ -38,7 +38,7 @@ export default function About() {
         </div>
       </div>
       <hr className=" border-gray-400 m-auto mt-8" />
-      <div className="w-screenfull py-10 m-auto">
+      <div className="py-10 m-auto">
         <ImageGallery />
       </div>
 

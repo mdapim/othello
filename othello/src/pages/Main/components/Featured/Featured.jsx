@@ -70,7 +70,7 @@ export default function Featured() {
         </h3>
         <br />
         <div
-          className="w-screen h-72 w-screenfull m-auto
+          className="w-screen h-72 m-auto
 "
         >
           <Slider {...settings}>

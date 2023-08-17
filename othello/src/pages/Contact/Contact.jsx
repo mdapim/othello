@@ -66,7 +66,7 @@ export default function Contact() {
         <p className="text-8xl font-bold uppercase"> {t('Title.heading')} </p>
         <p className="text-2xl px-96">{t('Title.description')}</p>
       </div>
-      <div className="w-screenfull m-auto">
+      <div className="m-auto">
         <div className="m-auto my-20 text-center">
           <p className="text-4xl font-bold">{t('open_days')}</p>
           <p className="my-5 text-3xl font-bold">{t('contact_info')}</p>
