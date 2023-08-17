@@ -33,11 +33,13 @@ jobs:
           echo "export FILE4=$SETNAMEV" >> ~/.bash_profile
           echo "export FILE5=testing this ourselves" >> ~/.bash_profile
           source ~/.zshrc
+          source ~/.bash_profile
 
       - name: printing zsh file
         run: |
           cat ~/.zshrc
           source ~/.zshrc
+          source ~/.bash_profile
           echo "echoing files out now"
           cat ~/.bash_profile
 
@@ -48,4 +50,6 @@ jobs:
           echo " we are echoing - $FILE3"
           echo "we are echoing -  ${FILE4}"
           echo "we are echoing -  ${FILE5}"
+          echo "bash - $POWERSHELL_DISTRIBUTION_CHANNEL"
+          echo "bash2 - ${POWERSHELL_DISTRIBUTION_CHANNEL}"
           echo printenv
