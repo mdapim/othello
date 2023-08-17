@@ -30,9 +30,6 @@ jobs:
           echo "export FILE5=testing" >> ~/.bash_profile
           echo "export FILE6=testing234" >> ~/.bash_profile
           echo "export FILE5_IS=testingwhat" >> ~/.bash_profile
-          source ~/.zshrc
-          . ~/.zshrc
-          . ~/.bash_profile
 
       - name: printing zsh file
         run: |
@@ -44,6 +41,8 @@ jobs:
 
       - name: echoing the files out
         run: |
+          . ~/.bash_profile
+          . ~/.zshrc
           echo " we are echoing - $FILE"
           echo "we are echoing -  $FILE2"
           echo " we are echoing - $FILE3"
