@@ -46,6 +46,6 @@ jobs:
           echo " we are echoing - $FILE"
           echo "we are echoing -  $FILE2"
           echo " we are echoing - $FILE3"
-          echo "we are echoing -  $FILE4"
-          echo "we are echoing -  $FILE5"
+          echo "we are echoing -  ${FILE4}"
+          echo "we are echoing -  ${FILE5}"
           echo printenv
