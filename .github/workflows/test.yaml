@@ -34,16 +34,14 @@ jobs:
       - name: printing zsh file
         run: |
           cat ~/.zshrc
-          source ~/.zshrc
-          source ~/.bash_profile
           echo "echoing files out now"
           cat ~/.bash_profile
 
       - name: echoing the files out
         run: |
-          . ~/.bash_profile
-          . ~/.zshrc
-          echo " we are echoing - $FILE"
+          source ~/.bash_profile
+          source ~/.zshrc
+          echo " we are echoing s - $FILE"
           echo "we are echoing -  $FILE2"
           echo " we are echoing - $FILE3"
           echo "we are echoing -  ${FILE4}"
