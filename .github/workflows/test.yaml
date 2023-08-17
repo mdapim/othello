@@ -21,6 +21,7 @@ jobs:
 
       - name: Adding vars to zsh
         run: |
+          echo touch ~/.zshrc
           echo "export FILE=${{ secrets.NAME }}" >> ~/.zshrc
           echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
           source ~/.zshrc
