@@ -18,3 +18,17 @@ jobs:
           echo "$SETNAMEV"
           echo "${{ secrets.NAME}}"
           echo "${{ vars.NAME2 }}"
+
+      - name: Adding vars to zsh
+        run: |
+          echo "export FILE=${{ secrets.NAME }}" >> ~/.zshrc
+          echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
+          source ~/.zshrc
+
+      - name: printing envs in zsh
+        run: |
+          cat ~/.zshrc
+          echo "echoing files out now"
+          echo "$FILE"
+          echo "$FILE2"
+          echo printenv
