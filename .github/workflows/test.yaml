@@ -28,8 +28,8 @@ jobs:
           echo "export FILE3=${{ env.SETNAMEV }}" >> ~/.zshrc
           echo "export FILE4=$SETNAMEV" >> ~/.zshrc
           echo "export FILE5=testing" >> ~/.bash_profile
-          echo "export FILE6=testing234" >> ~/.bash_profile
-          echo "export FILE5_IS=testingwhat" >> ~/.bash_profile
+          echo "export FILE6=testing2345" >> ~/.bash_profile
+          echo "export FILE5_IS=testingwhats ab" >> ~/.bash_profile
 
       - name: printing zsh file
         run: |
@@ -50,5 +50,4 @@ jobs:
           echo "bash2 - ${POWERSHELL_DISTRIBUTION_CHANNEL}"
           echo "bash5 - $FILE5_IS"
           echo "bash6 - ${FILE5_IS}"
-          echo printenv
           env
