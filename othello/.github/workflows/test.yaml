@@ -1,17 +1,18 @@
 name: My Test
 on:
   push:
+    branches:
+      - i18next
+
 jobs:
   testenv:
-    name: zsh
     runs-on: macos-latest
+    env:
+      SETNAME: ${{ secrets.NAME}}
+      SETNAMEV: ${{ vars.NAME2 }}
     steps:
-      - uses: actions/checkout@v3
-
-      - name: setup zshrc
-        env:
-          SETNAME: ${{ secrets.NAME}}
-          SETNAMEV: ${{ vars.NAME2 }}
-        run: |
+      - name: Test env vars
+        uses: actions/checkout@v3
+      - run: |
           echo "$SETNAME"
           echo "$SETNAMEV"
