@@ -18,6 +18,7 @@ jobs:
           echo "$SETNAMEV"
           echo "${{ secrets.NAME}}"
           echo "${{ vars.NAME2 }}"
+          echo "${SETNAME}"
 
       - name: Adding vars to zsh
         run: |
@@ -29,10 +30,11 @@ jobs:
       - name: printing zsh file
         run: |
           cat ~/.zshrc
+          source ~/.zshrc
           echo "echoing files out now"
 
       - name: echoing the files out
         run: |
-          echo "$FILE"
-          echo "$FILE2"
+          echo " we are echoing - $FILE"
+          echo "we are echoing $FILE2"
           echo printenv
