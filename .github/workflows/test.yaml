@@ -25,6 +25,8 @@ jobs:
           echo touch ~/.zshrc
           echo "export FILE=${{ secrets.NAME }}" >> ~/.zshrc
           echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
+          echo "export FILE3=${{ env.SETNAMEV }}" >> ~/.zshrc
+          echo "export FILE4=$NAMEV" >> ~/.zshrc
           source ~/.zshrc
 
       - name: printing zsh file
@@ -36,5 +38,7 @@ jobs:
       - name: echoing the files out
         run: |
           echo " we are echoing - $FILE"
-          echo "we are echoing $FILE2"
+          echo "we are echoing -  $FILE2"
+          echo " we are echoing - $FILE3"
+          echo "we are echoing -  $FILE4"
           echo printenv
