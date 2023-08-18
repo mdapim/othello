@@ -38,6 +38,7 @@ jobs:
           cat ~/.bash_profile
 
       - name: echoing the files out
+        id: rune2e
         run: |
           source ~/.bash_profile
           source ~/.zshrc
@@ -51,3 +52,14 @@ jobs:
           echo "bash5 - $FILE5_IS"
           echo "bash6 - ${FILE5_IS}"
           env
+          exit 1
+
+      - name: stop video
+        if: always()
+        run: |
+          echo "running video now"
+
+      - name: store vid
+        if: steps.runE2E.outcome == 'failure'
+        run: |
+          echo "we are saving now"
