@@ -60,6 +60,6 @@ jobs:
           echo "running video now"
 
       - name: store vid
-        if: steps.rune2e.outcome == 'failure'
+        if: failure() && steps.rune2e.outcome == 'failure'
         run: |
           echo "we are saving now"
