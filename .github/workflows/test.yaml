@@ -36,6 +36,7 @@ jobs:
           cat ~/.zshrc
           echo "echoing files out now"
           cat ~/.bash_profile
+          exit 1
 
       - name: echoing the files out
         id: rune2e
@@ -52,7 +53,6 @@ jobs:
           echo "bash5 - $FILE5_IS"
           echo "bash6 - ${FILE5_IS}"
           env
-          exit 1
 
       - name: stop video
         if: always()
