@@ -39,7 +39,7 @@ jobs:
           cat ~/.zshrc
           echo "echoing files out now"
           cat ~/.bash_profile
-        #   exit 1
+        #    exit 1
 
       - name: set delay
         run: |
