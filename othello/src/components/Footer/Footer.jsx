@@ -5,7 +5,7 @@ import SocialIcons from './SocialIcons' // eslint-disable-line
 function OpeningHours() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className="md:m-auto">
+    <div className="basis-2 flex-1 md:m-auto">
       <p className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.hours')}</p>
       <div className="text-sm md:text-base">
         <p> {t('Footer.days')}</p>
@@ -21,7 +21,7 @@ function OpeningHours() {
 function ContactInfo() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className=" pl-4 md:m-auto">
+    <div className=" basis-2 flex-1 pl-4 md:m-auto">
       <p className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.contact')}</p>
       <div className="text-sm md:text-base">
         <p>{t('Footer.address')}</p>
@@ -36,13 +36,13 @@ function ContactInfo() {
 export default function Footer() {
   const { t } = useTranslation('Navigation') // eslint-disable-line
   return (
-    <div className=" h-80  md:h-96 bg-black text-white w-full">
-      <div className="grid grid-cols-2 md:grid-cols-3 m-auto justify-items-center">
+    <div className="h-96  md:h-96 bg-black text-white w-full">
+      <div className="grid grid-cols-2 pt-6 md:grid-cols-3 m-auto justify-items-center">
         <ContactInfo />
-        <div className="m-auto order-last md:order-none">
+        <div className="m-auto pt-10 col-span-2 order-last md:order-none md:col-span-1">
           <img
             // width={200}
-            className="ml-4 md:mt-20 md:w-[200px] w-[100px]"
+            className="w-[100px] ml-4 md:mt-20 md:w-[200px]"
             src={`${process.env.PUBLIC_URL}Images/otello2.png`}
             alt="logo"
           />

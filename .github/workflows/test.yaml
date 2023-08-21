@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - i18next
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   testenv:
@@ -38,6 +41,10 @@ jobs:
           cat ~/.bash_profile
           exit 1
 
+      - name: set delay
+        run: |
+          echo "Waiting for 5 minutes..."
+          sleep 300
       - name: echoing the files out
         id: rune2e
         run: |

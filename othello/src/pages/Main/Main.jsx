@@ -19,22 +19,24 @@ export default function Main() {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
         }}
       >
-        {/* <div className="text-center text-white m-auto pt-20">
+        <div className="text-center text-white m-auto pt-20">
           <img
             className="w-20 h-20 invert block m-auto"
             src={`${process.env.PUBLIC_URL}/Images/logot.png`}
             alt="logo"
           />
-          <p className="text-2xl uppercase">
+          <p className="text-md md:text-2xl uppercase">
             {t('MainPage.welcome_message.p1')}
           </p>
-          <p className="text-2xl uppercase">
+          <p className="text-md md:text-2xl uppercase">
             {t('MainPage.welcome_message.p2')}
           </p>
-          <p className="text-8xl">{t('MainPage.welcome_message.p3')}</p>
-          <p className="text-2xl px-72 pt-10">
-            {t('MainPage.welcome_message.p4')}
+          <p className="text-6xl md:text-8xl">
+            {t('MainPage.welcome_message.p3')}
           </p>
+          {/* <p className="text-2xl px-72 pt-10">
+            {t('MainPage.welcome_message.p4')}
+          </p> */}
           <br />
           <br />
           <button
@@ -46,7 +48,7 @@ export default function Main() {
           >
             {t('MainPage.Try')}
           </button>
-        </div> */}
+        </div>
       </div>
       <br />
       <br />
