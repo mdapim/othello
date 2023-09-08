@@ -34,9 +34,9 @@ export default function Main() {
           <p className="text-6xl md:text-8xl">
             {t('MainPage.welcome_message.p3')}
           </p>
-          {/* <p className="text-2xl px-72 pt-10">
+          <p className="text-lg px-2 md:text-2xl md:px-72 pt-10 ">
             {t('MainPage.welcome_message.p4')}
-          </p> */}
+          </p>
           <br />
           <br />
           <button
@@ -52,10 +52,10 @@ export default function Main() {
       </div>
       <br />
       <br />
-      {/* <InfoPanel />
+      <InfoPanel />
       <br />
       <Comments />
-      <Featured /> */}
+      <Featured />
       <Footer />
     </div>
   )
