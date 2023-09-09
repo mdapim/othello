@@ -27,7 +27,7 @@ export default function PrivateBookings() {
           src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
           alt=""
         />
-        <div className="p-10 py-20 m-auto md:px-32 space-y-6 flex flex-col items-center">
+        <div className="pb-20 md:pb-0 p-10 md:py-20 m-auto md:px-32 space-y-6 flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">
             {t('Aphrodite.title')}
           </h2>
@@ -45,8 +45,8 @@ export default function PrivateBookings() {
           </button>
         </div>
       </div>
-      <div className="md:p-10  m-auto grid grid-cols-1 md:grid-cols-2">
-        <div className="order-2 md:order-1 p-10 py-20 md:px-32 space-y-6 m-auto flex flex-col items-center">
+      <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
+        <div className="order-2 md:order-1 p-10 md:py-20 md:px-32 space-y-6 m-auto flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
           <p>{t('Alcove.p1')}</p>
           <p>{t('Alcove.p2')}</p>
