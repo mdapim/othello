@@ -9,7 +9,7 @@ export default function ButtonGrid({ setItem }) {
 
   return (
     // justify-items-stretch
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       {testArr.map((item, index) => (
         <ButtonCard
           title={t(`Buttons.${index}.title`)}

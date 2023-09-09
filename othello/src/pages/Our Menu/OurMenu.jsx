@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import SectionItem from './components/sectionItem'
@@ -20,17 +21,21 @@ export default function OurMenu() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/crab.jpeg`})`
         }}
       >
-        <p className="text-8xl uppercase font-bold"> {t('OurMenu:title')} </p>
-        <p className="text-2xl px-96">{t('OurMenu:description')}</p>
+        <p className="text-6xl md:text-8xl uppercase font-bold">
+          {t('OurMenu:title')}
+        </p>
+        <p className="text-base px-6 md:text-2xl md:px-96">
+          {t('OurMenu:description')}
+        </p>
       </div>
-      <div className="m-24">
+      <div className="m-4 md:m-24">
         <ButtonGrid setItem={setChosenItem} />
       </div>
 
       <br />
-      <hr className=" h-px dark:bg-black" />
+      {/* <hr className=" h-px dark:bg-black" /> */}
 
-      <ul className="flex flex-col space-y-10 ">
+      {/* <ul className="flex flex-col space-y-10 ">
         {MenuItems &&
           chosenItem &&
           Object.keys(
@@ -41,7 +46,7 @@ export default function OurMenu() {
               menuList={MenuItems[chosenItem][item]}
             />
           ))}
-      </ul>
+      </ul> */}
 
       <Footer />
     </div>
