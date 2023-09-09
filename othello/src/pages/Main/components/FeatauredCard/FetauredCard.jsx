@@ -10,7 +10,7 @@ export default function FeaturedCard({ image, title, description }) {
 
   return (
     <div
-      className="w-48 m-auto md:w-80 h-[340px] md:h-[480px] shadow-md border text-black hover:cursor-pointer"
+      className="w-44 m-auto md:w-80 h-[340px] md:h-[480px] shadow-md border text-black hover:cursor-pointer"
       role="link"
       tabIndex={0}
       onClick={handleEventAction}

@@ -65,7 +65,7 @@ export default function Featured() {
         className="opacity-10 p-10 absolute h-full md:h-auto top-0 left-0 w-screen z-0" // inset-x-80 inset-y-24
       />
       <div className="m-auto z-10">
-        <h1 className="text-center t-40 text-4xl text-black">
+        <h1 className="text-center t-40 text-4xl md:text-5xl text-black">
           {t('Main:Featured.title')}
         </h1>
         <h3 className="text-white text-xl text-center">
