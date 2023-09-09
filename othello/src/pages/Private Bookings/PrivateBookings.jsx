@@ -14,16 +14,20 @@ export default function PrivateBookings() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpg`})`
         }}
       >
-        <p className="text-8xl uppercase font-bold"> {t('Title.heading')} </p>
-        <p className="text-2xl px-96">{t('Title.description')}</p>
+        <p className="text-6xl md:text-8xl uppercase font-bold">
+          {t('Title.heading')}
+        </p>
+        <p className="text-base px-6 md:text-2xl md:px-96">
+          {t('Title.description')}
+        </p>
       </div>
-      <div className="p-10 m-auto grid grid-cols-2">
+      <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
         <img
-          className=""
+          className="p-2"
           src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
           alt=""
         />
-        <div className="py-20 m-auto px-32 space-y-6 flex flex-col items-center">
+        <div className="p-10 py-20 m-auto md:px-32 space-y-6 flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">
             {t('Aphrodite.title')}
           </h2>
@@ -41,8 +45,8 @@ export default function PrivateBookings() {
           </button>
         </div>
       </div>
-      <div className="p-10  m-auto grid grid-cols-2">
-        <div className="py-20 px-32 space-y-6 m-auto flex flex-col items-center">
+      <div className="md:p-10  m-auto grid grid-cols-1 md:grid-cols-2">
+        <div className="order-2 md:order-1 p-10 py-20 md:px-32 space-y-6 m-auto flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
           <p>{t('Alcove.p1')}</p>
           <p>{t('Alcove.p2')}</p>
@@ -58,7 +62,7 @@ export default function PrivateBookings() {
           </button>
         </div>
         <img
-          className=""
+          className="order-1 md:order-2 p-2"
           src={`${process.env.PUBLIC_URL}/Images/elnap.jpg`}
           alt=""
         />
