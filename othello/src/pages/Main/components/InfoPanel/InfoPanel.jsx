@@ -19,7 +19,9 @@ export default function InfoPanel() {
         className="infoPanel-container infoPanel-text pacific text-center align-self-center m-auto z-10 "
         id="test"
       >
-        <h1 className="uppercase text-4xl">{t('InfoPage.title')}</h1>
+        <h1 className="uppercase text-2xl md:text-4xl">
+          {t('InfoPage.title')}
+        </h1>
         <br />
         <span className="flex flex-col text-justify p-4 space-y-10 text-sm md:p-0 md:flex-row md:text-lg md:space-y-0 md:space-x-14">
           <p className="flex-1">{t('InfoPage.about_message.p1')}</p>

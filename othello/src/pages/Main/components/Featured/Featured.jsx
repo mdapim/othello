@@ -13,7 +13,7 @@ export default function Featured() {
   console.log('mobile', isMobile)
   const settings = {
     infinite: true,
-    slidesToShow: isMobile ? 1 : 4,
+    slidesToShow: isMobile ? 2 : 4,
     slidesToScroll: 1,
     fade: false,
     autoplay: true,
@@ -58,14 +58,14 @@ export default function Featured() {
   ]
 
   return (
-    <div className="h-screen/2 w-100% p-10 relative overflow-hidden">
+    <div className=" h-full md:h-screen/2 w-full py-10 relative overflow-hidden">
       <img
         src={`${process.env.PUBLIC_URL}/Images/olive.jpeg`}
         alt="op"
-        className="opacity-10 p-10 absolute h-auto top-0 left-0 w-screen z-0" // inset-x-80 inset-y-24
+        className="opacity-10 p-10 absolute h-full md:h-auto top-0 left-0 w-screen z-0" // inset-x-80 inset-y-24
       />
       <div className="m-auto z-10">
-        <h1 className="text-center t-40 text-5xl text-black">
+        <h1 className="text-center t-40 text-4xl text-black">
           {t('Main:Featured.title')}
         </h1>
         <h3 className="text-white text-xl text-center">
@@ -73,7 +73,7 @@ export default function Featured() {
         </h3>
         <br />
         <div
-          className="w-screen h-72 m-auto
+          className="w-full h-72 m-auto
 "
         >
           <Slider {...settings}>
