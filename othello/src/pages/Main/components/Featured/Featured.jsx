@@ -4,13 +4,16 @@ import Slider from 'react-slick'
 import FeaturedCard from '../FeatauredCard/FetauredCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import useWindowSize from '../../../../utils/useWindowSize'
 // import Menu from '../../../../Menu.json'
 
 export default function Featured() {
   const { t } = useTranslation(['Menu', 'Main'])
+  const isMobile = useWindowSize(window.innerWidth)
+  console.log('mobile', isMobile)
   const settings = {
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: isMobile ? 1 : 4,
     slidesToScroll: 1,
     fade: false,
     autoplay: true,
@@ -83,7 +86,7 @@ export default function Featured() {
             ))}
           </Slider>
         </div>
-        <h3 className=" mt-60 text-black text-xl text-center">
+        <h3 className="mt-60 text-black text-xl text-center">
           ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
         </h3>
       </div>
