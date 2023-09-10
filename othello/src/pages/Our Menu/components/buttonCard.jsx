@@ -10,7 +10,7 @@ export default function ButtonCard({
 }) {
   return (
     <div
-      className="grid grid-cols-2 bg-black md:h-64 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
+      className="grid grid-cols-2 bg-black overflow-hidden h-40 md:h-64 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
       onClick={() => {
         setItem(chosenKey)
       }}

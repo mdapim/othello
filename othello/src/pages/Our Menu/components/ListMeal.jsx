@@ -17,12 +17,12 @@ export default function ListMeal({ title, description, price }) {
   }
 
   return (
-    <span className="grid grid-cols-3 gap-0">
-      <span className="col-span-2">
-        <h1 className="font-bold text-xl"> {title} </h1>
-        <p> {description}</p>
+    <span className="grid grid-cols-4 gap-0">
+      <span className="col-span-3">
+        <h1 className="font-bold text-base md:text-xl"> {title} </h1>
+        <p className="text-xs md:text-base"> {description}</p>
       </span>
-      <p className="font-bold m-auto col-span-1">
+      <p className="text-sm md:text-base font-bold m-auto col-span-1">
         {t('formatPrice', {
           val: formatPrice(price),
           currency: localeCurrency[i18n.language]

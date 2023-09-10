@@ -33,9 +33,9 @@ export default function OurMenu() {
       </div>
 
       <br />
-      {/* <hr className=" h-px dark:bg-black" /> */}
+      <hr className=" p-2 bg-white" />
 
-      {/* <ul className="flex flex-col space-y-10 ">
+      <ul className="flex flex-col space-y-10 ">
         {MenuItems &&
           chosenItem &&
           Object.keys(
@@ -46,8 +46,8 @@ export default function OurMenu() {
               menuList={MenuItems[chosenItem][item]}
             />
           ))}
-      </ul> */}
-
+      </ul>
+      <div className="p-6 bg-white" />
       <Footer />
     </div>
   )
