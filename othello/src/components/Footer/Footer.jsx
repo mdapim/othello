@@ -36,7 +36,7 @@ function ContactInfo() {
 export default function Footer() {
   const { t } = useTranslation('Navigation') // eslint-disable-line
   return (
-    <div className="h-96  md:h-96 bg-black text-white w-full">
+    <div className="h-96 md:h-96 bg-black text-white w-full">
       <div className="grid grid-cols-2 pt-6 md:grid-cols-3 m-auto justify-items-center">
         <ContactInfo />
         <div className="m-auto pt-10 col-span-2 order-last md:order-none md:col-span-1">
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
         <OpeningHours />
       </div>
-      <p className="text-xs md:text-base mt-16 text-center text-white mt-5">
+      <p className="text-xs md:text-base mt-16 text-center text-white mt-5 md:pb-8 bg-black">
         {t('Footer.copyright')}
       </p>
     </div>

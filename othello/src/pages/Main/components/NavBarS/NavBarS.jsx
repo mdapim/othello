@@ -37,8 +37,8 @@ export default function NavBarS() {
     { name: t('Header.home'), link: '/' },
     { name: t('Header.about'), link: '/About' },
     { name: t('Header.our_menu'), link: '/OurMenu' },
-    { name: t('Header.contact'), link: 'Contact' },
-    { name: t('Header.private'), link: 'PrivateBookings' }
+    { name: t('Header.contact'), link: '/Contact' },
+    { name: t('Header.private'), link: '/PrivateBookings' }
   ]
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function NavBarS() {
     return () => {
       window.removeEventListener('scroll', fixedNavbar, true)
     }
-  }, [])
+  }, [hideBar])
 
   return (
     <nav className="md:px-2 py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-100">
@@ -114,6 +114,8 @@ export default function NavBarS() {
                   name={name}
                   link={link}
                   textCol={name === 'Home' ? 'text-othello' : 'text-gray-400'}
+                  toggleHideBar={setHideBar}
+                  hideBarState={hideBar}
                 />
               </li>
             ))}

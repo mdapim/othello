@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react'
+/* eslint-disable */
+import React, { Suspense, useEffect } from 'react'
 import './App.css'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -8,8 +9,13 @@ import Contact from './pages/Contact/Contact'
 import OurMenu from './pages/Our Menu/OurMenu'
 import PrivateBookings from './pages/Private Bookings/PrivateBookings'
 import NavBarS from './pages/Main/components/NavBarS/NavBarS'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1200 })
+  })
   return (
     // <div className="w-screen h-screen bg-stone-700">
     <BrowserRouter>

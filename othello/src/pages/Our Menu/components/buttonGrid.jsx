@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
 import ButtonCard from './buttonCard'
 
-export default function ButtonGrid({ setItem }) {
+export default function ButtonGrid({ setItem, scrollToMenu }) {
   const { t } = useTranslation('OurMenu')
   const testArr = ['asp.jpeg', 'steak.jpeg', 'bac.jpeg', 'drinks.jpeg']
 
@@ -17,6 +17,7 @@ export default function ButtonGrid({ setItem }) {
           chosenKey={t(`Buttons.${index}.title`, { lng: 'en' })}
           image={item}
           setItem={setItem}
+          scrollToMenu={scrollToMenu}
         />
       ))}
     </div>
@@ -24,5 +25,6 @@ export default function ButtonGrid({ setItem }) {
 }
 
 ButtonGrid.propTypes = {
-  setItem: PropTypes.func.isRequired
+  setItem: PropTypes.func.isRequired,
+  scrollToMenu: PropTypes.func.isRequired
 }

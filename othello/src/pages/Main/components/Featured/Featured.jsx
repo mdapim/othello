@@ -58,7 +58,10 @@ export default function Featured() {
   ]
 
   return (
-    <div className=" h-full md:h-screen/2 w-full py-10 relative overflow-hidden">
+    <div
+      className=" h-full md:h-screen/2 w-full py-10 relative overflow-hidden"
+      data-aos="fade-up"
+    >
       <img
         src={`${process.env.PUBLIC_URL}/Images/olive.jpeg`}
         alt="op"

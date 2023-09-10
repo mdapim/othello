@@ -6,16 +6,19 @@ export default function ButtonCard({
   description,
   image,
   setItem,
-  chosenKey
+  chosenKey,
+  scrollToMenu
 }) {
   return (
     <div
       className="grid grid-cols-2 bg-black overflow-hidden h-40 md:h-64 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
       onClick={() => {
         setItem(chosenKey)
+        scrollToMenu()
       }}
       onKeyDown={() => {
         setItem(chosenKey)
+        scrollToMenu()
       }}
       role="button"
       tabIndex={0}
@@ -42,5 +45,6 @@ ButtonCard.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   setItem: PropTypes.func.isRequired,
-  chosenKey: PropTypes.string.isRequired
+  chosenKey: PropTypes.string.isRequired,
+  scrollToMenu: PropTypes.func.isRequired
 }

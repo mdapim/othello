@@ -24,6 +24,7 @@ export default function Comments() {
   return (
     <div
       className="h-full md:h-screen/2 w-500% p-2 md:p-10 flex"
+      data-aos="fade-up"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
       }}

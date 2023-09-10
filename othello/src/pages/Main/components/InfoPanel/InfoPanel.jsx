@@ -8,8 +8,12 @@ const promotionCards = ['\u2605', '\u2766', '\u2764', '\u2600', '\u2746']
 
 export default function InfoPanel() {
   const { t } = useTranslation('Main')
+
   return (
-    <div className="flex flex-wrap flex-row m-auto h-auto w-full md:w-10/12 relative overflow-hidden">
+    <div
+      data-aos="fade-up"
+      className="flex flex-wrap flex-row m-auto h-auto w-full md:w-10/12 relative overflow-hidden"
+    >
       <img
         src={`${process.env.PUBLIC_URL}/Images/sketch.jpeg`}
         alt="op"

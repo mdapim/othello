@@ -12,29 +12,30 @@ export default function Main() {
   const { t } = useTranslation('Main') // eslint-disable-line
 
   return (
-    <div className="bg-slate-600 h-[600px] w-full">
+    <div className="mt-[50px] bg-slate-600 h-[600px] w-full">
       <div
-        className="bg-fixed h-screen w-full flex"
+        className=" bg-fixed h-screen w-full flex"
+        data-aos="fade-up"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
         }}
       >
-        <div className="text-center text-white m-auto pt-20">
+        <div className="animate-fade-up text-center text-white m-auto pt-20">
           <img
-            className="w-20 h-20 invert block m-auto"
+            className="w-12 h-12 md:w-20 md:h-20 invert block m-auto"
             src={`${process.env.PUBLIC_URL}/Images/logot.png`}
             alt="logo"
           />
-          <p className="text-md md:text-2xl uppercase">
+          <p className="text-lg md:text-2xl uppercase">
             {t('MainPage.welcome_message.p1')}
           </p>
-          <p className="text-md md:text-2xl uppercase">
+          <p className="text-lg md:text-2xl uppercase">
             {t('MainPage.welcome_message.p2')}
           </p>
-          <p className="text-6xl md:text-8xl">
+          <p className="text-4xl md:text-6xl md:text-8xl">
             {t('MainPage.welcome_message.p3')}
           </p>
-          <p className="text-lg px-2 md:text-2xl md:px-72 pt-10 ">
+          <p className="text-sm px-2 md:text-2xl md:px-72 pt-10 ">
             {t('MainPage.welcome_message.p4')}
           </p>
           <br />
