@@ -23,7 +23,7 @@ export default function PrivateBookings() {
       </div>
       <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
         <img
-          className="p-2"
+          className="p-2 md:pt-20"
           src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
           alt=""
         />
@@ -62,7 +62,7 @@ export default function PrivateBookings() {
           </button>
         </div>
         <img
-          className="order-1 md:order-2 p-2"
+          className="order-1 md:order-2 p-2 md:pt-20"
           src={`${process.env.PUBLIC_URL}/Images/elnap.jpg`}
           alt=""
         />

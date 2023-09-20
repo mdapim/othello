@@ -12,7 +12,7 @@ export default function Main() {
   const { t } = useTranslation('Main') // eslint-disable-line
 
   return (
-    <div className="mt-[50px] bg-slate-600 h-[600px] w-full">
+    <div className="mt-[50px] h-[600px] w-full">
       <div
         className=" bg-fixed h-screen w-full flex"
         data-aos="fade-up"
