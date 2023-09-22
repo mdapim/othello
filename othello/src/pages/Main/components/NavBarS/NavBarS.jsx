@@ -66,7 +66,7 @@ export default function NavBarS() {
           <img
             src={`${process.env.PUBLIC_URL}/Images/otello2.png`}
             className={`relative object-cover overflow-hidden transition-all duration-200${
-              changeSize ? ' w-full h-14' : ' w-full h-20'
+              changeSize ? ' h-14' : ' w-ful h-20'
             }`}
             alt="Flowbite Logo"
           />

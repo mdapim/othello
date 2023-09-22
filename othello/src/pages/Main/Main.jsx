@@ -14,7 +14,7 @@ export default function Main() {
   return (
     <div className="mt-[50px] h-[600px] w-full">
       <div
-        className=" bg-fixed h-screen w-full flex"
+        className=" bg-fixed h-screen min-h-full w-full flex"
         data-aos="fade-up"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
