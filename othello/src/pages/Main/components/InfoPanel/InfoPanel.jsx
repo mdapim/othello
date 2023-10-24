@@ -14,11 +14,6 @@ export default function InfoPanel() {
       data-aos="fade-up"
       className="flex flex-wrap flex-row m-auto h-auto w-full md:w-10/12 relative overflow-hidden"
     >
-      <img
-        src={`${process.env.PUBLIC_URL}/Images/sketch.jpeg`}
-        alt="op"
-        className="opacity-30 absolute top-0 left-0 w-screen h-full md:h-auto z-0" // inset-x-80 inset-y-24
-      />
       <div
         className="infoPanel-container infoPanel-text pacific text-center align-self-center m-auto z-10 "
         id="test"
@@ -27,15 +22,16 @@ export default function InfoPanel() {
           {t('InfoPage.title')}
         </h1>
         <br />
-        <span className="flex flex-col text-justify p-4 space-y-10 text-sm md:p-0 md:flex-row md:text-lg md:space-y-0 md:space-x-14">
+        <span className="flex flex-col text-left p-4 space-y-10 text-sm md:p-0 md:flex-row md:text-lg md:space-y-0 md:space-x-14">
           <p className="flex-1">{t('InfoPage.about_message.p1')}</p>
           <p className="flex-1">{t('InfoPage.about_message.p2')}</p>
         </span>
         <br />
-        <span className="flex flex-row flex-wrap md:space-x-32 text-justify">
+        <span className="flex flex-row flex-wrap md:space-x-32 text-left">
           {promotionCards.map((item, index) => (
             <PromotionCard
-              key={item.id}
+              code={item}
+              key={item}
               Details={item}
               title={t(`Promotion.${index}.title`)}
               description={t(`Promotion.${index}.description`)}

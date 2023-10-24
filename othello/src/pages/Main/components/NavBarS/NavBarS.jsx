@@ -62,17 +62,17 @@ export default function NavBarS() {
           changeSize ? ' py-0' : ' py-8'
         }`}
       >
-        <Link to="/" class="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
             src={`${process.env.PUBLIC_URL}/Images/otello2.png`}
             className={`relative object-cover overflow-hidden transition-all duration-200${
               changeSize ? ' h-14' : ' w-ful h-20'
             }`}
-            alt="Flowbite Logo"
+            alt="Othello Linked Logo"
           />
-          <span className="self-center othello-text-small text-4xl font-semibold whitespace-nowrap dark:text-white">
+          <h1 className="self-center othello-text-small text-4xl font-semibold whitespace-nowrap dark:text-white">
             Othello
-          </span>
+          </h1>
         </Link>
         <div className="flex md:order-2 p-4">
           <button
@@ -84,6 +84,7 @@ export default function NavBarS() {
             className="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-1 focus:ring-gray-200"
             aria-controls="navbar-sticky"
             aria-expanded="false"
+            aria-label="expand navigation options"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -109,7 +110,7 @@ export default function NavBarS() {
         >
           <ul className="flex flex-col p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white md:dark:bg-transparent">
             {linkNames.map(({ name, link }) => (
-              <li>
+              <li key={name}>
                 <AnimatedLink
                   name={name}
                   link={link}

@@ -18,7 +18,6 @@ export default function OurMenu() {
   }
 
   const handleClick2 = () => {
-    console.log('click yah')
     ref3.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -33,9 +32,9 @@ export default function OurMenu() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/crab.jpeg`})`
         }}
       >
-        <p className="text-6xl md:text-8xl uppercase font-bold">
+        <h1 className="text-6xl md:text-8xl uppercase font-bold">
           {t('OurMenu:title')}
-        </p>
+        </h1>
         <p className="text-base px-6 md:text-2xl md:px-96" ref={ref3}>
           {t('OurMenu:description')}
         </p>
@@ -54,6 +53,7 @@ export default function OurMenu() {
             t('Menu:OfficialMenu', { returnObjects: true })[chosenItem]
           ).map((item, index) => (
             <SectionItem
+              key={item}
               menuItem={t(`OurMenu:${chosenItem}.${index}`)}
               menuList={MenuItems[chosenItem][item]}
             />

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
@@ -63,25 +64,25 @@ export default function Contact() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/chris.jpg`})`
         }}
       >
-        <p className="text-6xl md:text-8xl font-bold uppercase">
+        <h1 className="text-6xl md:text-8xl font-bold uppercase">
           {t('Title.heading')}
-        </p>
+        </h1>
         <p className="text-base md:text-2xl px-6 md:px-96">
           {t('Title.description')}
         </p>
       </div>
       <div className="m-auto">
         <div className="m-auto my-10 md:my-20 text-center">
-          <p className="text-2xl md:text-4xl font-bold">{t('open_days')}</p>
+          <h2 className="text-2xl md:text-4xl font-bold">{t('open_days')}</h2>
           <p className="my-2 md:my-5 text-xl md:text-3xl font-bold">
             {t('contact_info')}
           </p>
         </div>
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 m-auto md:mt-32">
           <div>
-            <p className=" mx-28 font-bold text-4xl md:text-5xl">
+            <h2 className=" mx-28 font-bold text-4xl md:text-5xl">
               {t('Form.enquire')}
-            </p>
+            </h2>
             <p className="text-base mx-4 mt-6 md:text-lg md:mx-28 md:mt-14">
               {t('Form.description')}
             </p>

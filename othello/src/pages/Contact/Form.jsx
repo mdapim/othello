@@ -71,7 +71,7 @@ export default function Form({ sendMessage, handleFormInput }) {
               className="indent-2.5 h-10 w-full bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer"
             >
               {timeOptions.map(item => (
-                <option disabled={item === '--:--'} value={item}>
+                <option key={item} disabled={item === '--:--'} value={item}>
                   {item}
                 </option>
               ))}
@@ -112,6 +112,7 @@ export default function Form({ sendMessage, handleFormInput }) {
       <div className="mx-auto mt-8">
         <button
           type="submit"
+          aria-label="submit form"
           className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
         >
           {t('button')}

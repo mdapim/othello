@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
@@ -11,11 +12,11 @@ export default function InputCard({
 }) {
   const { t } = useTranslation('Contact')
   return (
-    <label htmlFor="name" className="font-extrabold uppercase">
+    <label className="font-extrabold uppercase">
       {t(label)}
       <br />
       <input
-        id="name"
+        id={name}
         type={type}
         name={name}
         size={size}

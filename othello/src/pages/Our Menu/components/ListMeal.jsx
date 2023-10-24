@@ -19,7 +19,7 @@ export default function ListMeal({ title, description, price }) {
   return (
     <span className="grid grid-cols-4 gap-0">
       <span className="col-span-3">
-        <h1 className="font-bold text-base md:text-xl"> {title} </h1>
+        <h4 className="font-bold text-base md:text-xl"> {title} </h4>
         <p className="text-xs md:text-base"> {description}</p>
       </span>
       <p className="text-sm md:text-base font-bold m-auto col-span-1">

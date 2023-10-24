@@ -12,21 +12,22 @@ export default function CommentCard({ title, description, user, image }) {
       <br />
       <hr />
       <br />
-      <h1 className="text-white text-center text-lg md:text-3xl"> {title} </h1>
+      <h2 className="text-white text-center text-lg md:text-3xl"> {title} </h2>
       <br />
-      <h2 className="text-white text-center text-sm md:text-xl">
-        {description}
-      </h2>
+      <p className="text-white text-center text-sm md:text-xl">{description}</p>
       <br />
       <p className="text-white text-sm text-center md:text-lg">{user}</p>
-      <br />
-      <h1 className="text-white text-center text-sm md:text-5xl">
+      <br />ß
+      <h3
+        className="text-white text-center text-sm md:text-5xl"
+        aria-label="separator"
+      >
         &#x275C;&#x275C;
-      </h1>
+      </h3>
       <img
         className=" w-16 h-16 rounded-full self-center"
         src={image}
-        alt="reviewer's logo"
+        alt={`${user}  "trip advisor logo`}
       />
     </div>
   )

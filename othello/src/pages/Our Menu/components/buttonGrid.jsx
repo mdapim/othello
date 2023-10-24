@@ -12,6 +12,7 @@ export default function ButtonGrid({ setItem, scrollToMenu }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       {testArr.map((item, index) => (
         <ButtonCard
+          key={item}
           title={t(`Buttons.${index}.title`)}
           description={t(`Buttons.${index}.description`)}
           chosenKey={t(`Buttons.${index}.title`, { lng: 'en' })}

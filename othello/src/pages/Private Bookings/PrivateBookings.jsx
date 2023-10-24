@@ -14,9 +14,9 @@ export default function PrivateBookings() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpg`})`
         }}
       >
-        <p className="text-6xl md:text-8xl uppercase font-bold">
+        <h1 className="text-6xl md:text-8xl uppercase font-bold">
           {t('Title.heading')}
-        </p>
+        </h1>
         <p className="text-base px-6 md:text-2xl md:px-96">
           {t('Title.description')}
         </p>
@@ -36,6 +36,7 @@ export default function PrivateBookings() {
           <p>{t('Aphrodite.p3')}</p>
           <button
             type="button"
+            aria-label="navigates to contact"
             onClick={() => {
               navigate('/Contact')
             }}
@@ -53,6 +54,7 @@ export default function PrivateBookings() {
           <p>{t('Alcove.p3')}</p>
           <button
             type="button"
+            aria-label="navigates to contact"
             onClick={() => {
               navigate('/Contact')
             }}

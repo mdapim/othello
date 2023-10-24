@@ -13,9 +13,9 @@ export default function About() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
         }}
       >
-        <p className="text-6xl md:text-8xl font-bold uppercase">
+        <h1 className="text-6xl md:text-8xl font-bold uppercase">
           {t('Title.heading')}
-        </p>
+        </h1>
         <p className="text-base px-6 md:text-2xl md:px-96">
           {t('Title.description')}
         </p>
@@ -32,7 +32,7 @@ export default function About() {
         </div>
         <hr className="md:w-[600px] border-[0.5px] border-gray-400 m-auto mt-8" />
         <div className="flex-1 m-auto space-y-10">
-          <div className="p-8 md:px-96 space-y-6 text-justify">
+          <div className="p-8 md:px-96 space-y-6 text-left">
             <p>{t('Story.p1')}</p>
             <p>{t('Story.p2')}</p>
             <p>{t('Story.p3')}</p>

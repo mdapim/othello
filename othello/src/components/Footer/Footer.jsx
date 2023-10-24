@@ -6,12 +6,12 @@ function OpeningHours() {
   const { t } = useTranslation('Navigation')
   return (
     <div className="basis-2 flex-1 md:m-auto">
-      <p className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.hours')}</p>
+      <h1 className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.hours')}</h1>
       <div className="text-sm md:text-base">
         <p> {t('Footer.days')}</p>
         <p> {t('Footer.open_afternoon')}</p>
         <p> {t('Footer.open_evening')}</p>
-        <p className="underline mt-4"> {t('Footer.Enquire')} </p>
+        {/* <p className="underline mt-4"> {t('Footer.Enquire')} </p> */}
       </div>
     </div>
   )
@@ -22,12 +22,14 @@ function ContactInfo() {
   const { t } = useTranslation('Navigation')
   return (
     <div className=" basis-2 flex-1 pl-4 md:m-auto">
-      <p className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.contact')}</p>
+      <h1 className="text-2xl my-2 md:text-4xl md:my-8">
+        {t('Footer.contact')}
+      </h1>
       <div className="text-sm md:text-base">
         <p>{t('Footer.address')}</p>
         {/* <p>{t('Footer.postcode')}</p> */}
-        <p className="underline mt-4">{t('Footer.phone')}</p>
-        <p className="underline">{t('Footer.email')}</p>
+        <p className="font-bosld mt-4">{t('Footer.phone')}</p>
+        <p className="font-bosld">{t('Footer.email')}</p>
       </div>
     </div>
   )
@@ -44,12 +46,21 @@ export default function Footer() {
             // width={200}
             className="w-[100px] ml-4 md:mt-20 md:w-[200px]"
             src={`${process.env.PUBLIC_URL}Images/otello2.png`}
-            alt="logo"
+            alt="Othello Logo"
           />
           <div className="mt-6 space-x-1 text-center">
-            <SocialIcons imageURL="https://twitter.com/jaketrent" />
-            <SocialIcons imageURL="https://www.facebook.com/othellorestaurantgrimsby/" />
-            <SocialIcons imageURL="mailto:othellogrimsby@gmail.com" />
+            <SocialIcons
+              aria-label="twitter link"
+              imageURL="https://twitter.com/jaketrent"
+            />
+            <SocialIcons
+              aria-label="facebook link"
+              imageURL="https://www.facebook.com/othellorestaurantgrimsby/"
+            />
+            <SocialIcons
+              aria-label="email link"
+              imageURL="mailto:othellogrimsby@gmail.com"
+            />
           </div>
         </div>
         <OpeningHours />

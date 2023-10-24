@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable */
+import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Slider from 'react-slick'
 import FeaturedCard from '../FeatauredCard/FetauredCard'
@@ -9,8 +10,8 @@ import useWindowSize from '../../../../utils/useWindowSize'
 
 export default function Featured() {
   const { t } = useTranslation(['Menu', 'Main'])
+  const [activeSlide, setActiveSlide] = useState(0)
   const isMobile = useWindowSize(window.innerWidth)
-  console.log('mobile', isMobile)
   const settings = {
     infinite: true,
     slidesToShow: isMobile ? 2 : 4,
@@ -21,7 +22,21 @@ export default function Featured() {
     autoplaySpeed: 4000,
     cssEase: 'linear',
     pauseOnHover: false,
-    arrows: false
+    arrows: false,
+    accessibility: true,
+    afterChange: () => hideAriaHiddenTiles()
+  }
+
+  useEffect(() => {
+    hideAriaHiddenTiles()
+  }, [])
+
+  const hideAriaHiddenTiles = () => {
+    Array.from(document.querySelectorAll('.slick-slide')).forEach(slide => {
+      slide.style.visibility = slide.classList?.contains('slick-active')
+        ? 'visible'
+        : 'hidden'
+    })
   }
 
   const featuredItems = [
@@ -29,31 +44,36 @@ export default function Featured() {
       image: 'bac',
       title: t('Menu:OfficialMenu.Desserts.deserts.0.name'),
       description: t('Menu:OfficialMenu.Desserts.deserts.0.description'),
-      price: t('Menu:OfficialMenu.Desserts.deserts.0.price')
+      price: t('Menu:OfficialMenu.Desserts.deserts.0.price'),
+      hiddenNo: 1
     },
     {
       image: 'sea',
-      title: t('Menu:OfficialMenu.Dinner.fish.0.name'),
-      description: t('Menu:OfficialMenu.Dinner.fish.0.description'),
-      price: t('Menu:OfficialMenu.Dinner.fish.0.price')
+      title: t('Menu:OfficialMenu.Dinner.fish.1.name'),
+      description: t('Menu:OfficialMenu.Dinner.fish.1.description'),
+      price: t('Menu:OfficialMenu.Dinner.fish.1.price'),
+      hiddenNo: 2
     },
     {
       image: 'garlic',
       title: t('Menu:OfficialMenu.Dinner.fish.0.name'),
       description: t('Menu:OfficialMenu.Dinner.fish.0.description'),
-      price: t('Menu:OfficialMenu.Dinner.fish.0.price')
+      price: t('Menu:OfficialMenu.Dinner.fish.0.price'),
+      hiddenNo: 3
     },
     {
       image: 'steak',
       title: t('Menu:OfficialMenu.Dinner.grill.1.name'),
       description: t('Menu:OfficialMenu.Dinner.grill.1.description'),
-      price: t('Menu:OfficialMenu.Dinner.grill.1.price')
+      price: t('Menu:OfficialMenu.Dinner.grill.1.price'),
+      hiddenNo: 4
     },
     {
       image: 'cheese',
       title: t('Menu:OfficialMenu.Desserts.deserts.3.name'),
       description: t('Menu:OfficialMenu.Desserts.deserts.3.description'),
-      price: t('Menu:OfficialMenu.Desserts.deserts.3.price')
+      price: t('Menu:OfficialMenu.Desserts.deserts.3.price'),
+      hiddenNo: 0
     }
   ]
 
@@ -62,36 +82,39 @@ export default function Featured() {
       className=" h-full md:h-screen/2 w-full py-10 relative overflow-hidden"
       data-aos="fade-up"
     >
-      <img
-        src={`${process.env.PUBLIC_URL}/Images/olive.jpeg`}
-        alt="op"
-        className="opacity-10 p-10 absolute h-full md:h-auto top-0 left-0 w-screen z-0" // inset-x-80 inset-y-24
-      />
       <div className="m-auto z-10">
         <h1 className="text-center t-40 text-4xl md:text-5xl text-black">
           {t('Main:Featured.title')}
         </h1>
-        <h3 className="text-white text-xl text-center">
-          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
-        </h3>
         <br />
         <div
-          className="w-full h-72 m-auto
+          className="w-full h-72 m-auto mt-10
 "
         >
-          <Slider {...settings}>
-            {featuredItems.map(item => (
-              <FeaturedCard
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
+          {console.log('active slide is', activeSlide)}
+          <Slider
+            beforeChange={(_, next) => setActiveSlide(next)}
+            {...settings}
+          >
+            {featuredItems.map((item, index) => {
+              // console.log('active slide is ', activeSlide, 'index is ', index)
+              return (
+                <FeaturedCard
+                  activeSlide={activeSlide}
+                  key={item.title}
+                  image={item.image}
+                  index={index}
+                  title={item.title}
+                  description={item.description}
+                  hiddenNo={item.hiddenNo}
+                />
+              )
+            })}
           </Slider>
         </div>
-        <h3 className="mt-60 text-black text-xl text-center">
+        <p className="mt-60 text-black text-xl text-center">
           ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
-        </h3>
+        </p>
       </div>
     </div>
   )

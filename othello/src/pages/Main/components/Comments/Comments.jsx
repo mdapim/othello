@@ -33,6 +33,7 @@ export default function Comments() {
         <Slider {...settings}>
           {ReviewsData.map(item => (
             <CommentCard
+              key={item.Title}
               title={item.Title}
               description={item['Review text']}
               user={item.Author}

@@ -24,17 +24,20 @@ export default function Main() {
           <img
             className="w-12 h-12 md:w-20 md:h-20 invert block m-auto"
             src={`${process.env.PUBLIC_URL}/Images/logot.png`}
-            alt="logo"
+            alt="wheat symbol"
           />
-          <p className="text-lg md:text-2xl uppercase">
-            {t('MainPage.welcome_message.p1')}
-          </p>
-          <p className="text-lg md:text-2xl uppercase">
-            {t('MainPage.welcome_message.p2')}
-          </p>
-          <p className="text-4xl md:text-6xl md:text-8xl">
-            {t('MainPage.welcome_message.p3')}
-          </p>
+          <h2>
+            <span className="text-lg block md:text-2xl uppercase">
+              {t('MainPage.welcome_message.p1')}
+            </span>
+            <span className="text-lg block md:text-2xl uppercase">
+              {t('MainPage.welcome_message.p2')}
+            </span>
+            <span className="text-4xl md:text-6xl md:text-8xl">
+              {t('MainPage.welcome_message.p3')}
+            </span>
+          </h2>
+
           <p className="text-sm px-2 md:text-2xl md:px-72 pt-10 ">
             {t('MainPage.welcome_message.p4')}
           </p>
@@ -45,6 +48,7 @@ export default function Main() {
             onClick={() => {
               navigate('/OurMenu')
             }}
+            aria-label="Try now navigates to the our menu page"
             className="relative h-12 w-44 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-black"
           >
             {t('MainPage.Try')}
