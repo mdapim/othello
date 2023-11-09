@@ -1,21 +1,20 @@
 import * as AWS from '@aws-sdk/client-ses'
-import 'dotenv/config'
 
 const SESSION_CONFIG = {
   credentials: {
-    accessKeyId: process.env.ACCESS_ID,
-    secretAccessKey: process.env.ACCESS_KEY
+    accessKeyId: process.env.REACT_APP_ACCESS_ID,
+    secretAccessKey: process.env.REACT_APP_ACCESS_KEY
   },
-  region: process.env.AWS_REGION
+  region: process.env.REACT_APP_AWS_REGION
 }
 
 const sesClient = new AWS.SESClient(SESSION_CONFIG)
 
-export default async function sendEmail(recipientEmial, details) {
+export default async function sendEmail(recipientEmail, details) {
   const params = {
-    Source: process.env.AWS_SES_SENDER,
+    Source: process.env.REACT_APP_AWS_SES_SENDER,
     Destination: {
-      ToAddresses: [recipientEmial]
+      ToAddresses: [recipientEmail]
     },
     ReplyToAddress: [],
     Message: {
@@ -70,13 +69,14 @@ export default async function sendEmail(recipientEmial, details) {
     console.log('error sending email', error)
   }
 }
-const details = {
-  name: 'John Doe',
-  phone: '(555) 555-5555',
-  email: 'johndoe@example.com',
-  time: '7:00 PM',
-  date: 'November 15, 2023',
-  message:
-    "We'd like a table for four by the window, and it's our anniversary celebration."
-}
-sendEmail('mikkay1@outlook.com', details)
+// const details = {
+//   name: 'John Doe',
+//   phone: '(555) 555-5555',
+//   email: 'johndoe@example.com',
+//   time: '7:00 PM',
+//   date: 'November 15, 2023',
+//   message:
+//     "We'd like a table for four by the window, and it's our anniversary celebration."
+// }
+
+// sendEmail('mikkay1@outlook.com', details)

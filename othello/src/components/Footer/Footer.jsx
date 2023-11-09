@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import SocialIcons from './SocialIcons' // eslint-disable-line
+import SocialIcons from './SocialIcons'
 
 function OpeningHours() {
   const { t } = useTranslation('Navigation')
@@ -11,13 +11,11 @@ function OpeningHours() {
         <p> {t('Footer.days')}</p>
         <p> {t('Footer.open_afternoon')}</p>
         <p> {t('Footer.open_evening')}</p>
-        {/* <p className="underline mt-4"> {t('Footer.Enquire')} </p> */}
       </div>
     </div>
   )
 }
 
-// eslint-disable-next-line
 function ContactInfo() {
   const { t } = useTranslation('Navigation')
   return (
@@ -27,7 +25,6 @@ function ContactInfo() {
       </h1>
       <div className="text-sm md:text-base">
         <p>{t('Footer.address')}</p>
-        {/* <p>{t('Footer.postcode')}</p> */}
         <p className="font-bosld mt-4">{t('Footer.phone')}</p>
         <p className="font-bosld">{t('Footer.email')}</p>
       </div>
@@ -36,14 +33,13 @@ function ContactInfo() {
 }
 
 export default function Footer() {
-  const { t } = useTranslation('Navigation') // eslint-disable-line
+  const { t } = useTranslation('Navigation')
   return (
     <div className="h-96 md:h-96 bg-black text-white w-full">
       <div className="grid grid-cols-2 pt-6 md:grid-cols-3 m-auto justify-items-center">
         <ContactInfo />
         <div className="m-auto pt-10 col-span-2 order-last md:order-none md:col-span-1">
           <img
-            // width={200}
             className="w-[100px] ml-4 md:mt-20 md:w-[200px]"
             src={`${process.env.PUBLIC_URL}Images/otello2.png`}
             alt="Othello Logo"

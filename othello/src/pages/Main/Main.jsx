@@ -1,15 +1,14 @@
-/* eslint-disable */
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import InfoPanel from './components/InfoPanel/InfoPanel'
 import Featured from './components/Featured/Featured'
-import Footer from '../../components/Footer/Footer' // eslint-disable-line
+import Footer from '../../components/Footer/Footer'
 import Comments from './components/Comments/Comments'
 
 export default function Main() {
-  const navigate = useNavigate() // eslint-disable-line
-  const { t } = useTranslation('Main') // eslint-disable-line
+  const navigate = useNavigate()
+  const { t } = useTranslation('Main')
 
   return (
     <div className="mt-[50px] h-[600px] w-full">

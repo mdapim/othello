@@ -1,10 +1,10 @@
-/* eslint-disable */
 import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
+import dateFormat from 'dateformat'
 import GMap from './openmap'
 import Footer from '../../components/Footer/Footer'
 import Form from './Form'
+import sendEmail from './sendEmail'
 
 export default function Contact() {
   const { t } = useTranslation('Contact')
@@ -13,22 +13,9 @@ export default function Contact() {
     email: '',
     phone: '',
     time: '',
-    date: '',
+    date: dateFormat(new Date(), 'yyyy-mm-dd'),
     message: ''
   })
-  const data = {
-    service_id: 'service_lw9ch6r',
-    template_id: 'template_0lx9i2t',
-    user_id: 'fUXfArGHyPjFG9aG-',
-    template_params: {
-      to_name: formData.name,
-      from_name: formData.email,
-      subject: formData.subject,
-      phone: formData.phone,
-      message: formData.message,
-      'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    }
-  }
 
   const handleFormInput = e => {
     const { name } = e.target
@@ -38,24 +25,7 @@ export default function Contact() {
   }
 
   const sendMessage = async () => {
-    // const apiResponse = await emailjs
-    //   .send(
-    //     data.service_id,
-    //     data.template_id,
-    //     data.template_params,
-    //     data.user_id
-    //   )
-    //   .then(
-    //     response => {
-    //       console.log('SUCCESS!', response.status, response.text)
-    //     },
-    //     error => {
-    //       console.log('FAILED...', error)
-    //     }
-    //   )
-    // console.log(apiResponse)
-    console.log(formData)
-    console.log('message sent')
+    sendEmail('mikkay1@outlook.com', formData)
   }
 
   return (

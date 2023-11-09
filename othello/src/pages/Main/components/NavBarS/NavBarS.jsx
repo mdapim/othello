@@ -31,7 +31,7 @@ export function SelectDropDown() {
 
 export default function NavBarS() {
   const { t } = useTranslation('Navigation')
-  const [hideBar, setHideBar] = useState(true) //eslint-disable-line
+  const [hideBar, setHideBar] = useState(true)
   const [changeSize, setChangeSize] = useState(false)
   const linkNames = [
     { name: t('Header.home'), link: '/' },

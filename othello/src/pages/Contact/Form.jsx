@@ -58,7 +58,6 @@ export default function Form({ sendMessage, handleFormInput }) {
         />
         <div className="grid gap-4 grid-cols-2">
           <div>
-            {/* eslint-disable-next-line */}
             <label htmlFor="underline_select" className="sr-only">
               Underline select
             </label>

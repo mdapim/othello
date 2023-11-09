@@ -1,23 +1,22 @@
-/* eslint-disable */
 import React, { Suspense, useEffect } from 'react'
 import './App.css'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
 import Main from './pages/Main/Main'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import OurMenu from './pages/Our Menu/OurMenu'
 import PrivateBookings from './pages/Private Bookings/PrivateBookings'
 import NavBarS from './pages/Main/components/NavBarS/NavBarS'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function App() {
+  console.log(process.env.REACT_APP_AWS_REGION)
   useEffect(() => {
     AOS.init({ duration: 1200 })
   })
   return (
-    // <div className="w-screen h-screen bg-stone-700">
     <BrowserRouter>
       <Suspense fallback={<div>"Loading...."</div>}>
         <NavBarS />
@@ -31,7 +30,6 @@ function App() {
         </Routes>
       </Suspense>
     </BrowserRouter>
-    // </div>
   )
 }
 

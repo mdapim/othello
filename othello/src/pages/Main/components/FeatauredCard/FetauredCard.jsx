@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -24,8 +23,6 @@ export default function FeaturedCard({
   return (
     <div
       className="w-44 m-auto md:w-80 h-[340px] md:h-[480px] shadow-md border text-black hover:cursor-pointer"
-      // hidden={activeSlide === hiddenNo ? true : undefined}
-      // aria-hidden={activeSlide === hiddenNo ? true : undefined}
       role="link"
       tabIndex={activeSlide === hiddenNo ? -1 : 0}
       onClick={handleEventAction}
@@ -53,5 +50,8 @@ export default function FeaturedCard({
 FeaturedCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  index: PropTypes.string.isRequired,
+  activeSlide: PropTypes.string.isRequired,
+  hiddenNo: PropTypes.string.isRequired
 }
