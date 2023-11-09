@@ -46,7 +46,7 @@ export default function OurMenu() {
       <br ref={ref} />
       <hr className=" p-4 bg-white" />
 
-      <ul className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10">
         {MenuItems &&
           chosenItem &&
           Object.keys(
@@ -58,7 +58,7 @@ export default function OurMenu() {
               menuList={MenuItems[chosenItem][item]}
             />
           ))}
-      </ul>
+      </div>
       <div className="p-6 bg-white" />
       <BackToTop scrollToTop={handleClick2} />
       <Footer />

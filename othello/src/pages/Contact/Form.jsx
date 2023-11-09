@@ -35,14 +35,14 @@ export default function Form({ sendMessage, handleFormInput }) {
       <div className="grid">
         <div className="grid gap-4 grid-cols-2">
           <InputCard
-            name="Full name"
+            name="name"
             label="Form.name"
             size={25}
             type="text"
             handleFormInput={handleFormInput}
           />
           <InputCard
-            name="phone number"
+            name="phone"
             label="Form.phone"
             size={25}
             type="phone"
@@ -50,7 +50,7 @@ export default function Form({ sendMessage, handleFormInput }) {
           />
         </div>
         <InputCard
-          name="email address"
+          name="email"
           label="Form.email"
           size={55}
           type="email"
@@ -65,9 +65,9 @@ export default function Form({ sendMessage, handleFormInput }) {
             <p className="font-extrabold uppercase"> {t('Form.time')}</p>
             <select
               id="underline_select"
-              name="event"
+              name="time"
               defaultValue="--:--"
-              // onChange={e => setSelectedDate(e.target.value)}
+              onChange={handleFormInput}
               className="indent-2.5 h-10 w-full bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer"
             >
               {timeOptions.map(item => (

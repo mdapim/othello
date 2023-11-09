@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
-import GMap from './googlemap'
+import GMap from './openmap'
 import Footer from '../../components/Footer/Footer'
 import Form from './Form'
 
@@ -12,7 +12,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    event: '',
+    time: '',
     date: '',
     message: ''
   })
@@ -38,22 +38,24 @@ export default function Contact() {
   }
 
   const sendMessage = async () => {
-    const apiResponse = await emailjs
-      .send(
-        data.service_id,
-        data.template_id,
-        data.template_params,
-        data.user_id
-      )
-      .then(
-        response => {
-          console.log('SUCCESS!', response.status, response.text)
-        },
-        error => {
-          console.log('FAILED...', error)
-        }
-      )
-    console.log(apiResponse)
+    // const apiResponse = await emailjs
+    //   .send(
+    //     data.service_id,
+    //     data.template_id,
+    //     data.template_params,
+    //     data.user_id
+    //   )
+    //   .then(
+    //     response => {
+    //       console.log('SUCCESS!', response.status, response.text)
+    //     },
+    //     error => {
+    //       console.log('FAILED...', error)
+    //     }
+    //   )
+    // console.log(apiResponse)
+    console.log(formData)
+    console.log('message sent')
   }
 
   return (
@@ -92,7 +94,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
       <GMap />
       <Footer />
     </div>

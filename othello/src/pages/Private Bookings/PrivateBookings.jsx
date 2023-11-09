@@ -36,7 +36,7 @@ export default function PrivateBookings() {
           <p>{t('Aphrodite.p3')}</p>
           <button
             type="button"
-            aria-label="navigates to contact"
+            aria-label="enquire navigates to contact"
             onClick={() => {
               navigate('/Contact')
             }}
@@ -54,7 +54,7 @@ export default function PrivateBookings() {
           <p>{t('Alcove.p3')}</p>
           <button
             type="button"
-            aria-label="navigates to contact"
+            aria-label="enquire navigates to contact"
             onClick={() => {
               navigate('/Contact')
             }}

@@ -11,12 +11,14 @@
 @font-face {
   font-family: 'FONTLERO'; /*Can be any text*/
   src: local('FONTLERO'), url('./Fonts/FONTLERO.TTF') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'fontleroybrown.regular'; /*Can be any text*/
   src: local('fontleroybrown.regular'),
     url('./Fonts/fontleroybrown.regular.ttf') format('truetype');
+  font-display: swap;
 }
 body {
   margin: 0;
@@ -26,9 +28,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-display: swap;
 }

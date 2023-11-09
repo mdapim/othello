@@ -66,7 +66,7 @@ export default function NavBarS() {
           <img
             src={`${process.env.PUBLIC_URL}/Images/otello2.png`}
             className={`relative object-cover overflow-hidden transition-all duration-200${
-              changeSize ? ' h-14' : ' w-ful h-20'
+              changeSize ? 'w-20 h-14' : ' w-20 h-20'
             }`}
             alt="Othello Linked Logo"
           />
