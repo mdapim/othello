@@ -17,7 +17,7 @@ export default function PrivateBookings() {
         <h1 className="text-6xl md:text-8xl uppercase font-bold">
           {t('Title.heading')}
         </h1>
-        <p className="text-base px-6 md:text-2xl md:px-96">
+        <p className="text-base px-6 md:text-2xl md:px-[18vw]">
           {t('Title.description')}
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function PrivateBookings() {
           src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
           alt=""
         />
-        <div className="pb-20 md:pb-0 p-10 md:py-20 m-auto md:px-32 space-y-6 flex flex-col items-center">
+        <div className="pb-20 md:pb-0 p-10 md:py-20 m-auto md:px-[5%] space-y-6 flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">
             {t('Aphrodite.title')}
           </h2>
@@ -47,7 +47,7 @@ export default function PrivateBookings() {
         </div>
       </div>
       <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
-        <div className="order-2 md:order-1 p-10 md:py-20 md:px-32 space-y-6 m-auto flex flex-col items-center">
+        <div className="order-2 md:order-1 p-10 md:py-20 md:px-[5%] space-y-6 m-auto flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
           <p>{t('Alcove.p1')}</p>
           <p>{t('Alcove.p2')}</p>

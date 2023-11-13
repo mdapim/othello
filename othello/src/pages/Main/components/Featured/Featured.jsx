@@ -79,7 +79,7 @@ export default function Featured() {
 
   return (
     <div
-      className=" h-full md:h-screen/2 w-full py-10 relative overflow-hidden"
+      className="inline-block h-full pt-10 xl:py-0 2xl:px-44 xl:h-screen/2 w-full xl:mt-[10%] m-auto"
       data-aos="fade-up"
     >
       <div className="m-auto z-10">
@@ -91,19 +91,16 @@ export default function Featured() {
           className="w-full h-72 m-auto mt-10
 "
         >
-          {console.log('active slide is', activeSlide)}
           <Slider
             beforeChange={(_, next) => setActiveSlide(next)}
             {...settings}
           >
             {featuredItems.map((item, index) => {
-              // console.log('active slide is ', activeSlide, 'index is ', index)
               return (
                 <FeaturedCard
                   activeSlide={activeSlide}
                   key={item.title}
                   image={item.image}
-                  index={index}
                   title={item.title}
                   description={item.description}
                   hiddenNo={item.hiddenNo}
@@ -111,10 +108,11 @@ export default function Featured() {
               )
             })}
           </Slider>
+          <p className="mt-10 text-black text-xl text-center">
+            ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
+            ------------
+          </p>
         </div>
-        <p className="mt-60 text-black text-xl text-center">
-          ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; ------------
-        </p>
       </div>
     </div>
   )

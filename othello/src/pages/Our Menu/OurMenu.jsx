@@ -34,7 +34,7 @@ export default function OurMenu() {
         <h1 className="text-6xl md:text-8xl uppercase font-bold">
           {t('OurMenu:title')}
         </h1>
-        <p className="text-base px-6 md:text-2xl md:px-96" ref={ref3}>
+        <p className="text-base px-6 md:text-2xl md:px-[18vw]" ref={ref3}>
           {t('OurMenu:description')}
         </p>
       </div>

@@ -70,7 +70,7 @@ export default function NavBarS() {
             }`}
             alt="Othello Linked Logo"
           />
-          <h1 className="self-center othello-text-small text-4xl font-semibold whitespace-nowrap dark:text-white">
+          <h1 className="self-center othello-text-small text-4xl font-semibold whitespace-nowrap text-white">
             Othello
           </h1>
         </Link>
@@ -108,7 +108,7 @@ export default function NavBarS() {
           }`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white md:dark:bg-transparent">
+          <ul className="flex flex-col p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 bg-transparent">
             {linkNames.map(({ name, link }) => (
               <li key={name}>
                 <AnimatedLink

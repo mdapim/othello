@@ -8,12 +8,18 @@
   "Form": {
     "enquire": "Enquires",
     "description": "We recommend booking at least 2 weeks in advance for large parties of 6 or more, Please be advised this form does not confirm your reservation and you will be contacted by a member of our team as quickly as possible to confirm it. We value your interest in our establishment and look forward to serving you.",
-    "name": "Full name",
-    "phone": "Phone Number",
+    "name": "Name",
+    "phone": "Phone",
     "email": "Email Address",
     "time": "Event Time",
     "date": "Booking Date",
     "info": "Additional Information"
   },
-  "button": "Submit"
+  "button": "Submit",
+  "submitted": "Sent",
+  "try_again": "Try Again",
+  "loading": "loading...",
+  "sent": "Thank you for your inquiry. We have received it and will reach out to you shortly to confirm the reservation.",
+  "failed": "Apologies for the inconvenience, but it seems there was an issue sending your inquiry. Please try again or contact us directly on 01472356704",
+  "invalid": "Invalid input. Please check all fields have been filled before submitting. Thank you."
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import dateFormat from 'dateformat'
@@ -20,15 +21,28 @@ const timeOptions = [
   '21:30',
   '22:00'
 ]
-
-export default function Form({ sendMessage, handleFormInput }) {
+// eslint-disable-next-line
+export default function Form({
+  sendMessage,
+  handleFormInput,
+  mailRes,
+  setMailRes,
+  checkFormData,
+  formData
+}) {
   const { t } = useTranslation('Contact')
   const [selectedDate] = useState(new Date())
   return (
     <form
       className="grid h-screen/2"
       onSubmit={e => {
-        sendMessage()
+        if (checkFormData()) {
+          setMailRes('loading')
+          sendMessage()
+        } else {
+          setMailRes('invalid')
+        }
+
         e.preventDefault()
       }}
     >
@@ -40,12 +54,22 @@ export default function Form({ sendMessage, handleFormInput }) {
             size={25}
             type="text"
             handleFormInput={handleFormInput}
+            border={
+              formData.name.length <= 0 && mailRes === 'invalid'
+                ? 'border-red-700 border-2'
+                : ''
+            }
           />
           <InputCard
             name="phone"
             label="Form.phone"
             size={25}
             type="phone"
+            border={
+              formData.phone.length <= 0 && mailRes === 'invalid'
+                ? 'border-red-700 border-2'
+                : ''
+            }
             handleFormInput={handleFormInput}
           />
         </div>
@@ -54,11 +78,19 @@ export default function Form({ sendMessage, handleFormInput }) {
           label="Form.email"
           size={55}
           type="email"
+          border={
+            formData.email.length <= 0 && mailRes === 'invalid'
+              ? 'border-red-700 border-2'
+              : ''
+          }
           handleFormInput={handleFormInput}
         />
         <div className="grid gap-4 grid-cols-2">
           <div>
-            <label htmlFor="underline_select" className="sr-only">
+            <label
+              htmlFor="underline_select"
+              className="sr-only whitespace-nowrap"
+            >
               Underline select
             </label>
             <p className="font-extrabold uppercase"> {t('Form.time')}</p>
@@ -67,7 +99,12 @@ export default function Form({ sendMessage, handleFormInput }) {
               name="time"
               defaultValue="--:--"
               onChange={handleFormInput}
-              className="indent-2.5 h-10 w-full bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer"
+              className={
+                `indent-2.5 h-10 w-full rounded-none bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer ` +
+                (formData.time.length <= 0 && mailRes === 'invalid'
+                  ? 'border-red-700 border-2'
+                  : '')
+              }
             >
               {timeOptions.map(item => (
                 <option key={item} disabled={item === '--:--'} value={item}>
@@ -77,15 +114,23 @@ export default function Form({ sendMessage, handleFormInput }) {
             </select>
           </div>
 
-          <label htmlFor="input_date" className="font-extrabold uppercase">
+          <label
+            htmlFor="input_date"
+            className="font-extrabold uppercase whitespace-nowrap"
+          >
             {t('Form.date')}
             <br />
             <input
               id="input_date"
               type="date"
               name="date"
-              size={25}
-              className="indent-1 border-gray-400 bg-gray-50 w-full border outline-0 normal-case font-normal h-10 focus:border-gray-700 focus:border-2"
+              size={2}
+              className={
+                `rounded-none border-gray-400 whitespace-nowrap bg-gray-50 min-w-[90%] sm:min-w-[90%] lg:min-w-full border outline-0 normal-case font-normal h-10 focus:border-gray-700 focus:border-2 ` +
+                (formData.date.length <= 0 && mailRes === 'invalid'
+                  ? 'border-red-700 border-2'
+                  : '')
+              }
               onChange={handleFormInput}
               min={dateFormat(selectedDate, 'yyyy-mm-dd')}
               max="2030-01-01"
@@ -93,7 +138,10 @@ export default function Form({ sendMessage, handleFormInput }) {
             />
           </label>
         </div>
-        <label htmlFor="text_box" className="font-extrabold uppercase">
+        <label
+          htmlFor="text_box"
+          className="font-extrabold uppercase whitespace-nowrap"
+        >
           {t('Form.info')}
           <br />
           <textarea
@@ -103,25 +151,69 @@ export default function Form({ sendMessage, handleFormInput }) {
             maxLength="200"
             type="text"
             name="message"
-            className="indent-2.5 border-gray-400 border bg-gray-50 w-full outline-0 normal-case font-normal focus:border-2 focus:border-gray-700 "
+            className={
+              `indent-2.5 rounded-none border-gray-400 border bg-gray-50 w-full outline-0 normal-case font-normal focus:border-2 focus:border-gray-700 ` +
+              (formData.message.length <= 0 && mailRes === 'invalid'
+                ? 'border-red-700 border-2'
+                : '')
+            }
             onChange={handleFormInput}
           />
         </label>
       </div>
       <div className="mx-auto mt-8">
         <button
+          // eslint-disable-next-line
+          disabled={mailRes === 'sent'}
+          onClick={() => {
+            console.log('this is check for data', checkFormData())
+          }}
           type="submit"
           aria-label="submit form"
-          className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer"
+          className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer
+          disabled:before:h-[calc(90%+16px)] disabled:before:w-[calc(90%+16px)] disabled:after:h-[calc(90%+16px)] disabled:after:w-[calc(90%+16px)] disabled:bg-white disabled:text-black disabled:cursor-default"
         >
-          {t('button')}
+          {mailRes === 'sent'
+            ? t('submitted')
+            : mailRes === 'loading'
+            ? t('loading')
+            : mailRes === 'failed'
+            ? t('try_again')
+            : t('button')}
         </button>
       </div>
+      {console.log(mailRes)}
+      {mailRes === 'sent' && (
+        <p className="pt-2  text-center visible text-green-600 text">
+          {t('sent')}
+        </p>
+      )}
+      {mailRes === 'failed' && (
+        <p className="pt-2  text-center visible text-pink-600 text">
+          {t('failed')}
+        </p>
+      )}
+      {mailRes === 'invalid' && (
+        <p className=" pt-2 text-center visible text-pink-600 text">
+          {t('invalid')}
+        </p>
+      )}
     </form>
   )
 }
 
 Form.propTypes = {
   sendMessage: PropTypes.func.isRequired,
-  handleFormInput: PropTypes.func.isRequired
+  handleFormInput: PropTypes.func.isRequired,
+  mailRes: PropTypes.string.isRequired,
+  setMailRes: PropTypes.func.isRequired,
+  checkFormData: PropTypes.func.isRequired,
+  formData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+  }).isRequired
 }

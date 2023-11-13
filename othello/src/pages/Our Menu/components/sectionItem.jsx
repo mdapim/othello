@@ -15,7 +15,7 @@ export default function SectionItem({ menuItem, menuList }) {
           {menuItem}
         </h3>
       </div>
-      <div className="grid gap-6 grid-cols-1 px-6 justify-between m-auto md:grid-cols-2 md:px-28 md:py-14">
+      <div className="grid gap-6 grid-cols-1 px-6 justify-between  md:grid-cols-2 md:px-28 md:py-14">
         {menuList.map(item => (
           <ListMeal
             key={item.name}

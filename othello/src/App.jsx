@@ -12,7 +12,6 @@ import NavBarS from './pages/Main/components/NavBarS/NavBarS'
 import 'aos/dist/aos.css'
 
 function App() {
-  console.log(process.env.REACT_APP_AWS_REGION)
   useEffect(() => {
     AOS.init({ duration: 1200 })
   })

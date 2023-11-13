@@ -18,11 +18,12 @@ async function translateText() {
   }
 
   // Run request
+  // eslint-disable-next-line
   const [response] = await translationClient.translateText(request)
 
-  for (const translation of response.translations) {
-    console.log(`Translation: ${translation.translatedText}`)
-  }
+  // for (const translation of response.translations) {
+  //   console.log(`Translation: ${translation.translatedText}`)
+  // }
 }
 
 translateText()

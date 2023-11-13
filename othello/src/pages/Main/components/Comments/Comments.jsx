@@ -14,10 +14,10 @@ export default function Comments() {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    speed: 1000,
+    speed: 200,
     autoplaySpeed: 8000,
     cssEase: 'linear',
-    pauseOnHover: false,
+    pauseOnHover: true,
     arrows: false
   }
 

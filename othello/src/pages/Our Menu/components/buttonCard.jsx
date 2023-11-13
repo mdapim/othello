@@ -29,12 +29,10 @@ export default function ButtonCard({
         alt=""
       />
       <div className="p-2 md:p-4 leading-normal md:m-auto">
-        <h2 className="mb-2 text-sm md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h2 className="mb-2 text-sm md:text-2xl font-bold tracking-tight text-white">
           {title}
         </h2>
-        <p className="text-xs font-normal text-gray-700 dark:text-gray-400">
-          {description}
-        </p>
+        <p className="text-xs font-normal text-gray-400">{description}</p>
       </div>
     </div>
   )

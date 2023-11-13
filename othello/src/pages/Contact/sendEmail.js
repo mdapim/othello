@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as AWS from '@aws-sdk/client-ses'
 
 const SESSION_CONFIG = {
@@ -7,7 +8,7 @@ const SESSION_CONFIG = {
   },
   region: process.env.REACT_APP_AWS_REGION
 }
-
+// eslint-disable-next-line
 const sesClient = new AWS.SESClient(SESSION_CONFIG)
 
 export default async function sendEmail(recipientEmail, details) {
@@ -60,23 +61,14 @@ export default async function sendEmail(recipientEmail, details) {
       }
     }
   }
-
+  // eslint-disable-next-line
   try {
+    // eslint-disable-next-line
     const sendEmailCmd = new AWS.SendEmailCommand(params)
+    // eslint-disable-next-line
     const res = await sesClient.send(sendEmailCmd)
-    console.log('Email has been sent!', res)
+    return 'sent'
   } catch (error) {
-    console.log('error sending email', error)
+    return 'failed'
   }
 }
-// const details = {
-//   name: 'John Doe',
-//   phone: '(555) 555-5555',
-//   email: 'johndoe@example.com',
-//   time: '7:00 PM',
-//   date: 'November 15, 2023',
-//   message:
-//     "We'd like a table for four by the window, and it's our anniversary celebration."
-// }
-
-// sendEmail('mikkay1@outlook.com', details)

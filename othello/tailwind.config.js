@@ -11,7 +11,10 @@ module.exports = {
       },
       height: theme => ({ 'screen/2': '75vh' }),
       width: theme => ({ screenfull: '1500px' }),
-      borderWidth: theme => ({ small: '0.5px' })
+      borderWidth: theme => ({ small: '0.5px' }),
+      screens: {
+        tablet: '500px'
+      }
     }
   },
   plugins: [require('tailwindcss-animated')]

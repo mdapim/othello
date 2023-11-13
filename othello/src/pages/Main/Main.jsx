@@ -37,7 +37,7 @@ export default function Main() {
             </span>
           </h2>
 
-          <p className="text-sm px-2 md:text-2xl md:px-72 pt-10 ">
+          <p className="text-sm px-2 md:text-2xl md:px-[10vw] pt-10 ">
             {t('MainPage.welcome_message.p4')}
           </p>
           <br />

@@ -6,7 +6,6 @@ export default function FeaturedCard({
   image,
   title,
   description,
-  index,
   activeSlide,
   hiddenNo
 }) {
@@ -22,23 +21,22 @@ export default function FeaturedCard({
 
   return (
     <div
-      className="w-44 m-auto md:w-80 h-[340px] md:h-[480px] shadow-md border text-black hover:cursor-pointer"
+      className="inline-block inline-flex flex-col w-[90%] min-h-[340px] sm:min-h-[400px] md:min-h-[500px] xl:-96 xl:min-h-[500px]  xl:w-[90%] shadow-md border text-black hover:cursor-pointer object-contain overflow-hidden" // m-auto md:w-[90%] min-w-44 h-[340px] md:h-[480px]
       role="link"
       tabIndex={activeSlide === hiddenNo ? -1 : 0}
       onClick={handleEventAction}
       onKeyDown={handleKeyEventAction}
     >
       <img
-        className="object-cover w-full "
+        className="object-cover overflow-hidden min-h-[50%] max-h-[50%]"
         src={`${process.env.PUBLIC_URL}/Images/${image}.jpeg`}
         alt={`${title} menu item`}
       />
       <hr className="w-16 shadow shadow-black border-transparent mx-auto mt-8" />
-      <div className="p-4 ">
+      <div className="block p-4 inline-block">
         <h2 className="mb-2 text-sm md:text-2xl text-center font-bold tracking-tight">
           {title}
         </h2>
-        <p>{index}</p>
         <p className="font-normal text-xs md:text-lg text-center">
           {description}
         </p>
@@ -51,7 +49,6 @@ FeaturedCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired,
-  activeSlide: PropTypes.string.isRequired,
-  hiddenNo: PropTypes.string.isRequired
+  activeSlide: PropTypes.number.isRequired,
+  hiddenNo: PropTypes.number.isRequired
 }

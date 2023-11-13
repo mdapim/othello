@@ -8,6 +8,7 @@ import sendEmail from './sendEmail'
 
 export default function Contact() {
   const { t } = useTranslation('Contact')
+  const [mailRes, setMailRes] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,8 +26,12 @@ export default function Contact() {
   }
 
   const sendMessage = async () => {
-    sendEmail('mikkay1@outlook.com', formData)
+    const response = await sendEmail('mikkay1@outlook.com', formData)
+    setMailRes(await response)
   }
+
+  const checkFormData = () =>
+    Object.values(formData).every(value => value !== '')
 
   return (
     <div className="h-full w-full">
@@ -39,7 +44,7 @@ export default function Contact() {
         <h1 className="text-6xl md:text-8xl font-bold uppercase">
           {t('Title.heading')}
         </h1>
-        <p className="text-base md:text-2xl px-6 md:px-96">
+        <p className="text-base md:text-2xl px-6 md:px-[18vw]">
           {t('Title.description')}
         </p>
       </div>
@@ -52,15 +57,22 @@ export default function Contact() {
         </div>
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 m-auto md:mt-32">
           <div>
-            <h2 className=" mx-28 font-bold text-4xl md:text-5xl">
+            <h2 className=" mx-[10%] font-bold text-4xl md:text-5xl">
               {t('Form.enquire')}
             </h2>
-            <p className="text-base mx-4 mt-6 md:text-lg md:mx-28 md:mt-14">
+            <p className="text-base mx-4 mt-6 md:text-lg md:mx-[10%] md:mt-14">
               {t('Form.description')}
             </p>
           </div>
-          <div className="pt-14 mx-6 md:pt-0 md:mx-20">
-            <Form handleFormInput={handleFormInput} sendMessage={sendMessage} />
+          <div className="pt-14 pb-40 mx-6 md:pt-0 md:mx-20">
+            <Form
+              handleFormInput={handleFormInput}
+              sendMessage={sendMessage}
+              mailRes={mailRes}
+              setMailRes={setMailRes}
+              checkFormData={checkFormData}
+              formData={formData}
+            />
           </div>
         </div>
       </div>
