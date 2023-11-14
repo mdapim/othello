@@ -38,7 +38,7 @@ export default function OurMenu() {
           {t('OurMenu:description')}
         </p>
       </div>
-      <div className="m-4 md:m-24">
+      <div className="m-4 md:m-[3%]">
         <ButtonGrid setItem={setChosenItem} scrollToMenu={handleClick} />
       </div>
 

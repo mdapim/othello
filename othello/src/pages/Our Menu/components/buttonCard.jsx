@@ -11,7 +11,7 @@ export default function ButtonCard({
 }) {
   return (
     <div
-      className="grid grid-cols-2 bg-black overflow-hidden h-40 md:h-64 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
+      className="grid grid-cols-2 bg-black overflow-hidden h-32 h-24 md:h-40 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
       onClick={() => {
         setItem(chosenKey)
         scrollToMenu()
@@ -24,11 +24,11 @@ export default function ButtonCard({
       tabIndex={0}
     >
       <img
-        className="object-cover w-full h-full md:h-64 md:w-96 md:rounded-none md:rounded-l"
+        className=" overflow-hidden w-full h-full md:h-64 md:w-96 md:rounded-none md:rounded-l"
         src={`${process.env.PUBLIC_URL}/Images/${image}`}
         alt=""
       />
-      <div className="p-2 md:p-4 leading-normal md:m-auto">
+      <div className=" p-2 md:p-4 leading-normal ">
         <h2 className="mb-2 text-sm md:text-2xl font-bold tracking-tight text-white">
           {title}
         </h2>

@@ -4,11 +4,11 @@
   "Buttons": [
     {
       "title": "Lunch",
-      "description": "Explore our Greek-inspired lunch menu, brimming with authentic dishes crafted from the finest Mediterranean ingredients. Click now to savor the taste of Greece"
+      "description": "Explore our Greek-inspired lunch menu, brimming with authentic dishes crafted from the finest Mediterranean ingredients."
     },
     {
       "title": "Dinner",
-      "description": "Embark on a captivating Mediterranean dinner experience. Immerse yourself in the vibrant flavors of Greece, with fresh, authentic ingredients and delectable creations."
+      "description": "Embark on a captivating Mediterranean dinner experience."
     },
     {
       "title": "Desserts",
@@ -16,7 +16,7 @@
     },
     {
       "title": "Wine",
-      "description": "Raise a glass to Greek traditions. Explore our wine menu and experience the rich flavors that complement our authentic Greek cuisine"
+      "description": "Raise a glass to Greek traditions."
     }
   ],
   "Lunch": ["Starters", "Mains"],

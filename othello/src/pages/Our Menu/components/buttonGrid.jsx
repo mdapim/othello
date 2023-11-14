@@ -9,7 +9,7 @@ export default function ButtonGrid({ setItem, scrollToMenu }) {
 
   return (
     // justify-items-stretch
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-2">
       {testArr.map((item, index) => (
         <ButtonCard
           key={item}

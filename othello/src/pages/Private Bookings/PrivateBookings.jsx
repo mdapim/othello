@@ -21,13 +21,13 @@ export default function PrivateBookings() {
           {t('Title.description')}
         </p>
       </div>
-      <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
+      <div className="xl:p-10 m-auto grid grid-cols-1 xl:grid-cols-2">
         <img
-          className="p-2 md:pt-20"
+          className="p-2 xl:pt-20 m-auto"
           src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
           alt=""
         />
-        <div className="pb-20 md:pb-0 p-10 md:py-20 m-auto md:px-[5%] space-y-6 flex flex-col items-center">
+        <div className="pb-20 xl:pb-0 p-10 xl:py-20 m-auto md:px-[10%] space-y-6 flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">
             {t('Aphrodite.title')}
           </h2>
@@ -46,8 +46,8 @@ export default function PrivateBookings() {
           </button>
         </div>
       </div>
-      <div className="md:p-10 m-auto grid grid-cols-1 md:grid-cols-2">
-        <div className="order-2 md:order-1 p-10 md:py-20 md:px-[5%] space-y-6 m-auto flex flex-col items-center">
+      <div className="xl:p-10 m-auto grid grid-cols-1 xl:grid-cols-2">
+        <div className="order-2 xl:order-1 p-10 xl:py-20 md:px-[10%] space-y-6 m-auto flex flex-col items-center">
           <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
           <p>{t('Alcove.p1')}</p>
           <p>{t('Alcove.p2')}</p>
@@ -64,7 +64,7 @@ export default function PrivateBookings() {
           </button>
         </div>
         <img
-          className="order-1 md:order-2 p-2 md:pt-20"
+          className="order-1 xl:order-2 p-2 xl:pt-20 m-auto"
           src={`${process.env.PUBLIC_URL}/Images/elnap.jpg`}
           alt=""
         />
