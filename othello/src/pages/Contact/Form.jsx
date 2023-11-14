@@ -34,7 +34,7 @@ export default function Form({
   const [selectedDate] = useState(new Date())
   return (
     <form
-      className="grid h-screen/2"
+      className="grid gap-6" //h-screen/2
       onSubmit={e => {
         if (checkFormData()) {
           setMailRes('loading')
@@ -46,7 +46,7 @@ export default function Form({
         e.preventDefault()
       }}
     >
-      <div className="grid">
+      <div className="grid gap-4">
         <div className="grid gap-4 grid-cols-2">
           <InputCard
             name="name"
@@ -161,7 +161,7 @@ export default function Form({
           />
         </label>
       </div>
-      <div className="mx-auto mt-8">
+      <div className="mx-auto">
         <button
           // eslint-disable-next-line
           disabled={mailRes === 'sent'}
@@ -182,22 +182,21 @@ export default function Form({
             : t('button')}
         </button>
       </div>
-      {console.log(mailRes)}
-      {mailRes === 'sent' && (
-        <p className="pt-2  text-center visible text-green-600 text">
-          {t('sent')}
-        </p>
-      )}
-      {mailRes === 'failed' && (
-        <p className="pt-2  text-center visible text-pink-600 text">
-          {t('failed')}
-        </p>
-      )}
-      {mailRes === 'invalid' && (
-        <p className=" pt-2 text-center visible text-pink-600 text">
-          {t('invalid')}
-        </p>
-      )}
+      <div className="min-h-[100px]">
+        {mailRes === 'sent' && (
+          <p className="text-center visible text-green-600 text">{t('sent')}</p>
+        )}
+        {mailRes === 'failed' && (
+          <p className="text-center visible text-pink-600 text">
+            {t('failed')}
+          </p>
+        )}
+        {mailRes === 'invalid' && (
+          <p className=" text-center visible text-pink-600 text">
+            {t('invalid')}
+          </p>
+        )}
+      </div>
     </form>
   )
 }

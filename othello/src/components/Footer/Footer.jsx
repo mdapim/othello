@@ -35,7 +35,7 @@ function ContactInfo() {
 export default function Footer() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className="h-96 md:h-96 bg-black text-white w-full mt-10">
+    <div className="h-96 md:h-96 bg-black text-white w-full ">
       <div className="grid grid-cols-2 pt-6 md:grid-cols-3 m-auto justify-items-center">
         <ContactInfo />
         <div className="m-auto pt-10 col-span-2 order-last md:order-none md:col-span-1">

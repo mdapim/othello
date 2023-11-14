@@ -57,14 +57,14 @@ export default function Contact() {
         </div>
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 m-auto md:mt-32">
           <div>
-            <h2 className=" mx-[10%] font-bold text-4xl md:text-5xl">
+            <h2 className="mx-4  md:mx-[10%] font-bold text-4xl md:text-5xl">
               {t('Form.enquire')}
             </h2>
             <p className="text-base mx-4 mt-6 md:text-lg md:mx-[10%] md:mt-14">
               {t('Form.description')}
             </p>
           </div>
-          <div className="pt-14 pb-40 mx-6 md:pt-0 md:mx-20">
+          <div className="mt-14 md:mt-0 mx-6 md:pt-0 md:mx-20">
             <Form
               handleFormInput={handleFormInput}
               sendMessage={sendMessage}
