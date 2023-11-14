@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
         <OpeningHours />
       </div>
-      <p className="text-xs md:text-base mt-16 text-center text-white mt-5 md:pb-8 bg-black">
+      <p className="text-xs md:text-base text-center text-white mt-5 md:pb-8 bg-black">
         {t('Footer.copyright')}
       </p>
     </div>
