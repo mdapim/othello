@@ -111,6 +111,7 @@ export default function Featured() {
           <p className="mt-10 text-black text-xl text-center">
             ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
             ------------
+            <p className="mt-10 text-white"> -</p>
           </p>
         </div>
       </div>
