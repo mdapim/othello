@@ -108,7 +108,7 @@ export default function Featured() {
               )
             })}
           </Slider>
-          <p className="mt-10 text-black text-xl text-center">
+          <p className="mt-10  text-black text-xl text-center">
             ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
             ------------
             <p className="mt-10 text-white"> -</p>
