@@ -11,7 +11,7 @@ export default function ButtonCard({
 }) {
   return (
     <div
-      className="grid grid-cols-2 bg-black overflow-hidden h-32 h-24 md:h-40 rounded w-full shadow md:grid hover:bg-gray-900 hover:cursor-pointer"
+      className="grid grid-cols-2 bg-black overflow-hidden h-32 h-24 md:h-40 rounded w-full shadow md:grid hover:bg-gray-800 hover:cursor-pointer"
       onClick={() => {
         setItem(chosenKey)
         scrollToMenu()
@@ -32,7 +32,7 @@ export default function ButtonCard({
         <h2 className="mb-2 text-sm md:text-2xl font-bold tracking-tight text-white">
           {title}
         </h2>
-        <p className="text-xs font-normal text-gray-400">{description}</p>
+        <p className="text-xs font-normal text-gray-200">{description}</p>
       </div>
     </div>
   )

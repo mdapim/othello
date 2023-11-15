@@ -108,13 +108,13 @@ export default function NavBarS() {
           }`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 bg-transparent">
+          <ul className="flex flex-col font-bold alegreya p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-2xl md:font-bold md:border-0 bg-transparent">
             {linkNames.map(({ name, link }) => (
               <li key={name}>
                 <AnimatedLink
                   name={name}
                   link={link}
-                  textCol={name === 'Home' ? 'text-othello' : 'text-gray-400'}
+                  textCol={name === 'Home' ? 'text-othello' : 'text-gray-300'}
                   toggleHideBar={setHideBar}
                   hideBarState={hideBar}
                 />

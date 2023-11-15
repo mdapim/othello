@@ -79,7 +79,7 @@ export default function Featured() {
 
   return (
     <div
-      className="inline-block h-full pt-10 mb-10 2xl:mb-0 xl:py-0 2xl:px-44 xl:h-screen/2 w-full xl:mt-[10%] m-auto"
+      className="inline-block h-full pt-10 mb-10 2xl:mb-0 xl:pt-10 xl:py-0 2xl:px-44 xl:h-screen/2 w-full xl:mt-[10%] m-auto"
       data-aos="fade-up"
     >
       <div className="m-auto z-10">

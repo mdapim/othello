@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap');
 .App {
   text-align: center;
 }
@@ -8,6 +9,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: medium !important;
+  font-family: 'Alegreya', serif !important;
   /* overflow-x: hidden; */
   /* overflow: scroll; */
   /* overscroll-behavior: contain; */

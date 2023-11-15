@@ -32,7 +32,7 @@ export default function Main() {
             <span className="text-lg block md:text-2xl uppercase">
               {t('MainPage.welcome_message.p2')}
             </span>
-            <span className="text-4xl md:text-6xl md:text-8xl">
+            <span className="text-4xl alegreya md:text-6xl md:text-8xl">
               {t('MainPage.welcome_message.p3')}
             </span>
           </h2>

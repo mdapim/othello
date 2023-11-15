@@ -14,7 +14,7 @@ export default function About() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
         }}
       >
-        <h1 className="text-6xl md:text-8xl font-bold uppercase">
+        <h1 className="text-6xl baskerville md:text-8xl font-bold uppercase">
           {t('Title.heading')}
         </h1>
         <p className="text-base px-6 md:text-2xl md:px-[18vw]">
