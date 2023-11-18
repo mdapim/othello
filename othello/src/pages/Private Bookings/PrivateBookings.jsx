@@ -24,7 +24,7 @@ export default function PrivateBookings() {
       <div className="xl:p-10 m-auto grid grid-cols-1 xl:grid-cols-2">
         <img
           className="p-2 xl:pt-20 m-auto"
-          src={`${process.env.PUBLIC_URL}/Images/Afro2.jpg`}
+          src={`${process.env.PUBLIC_URL}/Images/napkin.jpg`}
           alt=""
         />
         <div className="pb-20 xl:pb-0 p-10 xl:py-20 m-auto md:px-[10%] space-y-6 flex flex-col items-center">

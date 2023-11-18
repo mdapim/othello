@@ -140,7 +140,7 @@ export default function Form({
         </div>
         <label
           htmlFor="text_box"
-          className="font-extrabold uppercase whitespace-nowrap"
+          className="font-extrabold uppercase whitespace"
         >
           {t('Form.info')}
           <br />

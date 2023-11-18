@@ -63,6 +63,12 @@ export default function Contact() {
             <p className="text-base mx-4 mt-6 md:text-lg md:mx-[10%] md:mt-14">
               {t('Form.description')}
             </p>
+            <h2 className="mx-4 font-bold mt-10 text-2xl md:text-2xl">
+              {t('Form.notice_title')}
+            </h2>
+            <p className="text-base mt-2 mx-4 md:text-lg md:mx-[10%] ">
+              {t('Form.notice')}
+            </p>
           </div>
           <div className="mt-14 md:mt-0 mx-6 md:pt-0 md:mx-20">
             <Form

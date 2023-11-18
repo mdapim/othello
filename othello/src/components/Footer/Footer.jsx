@@ -5,9 +5,11 @@ import SocialIcons from './SocialIcons'
 function OpeningHours() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className="basis-2 flex-1 md:m-auto">
-      <h1 className="text-2xl my-2 md:text-4xl md:my-8">{t('Footer.hours')}</h1>
-      <div className="text-sm md:text-base">
+    <div className={'basis-2 flex-1' + ' md:m-auto'}>
+      <h1 className={'text-2xl my-2' + ' md:text-4xl md:my-8'}>
+        {t('Footer.hours')}
+      </h1>
+      <div className={'text-sm' + ' md:text-base'}>
         <p> {t('Footer.days')}</p>
         <p> {t('Footer.open_afternoon')}</p>
         <p> {t('Footer.open_evening')}</p>
@@ -19,11 +21,11 @@ function OpeningHours() {
 function ContactInfo() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className=" basis-2 flex-1 pl-4 md:m-auto">
-      <h1 className="text-2xl my-2 md:text-4xl md:my-8">
+    <div className={' basis-2 flex-1 pl-4' + ' md:m-auto'}>
+      <h1 className={'text-2xl my-2' + ' md:text-4xl md:my-8'}>
         {t('Footer.contact')}
       </h1>
-      <div className="text-sm md:text-base">
+      <div className={'text-sm' + ' md:text-base'}>
         <p>{t('Footer.address')}</p>
         <p className="font-bosld mt-4">{t('Footer.phone')}</p>
         <p className="font-bosld">{t('Footer.email')}</p>
