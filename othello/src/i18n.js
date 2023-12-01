@@ -8,6 +8,7 @@ i18n
   .use(BackEnd)
   .use(initReactI18next)
   .init({
+    nsSeparator: ':',
     fallbackLng: 'en',
     lng: 'en',
     debug: false,

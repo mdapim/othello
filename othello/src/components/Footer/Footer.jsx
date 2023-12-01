@@ -27,8 +27,8 @@ function ContactInfo() {
       </h1>
       <div className={'text-sm' + ' md:text-base'}>
         <p>{t('Footer.address')}</p>
-        <p className="font-bosld mt-4">{t('Footer.phone')}</p>
-        <p className="font-bosld">{t('Footer.email')}</p>
+        <p className="font-bold mt-4">{t('Footer.phone')}</p>
+        <p className="font-bold">{t('Footer.email')}</p>
       </div>
     </div>
   )
@@ -37,12 +37,22 @@ function ContactInfo() {
 export default function Footer() {
   const { t } = useTranslation('Navigation')
   return (
-    <div className="h-96 md:h-96 bg-black text-white w-full ">
-      <div className="grid grid-cols-2 pt-6 md:grid-cols-3 m-auto justify-items-center">
+    <div className={'h-96 bg-black text-white w-full' + ' md:h-96'}>
+      <div
+        className={
+          'grid grid-cols-2 pt-6 m-auto justify-items-center ' +
+          'md:grid-cols-3 '
+        }
+      >
         <ContactInfo />
-        <div className="m-auto pt-10 col-span-2 order-last md:order-none md:col-span-1">
+        <div
+          className={
+            'm-auto pt-10 col-span-2 order-last' +
+            ' md:order-none md:col-span-1'
+          }
+        >
           <img
-            className="w-[100px] ml-4 md:mt-20 md:w-[200px]"
+            className={'w-[100px] ml-4' + ' md:mt-20 md:w-[200px]'}
             src={`${process.env.PUBLIC_URL}Images/otello2.png`}
             alt="Othello Logo"
           />
@@ -63,7 +73,12 @@ export default function Footer() {
         </div>
         <OpeningHours />
       </div>
-      <p className="text-xs md:text-base text-center text-white mt-5 md:pb-8 bg-black">
+      <p
+        className={
+          'text-xs text-center text-white mt-5 bg-black' +
+          ' md:pb-8 md:text-base'
+        }
+      >
         {t('Footer.copyright')}
       </p>
     </div>

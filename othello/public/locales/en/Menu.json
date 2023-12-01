@@ -425,7 +425,19 @@
           "price": "60.00"
         }
       ]
-    }
+    },
+    "new years eve": {
+      "New Years Eve Menu": []
+    },
+    "valentines day": {
+      "Valentines Day Menu": []
+    },
+    "easter sunday": {
+      "Easter Sunday Menu": []
+    },
+    "christmas": { "Christmas Menu": [] },
+    "fathers day": { "Father's Day Menu": [] },
+    "mothers day": { "Mother's Day Menu": [] }
   },
   "formatPrice": "{{val, currency}}"
 }

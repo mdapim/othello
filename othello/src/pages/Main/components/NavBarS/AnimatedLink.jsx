@@ -12,13 +12,21 @@ export default function AnimatedLink({
   return (
     <Link
       to={link}
-      className={`block py-2 pl-3 pr-4 rounded hover:text-white md:hover:bg-transparent md:p-0 md:hover:text-white dark:${textCol} md:dark:hover:bg-transparent group ${textCol} transition duration-300`} // prev col gray-400
+      className={
+        `block py-2 pl-3 pr-4 rounded hover:text-white dark:${textCol} group ${textCol} transition duration-300` +
+        `  md:hover:bg-transparent md:p-0 md:hover:text-white md:dark:hover:bg-transparent`
+      } // prev col gray-400
       onClick={() => {
         toggleHideBar(!hideBarState)
       }}
     >
       {name}
-      <span className="block max-w-0 md:group-hover:max-w-full transition-all duration-500 h-0.5 bg-white" />
+      <span
+        className={
+          'block max-w-0 transition-all duration-500 h-0.5 bg-white' +
+          ' md:group-hover:max-w-full'
+        }
+      />
     </Link>
   )
 }

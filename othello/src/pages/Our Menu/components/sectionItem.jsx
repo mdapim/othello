@@ -6,17 +6,22 @@ export default function SectionItem({ menuItem, menuList }) {
   return (
     <>
       <div
-        className="bg-fixed h-36 md:h-72 md:w-full flex overflow-hidden"
+        className={'bg-fixed h-36 flex overflow-hidden' + ' md:h-72 md:w-full'}
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
         }}
       >
-        <h3 className="text-5xl md:text-8xl text-white m-auto uppercase">
+        <h3 className={'text-5xl text-white m-auto uppercase' + ' md:text-8xl'}>
           {menuItem}
         </h3>
       </div>
-      <div className="grid gap-6 grid-cols-1 px-6 justify-between md:grid-cols-2 md:px-28 md:py-14">
-        {menuList.map(item => (
+      <div
+        className={
+          'grid gap-6 grid-cols-1 px-6 justify-between' +
+          ' md:grid-cols-2 md:px-28 md:py-14'
+        }
+      >
+        {menuList?.map(item => (
           <ListMeal
             key={item.name}
             title={item.name}

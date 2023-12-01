@@ -18,7 +18,7 @@ export default function Featured() {
     slidesToScroll: 1,
     fade: false,
     autoplay: true,
-    speed: 2000,
+    speed: 1000,
     autoplaySpeed: 4000,
     cssEase: 'linear',
     pauseOnHover: false,
@@ -79,18 +79,19 @@ export default function Featured() {
 
   return (
     <div
-      className="inline-block h-full pt-10 mb-10 2xl:mb-0 xl:pt-10 xl:py-0 2xl:px-44 xl:h-screen/2 w-full xl:mt-[10%] m-auto"
+      className={
+        'inline-block h-full pt-10 mb-10 w-full m-auto' +
+        ' xl:pt-10 xl:py-0 xl:h-screen/2 xl:mt-[10%]' +
+        ' 2xl:mb-0 2xl:px-44'
+      }
       data-aos="fade-up"
     >
       <div className="m-auto z-10">
-        <h1 className="text-center t-40 text-4xl md:text-5xl text-black">
+        <h1 className={'text-center t-40 text-4xl text-black' + ' md:text-5xl'}>
           {t('Main:Featured.title')}
         </h1>
         <br />
-        <div
-          className="w-full h-72 m-auto mt-10
-"
-        >
+        <div className="w-full h-72 m-auto mt-10">
           <Slider
             beforeChange={(_, next) => setActiveSlide(next)}
             {...settings}
@@ -109,10 +110,9 @@ export default function Featured() {
             })}
           </Slider>
           <p className="mt-10  text-black text-xl text-center">
-            ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
-            ------------
-            <p className="mt-10 text-white"> -</p>
+            ----------- &#x2605; &#x2605; &#x2605; &#x2605; &#x2605; -----------
           </p>
+          <span className={'mt-10 text-white' + ' md:visible'}>--</span>
         </div>
       </div>
     </div>

@@ -21,23 +21,23 @@ export default function Main() {
       >
         <div className="animate-fade-up text-center text-white m-auto pt-20">
           <img
-            className="w-12 h-12 md:w-20 md:h-20 invert block m-auto"
+            className={'w-12 h-12 invert block m-auto' + ' md:w-20 md:h-20'}
             src={`${process.env.PUBLIC_URL}/Images/logot.png`}
             alt="wheat symbol"
           />
           <h2>
-            <span className="text-lg block md:text-2xl uppercase">
+            <span className={'text-lg block uppercase' + ' md:text-2xl'}>
               {t('MainPage.welcome_message.p1')}
             </span>
-            <span className="text-lg block md:text-2xl uppercase">
+            <span className={'text-lg block uppercase' + ' md:text-2xl'}>
               {t('MainPage.welcome_message.p2')}
             </span>
-            <span className="text-4xl alegreya md:text-6xl md:text-8xl">
+            <span className={'text-4xl alegreya' + ' md:text-6xl md:text-8xl'}>
               {t('MainPage.welcome_message.p3')}
             </span>
           </h2>
 
-          <p className="text-sm px-2 md:text-2xl md:px-[10vw] pt-10 ">
+          <p className={'text-sm px-2 pt-10 ' + ' md:text-2xl md:px-[10vw]'}>
             {t('MainPage.welcome_message.p4')}
           </p>
           <br />

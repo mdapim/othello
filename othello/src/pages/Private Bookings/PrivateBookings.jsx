@@ -14,20 +14,26 @@ export default function PrivateBookings() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpg`})`
         }}
       >
-        <h1 className="text-6xl md:text-8xl uppercase font-bold">
+        <h1 className={'text-6xl uppercase font-bold' + ' md:text-8xl'}>
           {t('Title.heading')}
         </h1>
-        <p className="text-base px-6 md:text-2xl md:px-[18vw]">
+        <p className={'text-base px-6' + ' md:text-2xl md:px-[18vw]'}>
           {t('Title.description')}
         </p>
       </div>
-      <div className="xl:p-10 m-auto grid grid-cols-1 xl:grid-cols-2">
+      <div className={'m-auto grid grid-cols-1' + ' xl:p-10 xl:grid-cols-2'}>
         <img
-          className="p-2 xl:pt-20 m-auto"
+          className={'p-2 m-auto' + ' xl:pt-20'}
           src={`${process.env.PUBLIC_URL}/Images/napkin.jpg`}
           alt=""
         />
-        <div className="pb-20 xl:pb-0 p-10 xl:py-20 m-auto md:px-[10%] space-y-6 flex flex-col items-center">
+        <div
+          className={
+            'pb-20  p-10 m-auto space-y-6 flex flex-col items-center' +
+            ' md:px-[10%]' +
+            ' xl:pb-0 xl:py-20'
+          }
+        >
           <h2 className="font-bold text-4xl uppercase ">
             {t('Aphrodite.title')}
           </h2>
@@ -46,8 +52,14 @@ export default function PrivateBookings() {
           </button>
         </div>
       </div>
-      <div className="xl:p-10 m-auto grid grid-cols-1 xl:grid-cols-2">
-        <div className="order-2 xl:order-1 p-10 xl:py-20 md:px-[10%] space-y-6 m-auto flex flex-col items-center">
+      <div className={' m-auto grid grid-cols-1' + ' xl:grid-cols-2 xl:p-10'}>
+        <div
+          className={
+            'order-2  p-10 space-y-6 m-auto flex flex-col items-center' +
+            ' md:px-[10%]' +
+            ' xl:order-1 xl:py-20'
+          }
+        >
           <h2 className="font-bold text-4xl uppercase ">{t('Alcove.title')}</h2>
           <p>{t('Alcove.p1')}</p>
           <p>{t('Alcove.p2')}</p>
@@ -64,7 +76,7 @@ export default function PrivateBookings() {
           </button>
         </div>
         <img
-          className="order-1 xl:order-2 p-2 xl:pt-20 m-auto"
+          className={'order-1 p-2 m-auto' + ' xl:order-2 xl:pt-20'}
           src={`${process.env.PUBLIC_URL}/Images/elnap.jpg`}
           alt=""
         />

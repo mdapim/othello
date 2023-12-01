@@ -126,7 +126,9 @@ export default function Form({
               name="date"
               size={2}
               className={
-                `rounded-none border-gray-400 whitespace-nowrap bg-gray-50 min-w-[90%] sm:min-w-[90%] lg:min-w-full border outline-0 normal-case font-normal h-10 focus:border-gray-700 focus:border-2 ` +
+                ` sm:min-w-[90%]` +
+                ` lg:min-w-full` +
+                ` rounded-none border-gray-400 whitespace-nowrap bg-gray-50 min-w-[90%] border outline-0 normal-case font-normal h-10 focus:border-gray-700 focus:border-2 ` +
                 (formData.date.length <= 0 && mailRes === 'invalid'
                   ? 'border-red-700 border-2'
                   : '')
@@ -165,9 +167,6 @@ export default function Form({
         <button
           // eslint-disable-next-line
           disabled={mailRes === 'sent'}
-          onClick={() => {
-            console.log('this is check for data', checkFormData())
-          }}
           type="submit"
           aria-label="submit form"
           className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer

@@ -5,21 +5,25 @@ import PropTypes from 'prop-types'
 export default function CommentCard({ title, description, user, image }) {
   const { t } = useTranslation('Main')
   return (
-    <div className="flex justify-center align-end flex-col md:p-10">
-      <h1 className="text-center t-40 text-2xl md:text-5xl text-white">
+    <div className={'flex justify-center align-end flex-col' + ' md:p-10'}>
+      <h1 className={'text-center t-40 text-2xl text-white' + ' md:text-5xl'}>
         {t('Comments.title')}
       </h1>
       <br />
       <hr />
       <br />
-      <h2 className="text-white text-center text-lg md:text-3xl"> {title} </h2>
+      <h2 className={'text-white text-center text-lg' + ' md:text-3xl'}>
+        {title}
+      </h2>
       <br />
-      <p className="text-white text-center text-sm md:text-xl">{description}</p>
+      <p className={'text-white text-center text-sm' + ' md:text-xl'}>
+        {description}
+      </p>
       <br />
-      <p className="text-white text-sm text-center md:text-lg">{user}</p>
+      <p className={'text-white text-sm text-center' + ' md:text-lg'}>{user}</p>
       <br />ß
       <h3
-        className="text-white text-center text-sm md:text-5xl"
+        className={'text-white text-center text-sm' + ' md:text-5xl'}
         aria-label="separator"
       >
         &#x275C;&#x275C;

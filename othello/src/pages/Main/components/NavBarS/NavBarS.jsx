@@ -56,7 +56,12 @@ export default function NavBarS() {
   }, [hideBar])
 
   return (
-    <nav className="md:px-2 py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-100">
+    <nav
+      className={
+        ' py-2.5 bg-black fixed w-full z-20 top-0 left-0 border-b border-transparent dark:border-transparent opacity-100' +
+        ' md:px-2 '
+      }
+    >
       <div
         className={`container flex flex-wrap items-center justify-between mx-auto transition-all duration-200${
           changeSize ? ' py-0' : ' py-8'
@@ -74,14 +79,17 @@ export default function NavBarS() {
             Othello
           </h1>
         </Link>
-        <div className="flex md:order-2 p-4">
+        <div className={'flex p-4' + ' md:order-2'}>
           <button
             onClick={() => {
               setHideBar(!hideBar)
             }}
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-1 focus:ring-gray-200"
+            className={
+              'inline-flex items-center p-2 text-sm text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200' +
+              ' md:hidden'
+            }
             aria-controls="navbar-sticky"
             aria-expanded="false"
             aria-label="expand navigation options"
@@ -103,12 +111,20 @@ export default function NavBarS() {
           </button>
         </div>
         <div
-          className={`items-center justify-between  w-full md:flex md:w-auto md:order-2 uppercase${
-            hideBar ? ' hidden' : ''
-          }`}
+          className={
+            `items-center justify-between  w-full uppercase${
+              hideBar ? ' hidden' : ''
+            }` + ' md:flex md:w-auto md:order-2'
+          }
           id="navbar-sticky"
         >
-          <ul className="flex flex-col font-light baskerville p-4 mt-4 rounded-lg sm:bg-black md:flex-row md:space-x-12 md:mt-0 md:text-md md:font-bold md:border-0 bg-transparent">
+          <ul
+            className={
+              'flex flex-col font-light baskerville p-4 mt-4 rounded-lg bg-transparent' +
+              ' sm:bg-black' +
+              ' md:flex-row md:space-x-12 md:mt-0 md:text-md md:font-bold md:border-0'
+            }
+          >
             {linkNames.map(({ name, link }) => (
               <li key={name}>
                 <AnimatedLink

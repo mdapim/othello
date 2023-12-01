@@ -20,11 +20,14 @@ const imageList = [
 export default function ImageGallery2() {
   return (
     <div className="tcontainer tmx-auto tpx-4">
-      <div className="grid grid-cols-2  md:grid-cols-4 gap-4 tmt-10">
-        {imageList.map(i => {
+      <div className={'grid grid-cols-2 gap-4 tmt-10' + ' md:grid-cols-4'}>
+        {imageList.map((i, index) => {
           return (
             <div
-              className="tbg-cover h-[250px] md:h-[300px] xl:h-[500px]"
+              key={index}
+              className={
+                'tbg-cover h-[250px]' + ' md:h-[300px] ' + ' xl:h-[500px]'
+              }
               style={{
                 backgroundImage: `url(
               ${process.env.PUBLIC_URL}${i}`

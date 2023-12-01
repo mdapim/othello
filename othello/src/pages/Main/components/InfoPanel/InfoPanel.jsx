@@ -18,22 +18,32 @@ export default function InfoPanel() {
   return (
     <div
       data-aos="fade-up"
-      className="flex flex-wrap flex-row m-auto h-auto w-full md:w-10/12 relative overflow-hidden"
+      className={
+        'flex flex-wrap flex-row m-auto h-auto w-full  relative overflow-hidden' +
+        ' md:w-10/12'
+      }
     >
       <div
         className="infoPanel-container infoPanel-text  text-center align-self-center m-auto z-10 "
         id="test"
       >
-        <h1 className=" text-4xl font-normal md:text-5xl">
+        <h1 className={' text-4xl font-normal' + ' md:text-5xl'}>
           {t('InfoPage.title')}
         </h1>
         <br />
-        <span className="flex flex-col text-left p-4 space-y-10 text-base md:p-0 md:flex-row md:text-lg md:space-y-0 md:space-x-14">
+        <span
+          className={
+            'flex flex-col text-left p-4 space-y-10 text-base' +
+            '  md:p-0 md:flex-row md:text-lg md:space-y-0 md:space-x-14'
+          }
+        >
           <p className="flex-1">{t('InfoPage.about_message.p1')}</p>
           <p className="flex-1">{t('InfoPage.about_message.p2')}</p>
         </span>
         <br />
-        <span className="flex flex-row flex-wrap md:space-x-32 text-left">
+        <span
+          className={'flex flex-row flex-wrap text-left' + ' md:space-x-32'}
+        >
           {promotionCards.map((item, index) => (
             <PromotionCard
               code={item}
@@ -46,7 +56,11 @@ export default function InfoPanel() {
         </span>
       </div>
       <img
-        className="h-96 mt-10 shadow-[0px_0px_1px_1px] m-auto xl:h-full xl:w-[550px] md:shadow-[0_0_2px_2px] md:p-0 z-10"
+        className={
+          'h-96 mt-10 shadow-[0px_0px_1px_1px] m-auto' +
+          ' md:shadow-[0_0_2px_2px] md:p-0 z-10' +
+          ' xl:h-full xl:w-[550px]'
+        }
         src={`${process.env.PUBLIC_URL}/Images/drinks.jpeg`}
         alt="mine"
       />

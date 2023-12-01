@@ -22,5 +22,9 @@
   "Lunch": ["Starters", "Mains"],
   "Dinner": ["Starters", "Mains", "Fish", "Grill", "Side-orders"],
   "Desserts": ["Desserts", "Liquor-Coffee"],
-  "Wine": ["Red-Wine", "Rose-Wine", "White-Wine", "Sparkling Wine & Champagne"]
+  "Wine": ["Red-Wine", "Rose-Wine", "White-Wine", "Sparkling Wine & Champagne"],
+  "new years eve": ["starters", "lunch", "dessert"],
+  "valentines day": ["dinner", "lunch", "dessert"],
+  "easter sunday": ["starters", "lunch", "dessert"],
+  "christmas": ["starters", "lunch", "dessert"]
 }

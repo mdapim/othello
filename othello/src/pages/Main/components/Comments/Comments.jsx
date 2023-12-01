@@ -17,19 +17,19 @@ export default function Comments() {
     speed: 200,
     autoplaySpeed: 8000,
     cssEase: 'linear',
-    pauseOnHover: true,
+    pauseOnHover: false,
     arrows: false
   }
 
   return (
     <div
-      className="h-full md:h-screen/2 w-500% p-2 md:p-10 flex"
+      className={'h-full w-500% p-2 flex' + ' md:p-10 md:h-screen/2'}
       data-aos="fade-up"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
       }}
     >
-      <div className=" w-[90%] md:w-[70%] m-auto">
+      <div className={' w-[90%] m-auto' + ' md:w-[70%]'}>
         <Slider {...settings}>
           {ReviewsData.map(item => (
             <CommentCard

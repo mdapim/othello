@@ -21,7 +21,12 @@ export default function FeaturedCard({
 
   return (
     <div
-      className="inline-block inline-flex flex-col w-[90%] min-h-[340px] sm:min-h-[400px] md:min-h-[500px] xl:-96 xl:min-h-[500px]  xl:w-[90%] shadow-md border text-black hover:cursor-pointer object-contain overflow-hidden" // m-auto md:w-[90%] min-w-44 h-[340px] md:h-[480px]
+      className={
+        'inline-block inline-flex flex-col w-[90%] min-h-[340px] shadow-md border text-black hover:cursor-pointer object-contain overflow-hidden}' +
+        ' sm:min-h-[400px]' +
+        ' md:min-h-[500px]' +
+        ' xl:-96 xl:min-h-[500px]  xl:w-[90%]'
+      }
       role="link"
       tabIndex={activeSlide === hiddenNo ? -1 : 0}
       onClick={handleEventAction}
@@ -34,10 +39,14 @@ export default function FeaturedCard({
       />
       <hr className="w-16 shadow shadow-black border-transparent mx-auto mt-8" />
       <div className="block p-4 inline-block">
-        <h2 className="mb-2 text-sm md:text-2xl text-center font-bold tracking-tight">
+        <h2
+          className={
+            'mb-2 text-sm text-center font-bold tracking-tight' + ' md:text-2xl'
+          }
+        >
           {title}
         </h2>
-        <p className="font-normal text-xs md:text-lg text-center">
+        <p className={'font-normal text-xs text-center' + ' md:text-lg'}>
           {description}
         </p>
       </div>

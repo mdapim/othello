@@ -44,33 +44,47 @@ export default function Contact() {
         <h1 className="text-6xl md:text-8xl font-bold uppercase">
           {t('Title.heading')}
         </h1>
-        <p className="text-base md:text-2xl px-6 md:px-[18vw]">
+        <p className={'text-base px-6 ' + ' md:text-2xl md:px-[18vw]'}>
           {t('Title.description')}
         </p>
       </div>
       <div className="m-auto">
-        <div className="m-auto my-10 md:my-20 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold">{t('open_days')}</h2>
-          <p className="my-2 md:my-5 text-xl md:text-3xl font-bold">
+        <div className={'m-auto my-10 text-center' + ' md:my-20'}>
+          <h2 className={'text-2xl font-bold' + ' md:text-4xl'}>
+            {t('open_days')}
+          </h2>
+          <p className={'my-2  text-xl  font-bold' + ' md:text-3xl md:my-5'}>
             {t('contact_info')}
           </p>
         </div>
-        <div className="grid grid-cols-1 mt-20 md:grid-cols-2 m-auto md:mt-32">
+        <div
+          className={
+            'grid grid-cols-1 mt-20 m-auto' + ' xl:mt-32 xl:grid-cols-2'
+          }
+        >
           <div>
-            <h2 className="mx-4  md:mx-[10%] font-bold text-4xl md:text-5xl">
+            <h2
+              className={
+                'mx-4  font-bold text-4xl ' + ' md:text-5xl md:mx-[10%]'
+              }
+            >
               {t('Form.enquire')}
             </h2>
-            <p className="text-base mx-4 mt-6 md:text-lg md:mx-[10%] md:mt-14">
+            <p
+              className={
+                'text-base mx-4 mt-6' + ' md:text-lg md:mx-[10%] md:mt-14'
+              }
+            >
               {t('Form.description')}
             </p>
-            <h2 className="mx-4 font-bold mt-10 text-2xl md:text-2xl">
+            <h2 className={'mx-4 font-bold mt-10 text-2xl' + ' md:text-2xl'}>
               {t('Form.notice_title')}
             </h2>
-            <p className="text-base mt-2 mx-4 md:text-lg md:mx-[10%] ">
+            <p className={'text-base mt-2 mx-4 ' + ' md:text-lg md:mx-[10%]'}>
               {t('Form.notice')}
             </p>
           </div>
-          <div className="mt-14 md:mt-0 mx-6 md:pt-0 md:mx-20">
+          <div className={'mt-14 mx-6 ' + ' md:pt-0 md:mx-20 xl:mt-0'}>
             <Form
               handleFormInput={handleFormInput}
               sendMessage={sendMessage}

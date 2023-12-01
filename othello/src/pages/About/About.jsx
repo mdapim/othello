@@ -14,14 +14,23 @@ export default function About() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
         }}
       >
-        <h1 className="text-6xl baskerville md:text-8xl font-bold uppercase">
+        <h1
+          className={
+            'text-6xl baskerville font-bold uppercase' + ' md:text-8xl'
+          }
+        >
           {t('Title.heading')}
         </h1>
-        <p className="text-base px-6 md:text-2xl md:px-[18vw]">
+        <p className={'text-base px-6 ' + ' md:text-2xl md:px-[18vw]'}>
           {t('Title.description')}
         </p>
       </div>
-      <div className="flex-col justify-between text-sm md:text-base justify-center items-center">
+      <div
+        className={
+          'flex-col justify-between text-sm justify-center items-center' +
+          ' md:text-base'
+        }
+      >
         <div className="flex-1">
           <div>
             <img
@@ -31,9 +40,17 @@ export default function About() {
             />
           </div>
         </div>
-        <hr className="md:w-[600px] border-[0.5px] border-gray-400 m-auto mt-8" />
+        <hr
+          className={
+            ' border-[0.5px] border-gray-400 m-auto mt-8' + ' md:w-[600px]'
+          }
+        />
         <div className="flex-1 m-auto space-y-10">
-          <div className="p-8 xl:px-[15vw] 2xl:px-[30vw] space-y-6 text-left">
+          <div
+            className={
+              'p-8 space-y-6 text-left' + ' xl:px-[15vw]' + ' 2xl:px-[30vw]'
+            }
+          >
             <p>{t('Story.p1')}</p>
             <p>{t('Story.p2')}</p>
             <p>{t('Story.p3')}</p>
