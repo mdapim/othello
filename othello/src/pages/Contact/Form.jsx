@@ -201,8 +201,7 @@ export default function Form({
         )}
         <p className=" text-center visible text-pink-600 text">
           The contact form is temporarily disabled while the site is being
-          worked on, please contact use by calling or sending an email, thank
-          you
+          worked on, please contact us by calling or sending an email, thank you
         </p>
       </div>
     </form>
