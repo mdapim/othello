@@ -95,6 +95,7 @@ export default function Form({
             </label>
             <p className="font-extrabold uppercase"> {t('Form.time')}</p>
             <select
+              disabled={true}
               id="underline_select"
               name="time"
               defaultValue="--:--"
@@ -121,6 +122,7 @@ export default function Form({
             {t('Form.date')}
             <br />
             <input
+              disabled={true}
               id="input_date"
               type="date"
               name="date"
@@ -147,6 +149,7 @@ export default function Form({
           {t('Form.info')}
           <br />
           <textarea
+            disabled={true}
             id="text_box"
             cols="55"
             rows="9"
@@ -166,7 +169,8 @@ export default function Form({
       <div className="mx-auto">
         <button
           // eslint-disable-next-line
-          disabled={mailRes === 'sent'}
+          // disabled={mailRes === 'sent'}
+          disabled={true}
           type="submit"
           aria-label="submit form"
           className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer
@@ -195,6 +199,11 @@ export default function Form({
             {t('invalid')}
           </p>
         )}
+        <p className=" text-center visible text-pink-600 text">
+          The contact form is temporarily disabled while the site is being
+          worked on, please contact use by calling or sending an email, thank
+          you
+        </p>
       </div>
     </form>
   )
