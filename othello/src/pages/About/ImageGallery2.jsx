@@ -8,13 +8,13 @@ const imageList = [
   '/Images/sticky.jpeg',
   '/Images/val.jpeg',
   '/Images/new.jpeg',
-  '/Images/chicken.jpeg',
-  '/Images/Front.jpeg',
+  '/Images/crab.jpeg',
+  '/Images/17.jpg',
   '/Images/elnap.jpg',
   '/Images/val.jpeg',
   '/Images/eventmen.jpg',
   '/Images/cheese.jpeg',
-  '/Images/afro2.jpg'
+  '/Images/chris.jpg'
 ]
 
 export default function ImageGallery2() {
