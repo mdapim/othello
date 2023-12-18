@@ -23,6 +23,7 @@ www.othellorestaurant.com
 - Controlling States for the Form Control
 - Integrating with AWS
 - Connecting third Party API's and utilising external packages
+- Using Lighthouse and Axe to resolve acessibility and performance issues
 
 
 ## Technologies Used
