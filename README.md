@@ -1,9 +1,20 @@
 # Othello Website
 
 ## Description
-A react site developed for a local restaurant, it showcases what they have to offer and allows customers to contact them to enquire about bookings. 
-This is where I got my first ever job and wanted to use my skills to build something that might be useful to them. The site itself mainly uses React, Tailwind for styling and doesn't rely on a back end or API so is pretty simple.
+A react site developed for a local restaurant, it showcases what they have to offer and allows customers to contact them to enquire about bookings.
+The site includes the following places:
+Home
+About
+Our Menu
+Privacy
+
+
+## Motivation and Inspiration
+This is where I got my first ever job and wanted to use my skills to build something that might be useful to them and improve on them. The site itself mainly uses React, Tailwind for styling and doesn't rely on a back end or API so is pretty simple.
 The Design is based of examples taken from a moodboard with some inspiration gathered from sites such as SquareSpace and other popular Restaurants based around the world.
+
+## Link to website
+www.othellorestaurant.com
 
 ## What I learned 
 - Iterative, Design and Prototyping to come up with user freindly designs
