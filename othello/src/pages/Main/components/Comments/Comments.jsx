@@ -14,7 +14,7 @@ export default function Comments() {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    speed: 1000,
+    speed: 200,
     autoplaySpeed: 8000,
     cssEase: 'linear',
     pauseOnHover: false,
@@ -23,15 +23,17 @@ export default function Comments() {
 
   return (
     <div
-      className="h-screen/2 w-100% p-10 flex "
+      className={'h-full w-500% p-2 flex' + ' md:p-10 md:h-screen/2'}
+      data-aos="fade-up"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
       }}
     >
-      <div className=" w-[70%] w-screenfull  m-auto">
+      <div className={' w-[90%] m-auto' + ' md:w-[70%]'}>
         <Slider {...settings}>
           {ReviewsData.map(item => (
             <CommentCard
+              key={item.Title}
               title={item.Title}
               description={item['Review text']}
               user={item.Author}

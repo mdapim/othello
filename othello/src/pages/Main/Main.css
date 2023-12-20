@@ -1,8 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
 
 .pacifico {
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.cookie {
+  font-family: 'Cookie', cursive;
+}
+
+.playFair {
+  font-family: 'Playfair Display', serif;
+}
+
+.abril {
+  font-family: 'Abril Fatface', serif;
+}
+
+.baskerville {
+  font-family: 'Libre Baskerville', serif;
 }
 .frame {
   width: 100%;

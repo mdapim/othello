@@ -6,16 +6,24 @@ export default function SectionItem({ menuItem, menuList }) {
   return (
     <>
       <div
-        className="bg-fixed h-72 w-full flex"
+        className={'bg-fixed h-36 flex overflow-hidden' + ' md:h-72 md:w-full'}
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/main.jpeg`})`
         }}
       >
-        <p className="text-8xl text-white m-auto uppercase"> {menuItem} </p>
+        <h3 className={'text-5xl text-white m-auto uppercase' + ' md:text-8xl'}>
+          {menuItem}
+        </h3>
       </div>
-      <div className="grid grid-cols-2 gap-6 justify-between w-screenfull m-auto px-28 py-14">
-        {menuList.map(item => (
+      <div
+        className={
+          'grid gap-6 grid-cols-1 px-6 justify-between' +
+          ' md:grid-cols-2 md:px-28 md:py-14'
+        }
+      >
+        {menuList?.map(item => (
           <ListMeal
+            key={item.name}
             title={item.name}
             description={item.description}
             price={item.price}
@@ -25,8 +33,14 @@ export default function SectionItem({ menuItem, menuList }) {
     </>
   )
 }
-// fix
+
 SectionItem.propTypes = {
   menuItem: PropTypes.string.isRequired,
-  menuList: PropTypes.string.isRequired
+  menuList: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
 }

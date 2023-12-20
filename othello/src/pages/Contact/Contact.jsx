@@ -1,31 +1,22 @@
 import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
-import GMap from './googlemap'
+import { useTranslation } from 'react-i18next'
+import dateFormat from 'dateformat'
+import GMap from './openmap'
 import Footer from '../../components/Footer/Footer'
 import Form from './Form'
+import sendEmail from './sendEmail'
 
 export default function Contact() {
+  const { t } = useTranslation('Contact')
+  const [mailRes, setMailRes] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    event: '',
-    date: '',
+    time: '',
+    date: dateFormat(new Date(), 'yyyy-mm-dd'),
     message: ''
   })
-  const data = {
-    service_id: 'service_lw9ch6r',
-    template_id: 'template_0lx9i2t',
-    user_id: 'fUXfArGHyPjFG9aG-',
-    template_params: {
-      to_name: formData.name,
-      from_name: formData.email,
-      subject: formData.subject,
-      phone: formData.phone,
-      message: formData.message,
-      'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    }
-  }
 
   const handleFormInput = e => {
     const { name } = e.target
@@ -35,23 +26,12 @@ export default function Contact() {
   }
 
   const sendMessage = async () => {
-    const apiResponse = await emailjs
-      .send(
-        data.service_id,
-        data.template_id,
-        data.template_params,
-        data.user_id
-      )
-      .then(
-        response => {
-          console.log('SUCCESS!', response.status, response.text)
-        },
-        error => {
-          console.log('FAILED...', error)
-        }
-      )
-    console.log(apiResponse)
+    const response = await sendEmail('mikkay1@outlook.com', formData)
+    setMailRes(await response)
   }
+
+  const checkFormData = () =>
+    Object.values(formData).every(value => value !== '')
 
   return (
     <div className="h-full w-full">
@@ -61,40 +41,53 @@ export default function Contact() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/chris.jpg`})`
         }}
       >
-        <p className="text-8xl font-bold uppercase">Contact Us </p>
-        <p className="text-2xl px-96">
-          We're here to assist you! Contact us at Othello Restaurant in Grimsby
-          to reserve a table or discuss your event needs. We look forward to
-          hearing from you.
+        <h1 className="text-6xl md:text-8xl font-bold uppercase">
+          {t('Title.heading')}
+        </h1>
+        <p className={'text-base px-6 ' + ' md:text-2xl md:px-[18vw]'}>
+          {t('Title.description')}
         </p>
       </div>
-      <div className="w-screenfull m-auto">
-        <div className="m-auto my-20 text-center">
-          <p className="text-4xl font-bold">
-            Open Mondays through Saturdays Lunch - Dinner
-          </p>
-          <p className="my-5 text-3xl font-bold">
-            Call 01472 356704 during our opening times, or online using the form
-            below
+      <div className="m-auto">
+        <div className={'m-auto my-10 text-center' + ' md:my-20'}>
+          <h2 className={'text-2xl font-bold' + ' md:text-4xl'}>
+            {t('open_days')}
+          </h2>
+          <p className={'my-2  text-xl  font-bold' + ' md:text-3xl md:my-5'}>
+            {t('contact_info')}
           </p>
         </div>
-        <div className="grid grid-cols-2 m-auto mt-32">
+        <div
+          className={
+            'grid grid-cols-1 mt-20 m-auto' + ' xl:mt-32 xl:grid-cols-2'
+          }
+        >
           <div>
-            <p className=" mx-28 font-bold text-5xl"> Enquires </p>
-            <p className=" text-lg mx-28 mt-14">
-              We recommend booking at least 2 weeks in advance for large parties
-              of 6 or more, Please be advised this form does not confirm your
-              reservation and you will be contacted by a member of our team as
-              quickly as possible to confirm it. We value your interest in our
-              establishment and look forward to serving you.
+            <h2 className={'mx-4  font-bold text-4xl ' + ' md:text-5xl'}>
+              {t('Form.enquire')}
+            </h2>
+            <p className={'text-base mx-4 mt-6' + ' md:text-lg md:mt-14'}>
+              {t('Form.description')}
+            </p>
+            <h2 className={'mx-4 font-bold mt-10 text-2xl' + ' md:text-2xl'}>
+              {t('Form.notice_title')}
+            </h2>
+            <p className={'text-base mt-2 mx-4 ' + ' md:text-lg'}>
+              {t('Form.notice')}
             </p>
           </div>
-          <div className="mx-20">
-            <Form handleFormInput={handleFormInput} sendMessage={sendMessage} />
+          <div className={'mt-14 mx-6 ' + ' md:pt-0 md:mx-20 xl:mt-0'}>
+            <Form
+              handleFormInput={handleFormInput}
+              sendMessage={sendMessage}
+              mailRes={mailRes}
+              setMailRes={setMailRes}
+              checkFormData={checkFormData}
+              formData={formData}
+            />
           </div>
         </div>
       </div>
-
       <GMap />
       <Footer />
     </div>

@@ -1,0 +1,72 @@
+name: My Test
+on:
+  push:
+    branches:
+      - i18next
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  testenv:
+    runs-on: macos-latest
+    env:
+      SETNAME: ${{ secrets.NAME}}
+      SETNAMEV: ${{ vars.NAME2 }}
+    steps:
+      - name: Test env vars
+        uses: actions/checkout@v3
+      - run: |
+          echo "$SETNAME"
+          echo "$SETNAMEV"
+          echo "${{ secrets.NAME}}"
+          echo "${{ vars.NAME2 }}"
+          echo "${SETNAME}"
+
+      - name: Adding vars to zsh
+        run: |
+          echo touch ~/.zshrc
+          echo "export FILE=${{ secrets.NAME }}" >> ~/.zshrc
+          echo "export FILE2=${{ vars.NAME2 }}" >> ~/.zshrc
+          echo "export FILE3=${{ env.SETNAMEV }}" >> ~/.zshrc
+          echo "export FILE4=$SETNAMEV" >> ~/.zshrc
+          echo "export FILE5=testing" >> ~/.bash_profile
+          echo "export FILE6=testing2345" >> ~/.bash_profile
+          echo "export FILE5_IS=testingwhats ab" >> ~/.bash_profile
+
+      - name: printing zsh file
+        run: |
+          cat ~/.zshrc
+          echo "echoing files out now"
+          cat ~/.bash_profile
+        #    exit 1
+
+      - name: set delay
+        run: |
+          echo "Waiting for 5 minutes..."
+          sleep 300
+      - name: echoing the files out
+        id: rune2e
+        run: |
+          source ~/.bash_profile
+          source ~/.zshrc
+          echo " we are echoing s - $FILE"
+          echo "we are echoing -  $FILE2"
+          echo " we are echoing - $FILE3"
+          echo "we are echoing -  ${FILE4}"
+          echo "we are echoing -  ${FILE5}"
+          echo "bash - $POWERSHELL_DISTRIBUTION_CHANNEL"
+          echo "bash2 - ${POWERSHELL_DISTRIBUTION_CHANNEL}"
+          echo "bash5 - $FILE5_IS"
+          echo "bash6 - ${FILE5_IS}"
+          env
+
+      - name: stop video
+        if: always()
+        run: |
+          echo "running video now"
+
+      - name: store vid
+        if: failure() && steps.rune2e.outcome == 'failure'
+        run: |
+          echo "we are saving now"

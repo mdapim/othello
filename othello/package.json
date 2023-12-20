@@ -1,39 +1,45 @@
 {
   "name": "othello",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
-    "@coreui/coreui": "^4.2.6",
-    "@emailjs/browser": "^3.10.0",
+    "@aws-sdk/client-ses": "^3.441.0",
+    "@google-cloud/translate": "^7.2.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "date-fns": "^2.30.0",
+    "aos": "^2.3.4",
     "dateformat": "^5.0.3",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
-    "google-maps-react-markers": "^1.1.2",
+    "i18next": "^22.5.1",
+    "i18next-browser-languagedetector": "^7.0.2",
+    "i18next-http-backend": "^2.2.1",
+    "i18next-parser": "^8.0.0",
+    "leaflet": "^1.9.4",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-day-picker": "^8.7.1",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "react-i18next": "^12.3.1",
+    "react-leaflet": "^4.2.1",
     "react-pro-sidebar": "^1.0.0",
     "react-router-dom": "^6.8.0",
-    "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-social-icons": "^5.15.0",
-    "reacticons": "^0.0.1",
     "slick-carousel": "^1.8.1",
+    "tailwindcss-animated": "^1.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": " WATCHPACK_POLLING=true react-scripts start",
+    "start-p": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint"
+    "lint": "./node_modules/.bin/eslint",
+    "extract-translations": "i18next -c i18next-parser.config.js --fail-on-warnings"
   },
   "eslintConfig": {
     "extends": [
@@ -54,8 +60,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@svgr/webpack": "^6.5.1",
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
+    "dotenv": "^16.3.1",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^3.2.4"
+  },
+  "overrides": {
+    "@svgr/webpack": "$@svgr/webpack"
   }
 }

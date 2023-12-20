@@ -1,26 +1,37 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
 
 export default function CommentCard({ title, description, user, image }) {
+  const { t } = useTranslation('Main')
   return (
-    <div className="flex justify-center align-end flex-col p-10">
-      <h1 className="text-center t-40 text-5xl text-white">
-        What our happy clients thought
+    <div className={'flex justify-center align-end flex-col' + ' md:p-10'}>
+      <h1 className={'text-center t-40 text-2xl text-white' + ' md:text-5xl'}>
+        {t('Comments.title')}
       </h1>
       <br />
       <hr />
       <br />
-      <h1 className="text-white text-center text-3xl"> {title} </h1>
+      <h2 className={'text-white text-center text-lg' + ' md:text-3xl'}>
+        {title}
+      </h2>
       <br />
-      <h2 className="text-white text-center text-xl">{description}</h2>
+      <p className={'text-white text-center text-sm' + ' md:text-xl'}>
+        {description}
+      </p>
       <br />
-      <p className="text-white text-center">{user}</p>
-      <br />
-      <h1 className="text-white text-center text-5xl"> &#x275C;&#x275C;</h1>
+      <p className={'text-white text-sm text-center' + ' md:text-lg'}>{user}</p>
+      <br />ß
+      <h3
+        className={'text-white text-center text-sm' + ' md:text-5xl'}
+        aria-label="separator"
+      >
+        &#x275C;&#x275C;
+      </h3>
       <img
-        className=" w-24 h-24 rounded-full self-center"
+        className=" w-16 h-16 rounded-full self-center"
         src={image}
-        alt="reviewer's logo"
+        alt={`${user}  "trip advisor logo`}
       />
     </div>
   )

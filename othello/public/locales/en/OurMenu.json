@@ -1,0 +1,30 @@
+{
+  "title": "Our Menu",
+  "description": "Indulge in culinary delights at Othello Restaurant in Grimsby. Explore our tantalizing menu, crafted with passion and featuring exquisite flavors that will leave you wanting more.",
+  "Buttons": [
+    {
+      "title": "Lunch",
+      "description": "Explore our Greek-inspired lunch menu, brimming with authentic dishes crafted from the finest Mediterranean ingredients."
+    },
+    {
+      "title": "Dinner",
+      "description": "Embark on a captivating Mediterranean dinner experience."
+    },
+    {
+      "title": "Desserts",
+      "description": "Explore our irresistible dessert menu and indulge in heavenly baklava, creamy baileys mouse, and more."
+    },
+    {
+      "title": "Wine",
+      "description": "Raise a glass to Greek traditions."
+    }
+  ],
+  "Lunch": ["Starters", "Mains"],
+  "Dinner": ["Starters", "Mains", "Fish", "Grill", "Side-orders"],
+  "Desserts": ["Desserts", "Liquor-Coffee"],
+  "Wine": ["Red-Wine", "Rose-Wine", "White-Wine", "Sparkling Wine & Champagne"],
+  "new years eve": ["starters", "lunch", "dessert"],
+  "valentines day": ["dinner", "lunch", "dessert"],
+  "easter sunday": ["starters", "lunch", "dessert"],
+  "christmas": ["starters", "lunch", "dessert"]
+}

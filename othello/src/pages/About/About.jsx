@@ -1,8 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer/Footer'
-import ImageGallery from './ImageGallery'
+// import ImageGallery from './ImageGallery'
+import ImageGallery2 from './ImageGallery2'
 
 export default function About() {
+  const { t } = useTranslation('About')
   return (
     <div>
       <div
@@ -11,14 +14,23 @@ export default function About() {
           backgroundImage: ` linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${`${process.env.PUBLIC_URL}/Images/table.jpeg`})`
         }}
       >
-        <p className="text-8xl font-bold uppercase">About Us </p>
-        <p className="text-2xl px-96">
-          Exquisite cuisine, impeccable service, and elegant ambiance. Join us
-          at Othello Restaurant in Grimsby for an unforgettable dining
-          experience that delights all the senses.
+        <h1
+          className={
+            'text-6xl baskerville font-bold uppercase' + ' md:text-8xl'
+          }
+        >
+          {t('Title.heading')}
+        </h1>
+        <p className={'text-base px-6 ' + ' md:text-2xl md:px-[18vw]'}>
+          {t('Title.description')}
         </p>
       </div>
-      <div className="flex-col justify-between justify-center items-center">
+      <div
+        className={
+          'flex-col justify-between text-sm justify-center items-center' +
+          ' md:text-base'
+        }
+      >
         <div className="flex-1">
           <div>
             <img
@@ -28,50 +40,31 @@ export default function About() {
             />
           </div>
         </div>
-        <hr className="w-[600px] border-[0.5px] border-gray-400 m-auto mt-8" />
+        <hr
+          className={
+            ' border-[0.5px] border-gray-400 m-auto mt-8' + ' md:w-[600px]'
+          }
+        />
         <div className="flex-1 m-auto space-y-10">
-          <div className="p-8 px-96 space-y-6 text-center">
-            <p>
-              Welcome to Othello Restaurant, a family-owned and operated
-              restaurant located in the heart of Grimsby. We pride ourselves on
-              serving delicious, authentic Mediterranean cuisine in a warm and
-              inviting atmosphere.
-            </p>
-            <p>
-              Our menu features a wide range of dishes inspired by the rich
-              culinary traditions of the Mediterranean. From our famous lamb
-              chops and thai scallops to our mouthwatering pasta dishes and
-              fresh seafood, we have something to satisfy every palate. We use
-              only the freshest ingredients and traditional cooking methods to
-              create our dishes, ensuring that every meal is bursting with
-              flavor.
-            </p>
-            <p>
-              At Othello Restaurant, we believe that dining out should be an
-              experience that engages all the senses. That's why we've carefully
-              designed our restaurant to create an ambiance that is both elegant
-              and comfortable. Whether you're celebrating a special occasion or
-              just looking for a relaxing night out, we are committed to
-              providing you with exceptional service and an unforgettable dining
-              experience.
-            </p>
-            <p>
-              We also offer catering services for your next event or gathering.
-              Our experienced chefs will work with you to create a custom menu
-              that perfectly fits your needs and budget. From intimate dinner
-              parties to large corporate events, we have the expertise and
-              resources to make your event a success.
-            </p>
-            <p>
-              Thank you for considering Othello Restaurant for your next dining
-              experience. We look forward to serving you soon!
-            </p>
+          <div
+            className={
+              'p-8 space-y-6 text-left' + ' xl:px-[15vw]' + ' 2xl:px-[30vw]'
+            }
+          >
+            <p>{t('Story.p1')}</p>
+            <p>{t('Story.p2')}</p>
+            <p>{t('Story.p3')}</p>
+            <p>{t('Story.p4')}</p>
+            <p>{t('Story.p5')}</p>
           </div>
         </div>
       </div>
       <hr className=" border-gray-400 m-auto mt-8" />
-      <div className="w-screenfull py-10 m-auto">
+      {/* <div className="py-10 m-auto">
         <ImageGallery />
+      </div> */}
+      <div className="py-10 m-auto">
+        <ImageGallery2 />
       </div>
 
       <Footer />

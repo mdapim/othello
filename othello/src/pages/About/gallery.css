@@ -1,0 +1,74 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css');
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tbg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.th-screen {
+  height: 100vh;
+}
+
+.tcontainer {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tmt-10 {
+  margin-top: 2.5rem;
+}
+
+.tgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.tgrid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tgrid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tgap-4 {
+  gap: 1rem;
+}
+
+.tbg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* height: 500px; */
+  width: 100%;
+  cursor: pointer;
+}
+.tbg-cover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}

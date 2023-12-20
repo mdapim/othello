@@ -1,0 +1,36 @@
+{
+  "ERRORS": {
+    "USERNAME": "Ihr Benutzername existiert nicht.",
+    "EMAIL": "Meine {{email}} ist keine gültige E-Mail-Adresse."
+  },
+  "LOGIN": "Anmeldung",
+  "FORGOT_PASSWORD": "Passwort vergessen?",
+  "key": "Einige formatieren {{value, formatname}}",
+  "intlCurrencyWithOptions": "Der Wert ist {{val, currency(currency: USD)}}",
+  "intlNumberWithOptions": "Einige {{val, number(minimumFractionDigits: 2)}}",
+  "keyWithCount_other": "{{count}} Artikel",
+  "friend_male": "Ein Freund",
+  "friend_female": "Eine Freundin",
+  "nesting2": "Hallo $t(friend_male)",
+  "array": [
+    "wir gehen",
+    "Yah",
+    "NEIN"
+  ],
+  "array2": {
+    "me": [
+      {
+        "hello": "Name ist"
+      },
+      {
+        "hello2": "wir gehen wieder"
+      },
+      {
+        "name": "Knoblauch Pilze",
+        "description": "Sautierte Pilze, umhüllt von Knoblauchcreme und weißer Soße",
+        "price": "5,25 £",
+        "vegetarian": "1"
+      }
+    ]
+  }
+}
