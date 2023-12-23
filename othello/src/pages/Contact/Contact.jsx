@@ -26,7 +26,10 @@ export default function Contact() {
   }
 
   const sendMessage = async () => {
-    const response = await sendEmail('mikkay1@outlook.com', formData)
+    const response = await sendEmail(
+      process.env.REACT_APP_RECIPIENT_EMAIL_ADDRESS,
+      formData
+    )
     setMailRes(await response)
   }
 

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import AnimatedLink from './AnimatedLink'
 
 export function SelectDropDown() {
-  const { i18n, t } = useTranslation()
+  const { i18n, t } = useTranslation('Navigation')
   return (
     <div>
       <label htmlFor="underlineSelect" className="sr-only">
@@ -19,7 +19,7 @@ export function SelectDropDown() {
         }}
         className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-300 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
       >
-        <option selected>{t('Navigation:Header.language')}</option>
+        <option selected>{t('Header.language')}</option>
         <option value="en">English</option>
         <option value="fr">French</option>
         <option value="es">Spanish</option>

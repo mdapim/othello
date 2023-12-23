@@ -1,9 +1,10 @@
 import { TranslationServiceClient } from '@google-cloud/translate'
+// test file, left in for potential multilingual access
 
 // Instantiates a client
 const translationClient = new TranslationServiceClient()
 
-const projectId = 'canvas-radio-390117'
+const projectId = ''
 const location = 'global'
 const text = 'Hello, world!'
 
