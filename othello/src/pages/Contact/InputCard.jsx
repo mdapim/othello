@@ -16,7 +16,7 @@ export default function InputCard({
       {t(label)}
       <br />
       <input
-        // disabled
+        disabled
         id={name}
         type={type}
         name={name}
