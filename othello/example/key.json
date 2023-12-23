@@ -1,4 +1,0 @@
-{
-  "key": "I am {{author.name}}",
-  "key2": "{{what}} is {{how}}"
-}
