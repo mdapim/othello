@@ -42,9 +42,9 @@ export default function Featured() {
   const featuredItems = [
     {
       image: 'bac',
-      title: t('Menu:OfficialMenu.Desserts.deserts.0.name'),
-      description: t('Menu:OfficialMenu.Desserts.deserts.0.description'),
-      price: t('Menu:OfficialMenu.Desserts.deserts.0.price'),
+      title: t('Menu:OfficialMenu.Desserts.desserts.0.name'),
+      description: t('Menu:OfficialMenu.Desserts.desserts.0.description'),
+      price: t('Menu:OfficialMenu.Desserts.desserts.0.price'),
       hiddenNo: 1
     },
     {
@@ -70,9 +70,9 @@ export default function Featured() {
     },
     {
       image: 'cheese',
-      title: t('Menu:OfficialMenu.Desserts.deserts.3.name'),
-      description: t('Menu:OfficialMenu.Desserts.deserts.3.description'),
-      price: t('Menu:OfficialMenu.Desserts.deserts.3.price'),
+      title: t('Menu:OfficialMenu.Desserts.desserts.3.name'),
+      description: t('Menu:OfficialMenu.Desserts.desserts.3.description'),
+      price: t('Menu:OfficialMenu.Desserts.desserts.3.price'),
       hiddenNo: 0
     }
   ]

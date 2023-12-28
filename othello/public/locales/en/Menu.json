@@ -38,7 +38,7 @@
           "price": "5.95"
         }
       ],
-      "main": [
+      "mains": [
         {
           "name": "Chicken and Leak Pie",
           "description": "Served with Creamed Potatoes, Carrots, and Broccoli",
@@ -246,7 +246,7 @@
       ]
     },
     "Desserts": {
-      "deserts": [
+      "desserts": [
         {
           "name": "Baklava",
           "description": "A rich, sweet pastry made with layers of filo, filled with chopped nuts and soaked in a honey syrup, served with fresh fruit and vanilla ice cream.",

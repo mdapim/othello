@@ -26,6 +26,7 @@ export default function ButtonCard({
       }}
       role="button"
       tabIndex={0}
+      data-testid={`${title} button`}
     >
       <img
         className={

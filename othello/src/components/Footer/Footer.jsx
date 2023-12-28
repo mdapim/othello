@@ -55,20 +55,12 @@ export default function Footer() {
             className={'w-[100px] ml-4' + ' md:mt-20 md:w-[200px]'}
             src={`${process.env.PUBLIC_URL}Images/otello2.png`}
             alt="Othello Logo"
+            data-testid="othello-logo-footer"
           />
           <div className="mt-6 space-x-1 text-center">
-            <SocialIcons
-              aria-label="twitter link"
-              imageURL="https://twitter.com/jaketrent"
-            />
-            <SocialIcons
-              aria-label="facebook link"
-              imageURL="https://www.facebook.com/othellorestaurantgrimsby/"
-            />
-            <SocialIcons
-              aria-label="email link"
-              imageURL="mailto:othellogrimsby@gmail.com"
-            />
+            <SocialIcons imageURL="https://www.instagram.com/othellogrimsby?igsh=MXRnY3Q5NHIwa2F6ZA==" />
+            <SocialIcons imageURL="https://www.facebook.com/othellorestaurantgrimsby/" />
+            <SocialIcons imageURL="mailto:othellogrimsby@gmail.com" />
           </div>
         </div>
         <OpeningHours />

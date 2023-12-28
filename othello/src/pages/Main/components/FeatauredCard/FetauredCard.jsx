@@ -28,6 +28,7 @@ export default function FeaturedCard({
         ' xl:-96 xl:min-h-[500px]  xl:w-[90%]'
       }
       role="link"
+      name={title}
       tabIndex={activeSlide === hiddenNo ? -1 : 0}
       onClick={handleEventAction}
       onKeyDown={handleKeyEventAction}

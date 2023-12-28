@@ -67,12 +67,13 @@ export default function NavBarS() {
           changeSize ? ' py-0' : ' py-8'
         }`}
       >
-        <Link to="/" className="flex items-center">
+        <Link data-testid="logo-container" to="/" className="flex items-center">
           <img
             src={`${process.env.PUBLIC_URL}/Images/otello2.png`}
             className={`relative object-cover overflow-hidden transition-all duration-200${
               changeSize ? 'w-20 h-14' : ' w-20 h-20'
             }`}
+            data-testid="othello-logo"
             alt="Othello Linked Logo"
           />
           <h1 className="self-center othello-text-small text-4xl font-semibold whitespace-nowrap text-white">
