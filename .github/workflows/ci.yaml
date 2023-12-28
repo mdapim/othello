@@ -22,7 +22,7 @@ jobs:
           cache: "npm"
           cache-dependency-path: "./othello/package-lock.json"
       - name: install packages
-        run: npm install
+        run: cd ./othello && npm install
 
       - name: Run lint
         run: cd ./othello && npm run lint
