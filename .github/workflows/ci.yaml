@@ -6,6 +6,9 @@ on:
     paths-ignore:
       - ".env.sample"
       - "README.md"
+  push:
+    branches:
+      - main
   workflow_call:
 
 jobs:
