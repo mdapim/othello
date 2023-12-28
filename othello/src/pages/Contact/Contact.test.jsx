@@ -30,7 +30,7 @@ describe('Test all elements are present', () => {
   })
 
   describe('test states of the form', () => {
-    test('submit button is not disabled', () => {
+    test('submit button is not disabled', async () => {
       render(<Contact />)
 
       const submitButton = screen.getByTestId('submit-button')
@@ -52,6 +52,18 @@ describe('Test all elements are present', () => {
           )
         ).not.toBeNull()
       })
+    })
+
+    // TODO: Remove later on after contact form is enabled
+    test('All input boxes are disabled', async () => {
+      render(<Contact />)
+
+      expect(screen.getByTestId('email-input')).toBeDisabled()
+      expect(screen.getByTestId('name-input')).toBeDisabled()
+      expect(screen.getByTestId('phone-input')).toBeDisabled()
+      expect(screen.getByTestId('time-input')).toBeDisabled()
+      expect(screen.getByTestId('date-input')).toBeDisabled()
+      expect(screen.getByTestId('message-input')).toBeDisabled()
     })
 
     test('An error message is shown if the request fails to send ', async () => {
