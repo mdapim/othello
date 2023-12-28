@@ -1,10 +1,10 @@
 {
   "Header": {
-    "home": "home",
-    "about": "about",
+    "home": "Home",
+    "about": "About",
     "our_menu": "Our Menu",
     "contact": "Contact",
-    "private": "private bookings",
+    "private": "Private Bookings",
     "language": "select language"
   },
   "Footer": {

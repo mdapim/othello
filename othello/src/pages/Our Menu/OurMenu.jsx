@@ -6,10 +6,11 @@ import Footer from '../../components/Footer/Footer'
 import ButtonGrid from './components/buttonGrid'
 import BackToTop from './components/BackToTop'
 
-function MenuButton({ name, setItem, handleClick }) {
+function SpecialMenuButton({ name, setItem, handleClick }) {
   return (
     <button
       type="button"
+      data-testid={name + ' button'}
       className={
         'w-[250px] m-2 text-lg whitespace-nowrap rounded-sm bg-neutral-800 px-10 pb-2 pt-2.5 font-medium uppercase leading-normal text-neutral-50' +
         ' md:text-2xl' +
@@ -98,7 +99,7 @@ export default function OurMenu() {
       >
         {specialMenus.map(name => {
           return (
-            <MenuButton
+            <SpecialMenuButton
               key={name}
               name={name}
               setItem={setChosenItem}

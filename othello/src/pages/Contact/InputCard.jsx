@@ -16,6 +16,7 @@ export default function InputCard({
       {t(label)}
       <br />
       <input
+        data-testid={`${name}-input`}
         disabled
         id={name}
         type={type}

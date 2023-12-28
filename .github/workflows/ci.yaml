@@ -1,0 +1,27 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - prod-othello
+    paths-ignore:
+      - ".env.sample"
+      - "README.md"
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - name: install packages
+        run: npm install
+
+      - name: Run lint
+        run: cd ./othello && npm run lint
+
+      - name: Run Test
+        run: cd ./othello && npm run test:noWatch

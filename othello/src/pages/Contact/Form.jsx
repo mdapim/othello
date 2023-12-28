@@ -100,6 +100,7 @@ export default function Form({
               name="time"
               defaultValue="--:--"
               onChange={handleFormInput}
+              data-testid={'time-input'}
               className={
                 `indent-2.5 h-10 w-full rounded-none bg-gray-50 text-black bg-transparent border border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-2 focus:border-gray-700 peer ` +
                 (formData.time.length <= 0 && mailRes === 'invalid'
@@ -126,6 +127,7 @@ export default function Form({
               id="input_date"
               type="date"
               name="date"
+              data-testid={'date-input'}
               size={2}
               className={
                 ` sm:min-w-[90%]` +
@@ -153,6 +155,7 @@ export default function Form({
             id="text_box"
             cols="55"
             rows="9"
+            data-testid={'message-input'}
             maxLength="200"
             type="text"
             name="message"
@@ -169,8 +172,9 @@ export default function Form({
       <div className="mx-auto">
         <button
           // eslint-disable-next-line
-          // disabled={mailRes === 'sent'}
-          disabled={true}
+          disabled={mailRes === 'sent'}
+          // disabled={true}
+          data-testid="submit-button"
           type="submit"
           aria-label="submit form"
           className="relative border-black bg-black text-white h-12 w-44 border before:border-black after:border-black before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(90%+16px)] hover:before:w-[calc(90%+16px)] hover:after:h-[calc(90%+16px)] hover:after:w-[calc(90%+16px)] hover:bg-white hover:text-black cursor-pointer
