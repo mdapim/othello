@@ -28,7 +28,6 @@ www.othellorestaurant.com
 
 ## Technologies Used
 - React
-- TypeScript
 - AWS SMS
 - Netlify
 - Reacti18Next
