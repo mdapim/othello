@@ -40,7 +40,7 @@
     "test": "DEBUG_PRINT_LIMIT=100000 react-scripts test",
     "test:noWatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "eslint ./src",
     "extract-translations": "i18next -c i18next-parser.config.js --fail-on-warnings",
     "prepare": "cd .. && husky install othello/.husky"
   },
