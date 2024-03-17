@@ -234,11 +234,11 @@ Object {
                         disabled=""
                         id="input_date"
                         max="2030-01-01"
-                        min="2023-12-28"
+                        min="2024-03-17"
                         name="date"
                         size="2"
                         type="date"
-                        value="2023-12-28"
+                        value="2024-03-17"
                       />
                     </label>
                   </div>
@@ -864,11 +864,11 @@ Object {
                       disabled=""
                       id="input_date"
                       max="2030-01-01"
-                      min="2023-12-28"
+                      min="2024-03-17"
                       name="date"
                       size="2"
                       type="date"
-                      value="2023-12-28"
+                      value="2024-03-17"
                     />
                   </label>
                 </div>
