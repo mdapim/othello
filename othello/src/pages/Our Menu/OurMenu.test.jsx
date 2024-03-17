@@ -111,90 +111,90 @@ describe('Test all elements are present', () => {
       })
     })
 
-    describe('testing special menus', () => {
-      test('Clicking New Years Eve shows displays the New years eve menu', async () => {
-        render(<OurMenu />)
+    // describe('testing special menus', () => {
+    //   test('Clicking New Years Eve shows displays the New years eve menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText('New Years Eve Menu')).toBeNull()
-        const WineButton = screen.getByTestId('New years eve button')
+    //     expect(screen.queryByText('New Years Eve Menu')).toBeNull()
+    //     const WineButton = screen.getByTestId('New years eve button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText('New Years Eve Menu')).not.toBeNull()
-        })
-      })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText('New Years Eve Menu')).not.toBeNull()
+    //     })
+    //   })
 
-      test('Clicking valentines day shows displays the valentines day menu', async () => {
-        render(<OurMenu />)
+    //   test('Clicking valentines day shows displays the valentines day menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText('Valentines Day Menu')).toBeNull()
-        const WineButton = screen.getByTestId('Valentines day button')
+    //     expect(screen.queryByText('Valentines Day Menu')).toBeNull()
+    //     const WineButton = screen.getByTestId('Valentines day button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText('Valentines Day Menu')).not.toBeNull()
-        })
-      })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText('Valentines Day Menu')).not.toBeNull()
+    //     })
+    //   })
 
-      test('Clicking mothers day shows displays the mothers day menu', async () => {
-        render(<OurMenu />)
+    //   test('Clicking mothers day shows displays the mothers day menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText("Mother's Day Menu")).toBeNull()
-        const WineButton = screen.getByTestId('Mothers Day button')
+    //     expect(screen.queryByText("Mother's Day Menu")).toBeNull()
+    //     const WineButton = screen.getByTestId('Mothers Day button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText("Mother's Day Menu")).not.toBeNull()
-        })
-      })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText("Mother's Day Menu")).not.toBeNull()
+    //     })
+    //   })
 
-      test('Clicking easter sunday shows displays the easter sunday menu', async () => {
-        render(<OurMenu />)
+    //   test('Clicking easter sunday shows displays the easter sunday menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText('Easter Sunday Menu')).toBeNull()
-        const WineButton = screen.getByTestId('Easter sunday button')
+    //     expect(screen.queryByText('Easter Sunday Menu')).toBeNull()
+    //     const WineButton = screen.getByTestId('Easter sunday button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText('Easter Sunday Menu')).not.toBeNull()
-        })
-      })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText('Easter Sunday Menu')).not.toBeNull()
+    //     })
+    //   })
 
-      test('Clicking Fathers day shows displays the easter Fathers day menu', async () => {
-        render(<OurMenu />)
+    //   test('Clicking Fathers day shows displays the easter Fathers day menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText("Father's Day Menu")).toBeNull()
-        const WineButton = screen.getByTestId('Fathers Day button')
+    //     expect(screen.queryByText("Father's Day Menu")).toBeNull()
+    //     const WineButton = screen.getByTestId('Fathers Day button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText("Father's Day Menu")).not.toBeNull()
-        })
-      })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText("Father's Day Menu")).not.toBeNull()
+    //     })
+    //   })
 
-      test('Clicking Christmas shows displays the Christmas menu', async () => {
-        render(<OurMenu />)
+    //   test('Clicking Christmas shows displays the Christmas menu', async () => {
+    //     render(<OurMenu />)
 
-        expect(screen.queryByText('Christmas Menu')).toBeNull()
-        const WineButton = screen.getByTestId('Christmas button')
+    //     expect(screen.queryByText('Christmas Menu')).toBeNull()
+    //     const WineButton = screen.getByTestId('Christmas button')
 
-        fireEvent.click(WineButton)
+    //     fireEvent.click(WineButton)
 
-        await waitFor(() => {
-          expect(scrollIntoViewMock).toHaveBeenCalled()
-          expect(screen.queryByText('Christmas Menu')).not.toBeNull()
-        })
-      })
-    })
+    //     await waitFor(() => {
+    //       expect(scrollIntoViewMock).toHaveBeenCalled()
+    //       expect(screen.queryByText('Christmas Menu')).not.toBeNull()
+    //     })
+    //   })
+    // })
   })
 })

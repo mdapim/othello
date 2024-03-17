@@ -28,7 +28,6 @@ www.othellorestaurant.com
 
 ## Technologies Used
 - React
-- TypeScript
 - AWS SMS
 - Netlify
 - Reacti18Next
@@ -40,4 +39,5 @@ www.othellorestaurant.com
 - Create a data store and Incoporate a content management system to allow the staff to change content on the website at will.
 - Improve the Our Menu Page to make it less content heavy and more user friendly
 - Connect to TripAdvisor API to routinely update comment section
+- Add E2E test using cypress
 - Create a Max width to improve responsive design
