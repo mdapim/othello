@@ -34,7 +34,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": " WATCHPACK_POLLING=true react-scripts start",
+    "start": " react-scripts start",
     "start-p": "react-scripts start",
     "build": "react-scripts build",
     "test": "DEBUG_PRINT_LIMIT=100000 react-scripts test",

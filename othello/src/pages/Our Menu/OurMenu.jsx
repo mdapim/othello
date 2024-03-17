@@ -91,7 +91,7 @@ export default function OurMenu() {
       <div className={'mt-10 m-4 ' + ' md:m-[3%]'}>
         <ButtonGrid setItem={setChosenItem} scrollToMenu={handleClick} />
       </div>
-      <p className="text-center text-4xl font-bold mt-10"> Special Menus </p>
+      {/* <p className="text-center text-4xl font-bold mt-10"> Special Menus </p>
       <div
         className={
           'flex flex-row flex-wrap justify-center space-y- space-x- border-8 border-double border-black p-2 m-4'
@@ -107,7 +107,7 @@ export default function OurMenu() {
             />
           )
         })}
-      </div>
+      </div> */}
 
       <br ref={ref} />
       <hr className=" p-4 bg-white" />
